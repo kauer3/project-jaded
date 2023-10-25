@@ -15,7 +15,13 @@ typeHeaders
 	Plane subclassOf Object highestOrdinal = 3, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 7, number = 2073;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
+	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
+	AirportSet subclassOf ObjectSet loadFactor = 66, number = 2075;
+	AirportArray subclassOf Array number = 2076;
 membershipDefinitions
+	AirportByCode of Airport;
+	AirportSet of Airport;
+	AirportArray of Airport;
 typeDefinitions
 	Object completeDefinition
 	(
@@ -25,7 +31,7 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:49:34.088;
 	attributeDefinitions
 		cityCode:                      String[4] readonly, number = 3, ordinal = 3;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:53:09.597;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:48:50.646;
 		cityName:                      String[26] readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:52:33.107;
 		code:                          String[4] readonly, number = 1, ordinal = 1;
@@ -33,9 +39,9 @@ typeDefinitions
 	jadeMethodDefinitions
 		setPropertiesOnCreate(
 			pCode: String; 
-			pCityName: String; 
-			pCityCode: String) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:17:11:45:29.424;
+			pCityCode: String; 
+			pCityName: String) updating, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:00:50.373;
 	)
 	Application completeDefinition
 	(
@@ -104,7 +110,9 @@ typeDefinitions
 	(
 	jadeMethodDefinitions
 		createAirport() number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:23:21:19:50.236;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:15:52.716;
+		createAirportFromFile() number = 1003;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:25:14.674;
 		createPassenger() number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:23:19:27:10.955;
 	)
@@ -202,6 +210,47 @@ typeDefinitions
 	(
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:31:11.724;
 	)
+	Collection completeDefinition
+	(
+	)
+	Btree completeDefinition
+	(
+	)
+	Dictionary completeDefinition
+	(
+	)
+	MemberKeyDictionary completeDefinition
+	(
+	)
+	AirportByCode completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:18:15.421;
+	)
+	Set completeDefinition
+	(
+	)
+	ObjectSet completeDefinition
+	(
+	)
+	AirportSet completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:13:18.001;
+	)
+	List completeDefinition
+	(
+	)
+	Array completeDefinition
+	(
+	)
+	AirportArray completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:14:31.354;
+	)
+memberKeyDefinitions
+	AirportByCode completeDefinition
+	(
+		code;
+	)
 databaseDefinitions
 	FlightBookingSchemaDb
 	(
@@ -212,6 +261,9 @@ databaseDefinitions
 	defaultFileDefinition "flightbook";
 	classMapDefinitions
 		Airport in "flightbook";
+		AirportArray in "flightbook";
+		AirportByCode in "flightbook";
+		AirportSet in "flightbook";
 		Flight in "flightbook";
 		FlightBookingSchema in "_usergui";
 		FlightPath in "flightbook";
@@ -226,7 +278,7 @@ typeSources
 	jadeMethodSources
 setPropertiesOnCreate
 {
-setPropertiesOnCreate(pCode : String ; pCityName : String ; pCityCode : String) updating;
+setPropertiesOnCreate(pCode : String ; pCityCode : String ; pCityName : String) updating;
 
 begin
 	self.code := pCode;
@@ -275,10 +327,46 @@ vars
 begin
 	beginTransaction;
 	create airport persistent;
-	airport.setPropertiesOnCreate("IVC", "Invercargill", "IVC");
+	airport.setPropertiesOnCreate("IVC", "IVC", "Invercargill");
 	create airport persistent;
-	airport.setPropertiesOnCreate("AKL", "Auckland", "AKL");
+	airport.setPropertiesOnCreate("AKL", "AKL", "Auckland");
 	commitTransaction;
+end;
+}
+createAirportFromFile
+{
+createAirportFromFile();
+
+vars
+	file : File;
+	str : String;
+	airport : Airport;
+	arr : AirportArray;
+	dict : AirportByCode;
+	set: AirportSet;
+begin
+	create file transient;
+	file.fileName := 'C:\Users\kaue0\.gitstuff\bit\606\project\airports.txt';
+	file.kind:= File.Kind_Unknown_Text;
+	beginTransaction;
+	create arr persistent;
+	create dict persistent;
+	create set persistent;
+	while not file.endOfFile() do
+		str := file.readLine();
+		create airport persistent;
+		airport.setPropertiesOnCreate (
+										str[1:4].trimBlanks(),
+										"AAA",
+										str[9:end].trimBlanks()
+										);
+		arr.add(airport);
+		dict.add(airport);
+		set.add(airport);
+	endwhile;
+	commitTransaction;
+epilog
+	delete file;
 end;
 }
 createPassenger
