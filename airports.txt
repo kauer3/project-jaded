@@ -1,0 +1,10 @@
+LAX LOS Los Angeles
+JFK NYC New York
+LHR LON London
+CDG PAR Paris
+NRT TYO Tokyo
+SYD SYD Sydney
+FRA FRA Frankfurt
+DUB DUB Dublin
+SIN SIN Singapore
+DXB DXB Dubai
