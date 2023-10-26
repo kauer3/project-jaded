@@ -112,7 +112,7 @@ typeDefinitions
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:15:52.716;
 		createAirportFromFile() number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:25:14.674;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:25:14:17:09.187;
 		createPassenger() number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:23:19:27:10.955;
 	)
@@ -224,7 +224,7 @@ typeDefinitions
 	)
 	AirportByCode completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:18:15.421;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:25:14:56:56.683;
 	)
 	Set completeDefinition
 	(
@@ -356,8 +356,8 @@ begin
 		str := file.readLine();
 		create airport persistent;
 		airport.setPropertiesOnCreate (
-										str[1:4].trimBlanks(),
-										"AAA",
+										str[1:3].trimBlanks(),
+										str[5:3].trimBlanks(),
 										str[9:end].trimBlanks()
 										);
 		arr.add(airport);
