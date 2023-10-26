@@ -112,9 +112,11 @@ typeDefinitions
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:15:52.716;
 		createAirportFromFile() number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:25:14:17:09.187;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:12:22:24.132;
 		createPassenger() number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:23:19:27:10.955;
+		removeAirportData() number = 1004;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:12:21:57.156;
 	)
 	Passenger completeDefinition
 	(
@@ -377,6 +379,16 @@ vars
 
 begin
 
+end;
+}
+removeAirportData
+{
+removeAirportData();
+
+begin
+	beginTransaction;
+	Airport.instances.purge();
+	commitTransaction;
 end;
 }
 	)
