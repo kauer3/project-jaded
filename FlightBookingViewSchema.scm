@@ -68,7 +68,7 @@ typeDefinitions
 	)
 	AirportDetails completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:14:54.334;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:03:55.187;
 	referenceDefinitions
 		btnCancel:                     Button  number = 8, ordinal = 8;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:22:43:47.911;
@@ -101,15 +101,15 @@ typeDefinitions
 		clearForm() number = 1008;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:44.108;
 		createAirport() number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:03:12:15.974;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:01:17.446;
 		keyDown(
 			keyCode: Integer io; 
 			shift: Integer) updating, number = 1006;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:03:27:59.977;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:05:06.459;
 		load() updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:55:49.303;
 		submitAirportDetails() updating, number = 1007;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:44.105;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:00:48.751;
 	eventMethodMappings
 		btnCancel_click = click of Button;
 		btnOk_click = click of Button;
@@ -143,7 +143,7 @@ typeDefinitions
 	)
 	PassengerDetails completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:05:51.151;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:02:19.388;
 	referenceDefinitions
 		address:                       Label  number = 5, ordinal = 5;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:18:42:09.250;
@@ -197,7 +197,7 @@ typeDefinitions
 		keyDown(
 			keyCode: Integer io; 
 			shift: Integer) updating, number = 1004;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:58:01.855;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:05:56.429;
 		submitPassengerDetails() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:23.684;
 	eventMethodMappings
@@ -275,10 +275,10 @@ keyDown
 {
 keyDown(keyCode: Integer io; shift: Integer) updating;
 
+vars
+
 begin
-	if keyCode = J_key_Enter then
-		self.submitAirportDetails();
-	endif;
+
 end;
 }
 load
@@ -301,7 +301,7 @@ begin
 	airpCode := self.txtCode.text.trimBlanks();
 	ctCode := self.txtCityCode.text.trimBlanks();
 	ctName := self.txtCityName.text.trimBlanks();
-	if not airpCode.length = 3 then
+	if airpCode.length <> 3 then
 		self.statusLine.caption := "Invalid airport code format.";
 		self.statusLine.visible := true;
 		self.txtCode.setFocus();
@@ -309,7 +309,7 @@ begin
 		self.statusLine.caption := "City Name field is required.";
 		self.statusLine.visible := true;
 		self.txtCityName.setFocus();
-	elseif not ctCode.length = 3 then
+	elseif ctCode.length <> 3 then
 		self.statusLine.caption := "Invalid city code format.";
 		self.statusLine.visible := true;
 		self.txtCityCode.setFocus();
@@ -416,10 +416,10 @@ keyDown
 {
 keyDown(keyCode: Integer io; shift: Integer) updating;
 
+vars
+
 begin
-	if keyCode = J_key_Enter then
-		self.submitPassengerDetails();
-	endif;
+
 end;
 }
 submitPassengerDetails

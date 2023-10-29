@@ -212,8 +212,8 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>8</tabIndex>
-				<tabStop>false</tabStop>
+				<tabIndex>5</tabIndex>
+				<tabStop>true</tabStop>
 				<tag/>
 				<top>218</top>
 				<userScript/>
@@ -233,7 +233,7 @@
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -273,8 +273,8 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>7</tabIndex>
-				<tabStop>false</tabStop>
+				<tabIndex>4</tabIndex>
+				<tabStop>true</tabStop>
 				<tag/>
 				<top>218</top>
 				<userScript/>
@@ -331,7 +331,7 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>6</tabIndex>
+				<tabIndex>8</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
 				<top>183</top>
@@ -389,7 +389,7 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>5</tabIndex>
+				<tabIndex>7</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
 				<top>134</top>
@@ -447,7 +447,7 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>4</tabIndex>
+				<tabIndex>6</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
 				<top>86</top>
@@ -948,7 +948,7 @@
 				<skinCategoryName/>
 				<style>0</style>
 				<tabIndex>11</tabIndex>
-				<tabStop>false</tabStop>
+				<tabStop>true</tabStop>
 				<tag/>
 				<top>245</top>
 				<userScript/>
@@ -968,7 +968,7 @@
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -1009,7 +1009,7 @@
 				<skinCategoryName/>
 				<style>0</style>
 				<tabIndex>10</tabIndex>
-				<tabStop>false</tabStop>
+				<tabStop>true</tabStop>
 				<tag/>
 				<top>245</top>
 				<userScript/>
