@@ -6,15 +6,15 @@ localeDefinitions
 	5129 "English (New Zealand)" schemaDefaultLocale;
 	setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:31:11.708;
 typeHeaders
-	Airport subclassOf Object highestSubId = 1, highestOrdinal = 4, number = 2048;
+	Airport subclassOf Object highestSubId = 1, highestOrdinal = 5, number = 2048;
 	FlightBookingSchema subclassOf RootSchemaApp transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, highestOrdinal = 1, number = 2050;
 	Flight subclassOf Object highestSubId = 1, highestOrdinal = 10, number = 2055;
-	FlightPath subclassOf Object highestOrdinal = 5, number = 2059;
+	FlightPath subclassOf Object highestOrdinal = 6, number = 2059;
 	GFlightBookingSchema subclassOf RootSchemaGlobal transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2070;
-	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 11, number = 2071;
-	Plane subclassOf Object highestOrdinal = 5, number = 2072;
-	Ticket subclassOf Object highestOrdinal = 9, number = 2073;
-	TravelStore subclassOf Object highestSubId = 1, highestOrdinal = 6, number = 2083;
+	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 12, number = 2071;
+	Plane subclassOf Object highestOrdinal = 6, number = 2072;
+	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
+	TravelStore subclassOf Object highestSubId = 6, highestOrdinal = 11, number = 2083;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
 	FlightById subclassOf MemberKeyDictionary loadFactor = 66, number = 2087;
@@ -50,12 +50,14 @@ typeDefinitions
 	referenceDefinitions
 		allFlightPaths:                FlightPathById   explicitInverse, readonly, subId = 1, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:43:03.524;
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 5, ordinal = 5;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:37:38.549;
 	jadeMethodDefinitions
 		setPropertiesOnCreate(
 			pCode: String; 
 			pCityCode: String; 
 			pCityName: String) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:11:00:50.373;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:15:08:51.360;
 	)
 	Application completeDefinition
 	(
@@ -96,7 +98,7 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:05:09:09.345;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:32:22.930;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:46:49.983;
 		setPropertiesOnCreate(
 			pDate: Date; 
 			pMyFlightPath: FlightPath; 
@@ -116,9 +118,11 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:41:59.243;
 		myDepartureAirport:            Airport   explicitEmbeddedInverse, readonly, number = 5, ordinal = 5;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:43:03.524;
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 2, ordinal = 6;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:36:18.441;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:56:12.701;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:46:42.305;
 		setPropertiesOnCreate(
 			pDepartureAirport: Airport; 
 			pMyArrivalAirport: Airport) updating, number = 1001;
@@ -142,9 +146,9 @@ typeDefinitions
 		createAirportFromFile() number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:24:53.189;
 		createFlight() number = 1013;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:45:36.481;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:23:15.457;
 		createFlightPath() number = 1006;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:50:13.516;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:09:59.675;
 		createFlightPathFromFile() number = 1011;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:28:37.391;
 		createPassenger() number = 1001;
@@ -191,9 +195,11 @@ typeDefinitions
 	referenceDefinitions
 		allTickets:                    TicketById   explicitInverse, readonly, subId = 1, number = 11, ordinal = 11;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 12, ordinal = 12;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:35:02.701;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:19:12.412;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:42:26.828;
 		setPropertiesOnCreate(
 			pAddress: String; 
 			pDateOfBirth: Date; 
@@ -220,9 +226,12 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:11:04.483;
 		type:                          String[41] readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:10:42.953;
+	referenceDefinitions
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 6, ordinal = 6;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:37:11.756;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:48:12.634;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:43:36.524;
 		setPropertiesOnCreate(
 			pType: String; 
 			pSize: String; 
@@ -249,9 +258,11 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:32.512;
 		myPassenger:                   Passenger   explicitEmbeddedInverse, readonly, number = 8, ordinal = 8;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 2, ordinal = 10;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:38:03.839;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:47:40.255;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:43:49.500;
 		setPropertiesOnCreate(
 			pMyFlight: Flight; 
 			pMyPassenger: Passenger; 
@@ -276,8 +287,18 @@ typeDefinitions
 		ticketId:                      Integer protected, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:46:03.480;
 	referenceDefinitions
+		allAirports:                   AirportByCode   explicitInverse, readonly, subId = 5, number = 10, ordinal = 10;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:37:38.547;
+		allFlightPaths:                FlightPathById   explicitInverse, readonly, subId = 3, number = 8, ordinal = 8;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:36:18.438;
 		allFlights:                    FlightById   explicitInverse, readonly, subId = 1, number = 6, ordinal = 6;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:05:09:09.342;
+		allPassengers:                 PassengerById   explicitInverse, readonly, subId = 2, number = 7, ordinal = 7;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:35:02.693;
+		allPlanes:                     PlaneById   explicitInverse, readonly, subId = 4, number = 9, ordinal = 9;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:37:11.752;
+		allTickets:                    TicketById   explicitInverse, readonly, subId = 6, number = 11, ordinal = 11;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:38:03.835;
 	jadeMethodDefinitions
 		nextFlightId(): Integer updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:31:15.951;
@@ -391,9 +412,14 @@ memberKeyDefinitions
 inverseDefinitions
 	allFlightPaths of Airport automatic parentOf myArrivalAirport of FlightPath manual;
 	allFlightPaths of Airport automatic parentOf myDepartureAirport of FlightPath manual;
+	allAirports of TravelStore automatic peerOf myTravelStore of Airport manual;
 	allTickets of Flight automatic parentOf myFlight of Ticket manual;
 	allFlights of TravelStore automatic peerOf myTravelStore of Flight manual;
+	allFlightPaths of TravelStore automatic peerOf myTravelStore of FlightPath manual;
 	allTickets of Passenger automatic parentOf myPassenger of Ticket manual;
+	allPassengers of TravelStore automatic peerOf myTravelStore of Passenger manual;
+	allPlanes of TravelStore automatic peerOf myTravelStore of Plane manual;
+	allTickets of TravelStore automatic peerOf myTravelStore of Ticket manual;
 
 databaseDefinitions
 	FlightBookingSchemaDb
@@ -434,6 +460,7 @@ begin
 	self.code := pCode;
 	self.cityCode := pCityCode;
 	self.cityName := pCityName;
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 	)
@@ -464,6 +491,7 @@ create() updating;
 
 begin
 	self.id := app.myTravelStore.nextFlightId();
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 setPropertiesOnCreate
@@ -487,6 +515,7 @@ create() updating;
 
 begin
 	self.id := app.myTravelStore.nextFlightPathId();
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 setPropertiesOnCreate
@@ -581,7 +610,7 @@ vars
 	dict : AirportByCode;
 begin
 	app.initialize();
-	dict := 
+	//dict := FlightById.firstInstance();
 	beginTransaction;
 	create flightPath persistent;
 	flightPath.setPropertiesOnCreate(dict.getAtKey("DBL"), dict.getAtKey("IVC"));
@@ -750,6 +779,7 @@ create() updating;
 
 begin
 	self.id := app.myTravelStore.nextPassId();
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 setPropertiesOnCreate
@@ -777,6 +807,7 @@ create() updating;
 
 begin
 	self.id := app.myTravelStore.nextPlaneId();
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 setPropertiesOnCreate
@@ -799,6 +830,7 @@ create() updating;
 
 begin
 	self.id := app.myTravelStore.nextTicketId();
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 setPropertiesOnCreate
