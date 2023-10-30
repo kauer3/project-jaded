@@ -15,6 +15,7 @@ typeHeaders
 	Plane subclassOf Object highestOrdinal = 6, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
 	TravelStore subclassOf Object highestSubId = 6, highestOrdinal = 11, number = 2083;
+	User subclassOf Object highestOrdinal = 2, number = 2091;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
 	FlightById subclassOf MemberKeyDictionary loadFactor = 66, number = 2087;
@@ -311,6 +312,15 @@ typeDefinitions
 		nextTicketId(): Integer updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:47:03.348;
 	)
+	User completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:21:42.250;
+	attributeDefinitions
+		password:                      String[31] protected, number = 2, ordinal = 2;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:24:06.588;
+		username:                      String[31] protected, number = 1, ordinal = 1;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:23:13.539;
+	)
 	WebSession completeDefinition
 	(
 	)
@@ -448,6 +458,7 @@ databaseDefinitions
 		Ticket in "flightbook";
 		TicketById in "flightbook";
 		TravelStore in "flightbook";
+		User in "flightbook";
 	)
 typeSources
 	Airport (
