@@ -6,15 +6,15 @@ localeDefinitions
 	5129 "English (New Zealand)" schemaDefaultLocale;
 	setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:31:11.708;
 typeHeaders
-	Airport subclassOf Object highestOrdinal = 3, number = 2048;
+	Airport subclassOf Object highestSubId = 1, highestOrdinal = 4, number = 2048;
 	FlightBookingSchema subclassOf RootSchemaApp transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, highestOrdinal = 1, number = 2050;
-	Flight subclassOf Object highestOrdinal = 6, number = 2055;
-	FlightPath subclassOf Object highestOrdinal = 3, number = 2059;
+	Flight subclassOf Object highestSubId = 1, highestOrdinal = 10, number = 2055;
+	FlightPath subclassOf Object highestOrdinal = 5, number = 2059;
 	GFlightBookingSchema subclassOf RootSchemaGlobal transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2070;
-	Passenger subclassOf Object highestOrdinal = 10, number = 2071;
+	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 11, number = 2071;
 	Plane subclassOf Object highestOrdinal = 5, number = 2072;
-	Ticket subclassOf Object highestOrdinal = 7, number = 2073;
-	TravelStore subclassOf Object highestOrdinal = 5, number = 2083;
+	Ticket subclassOf Object highestOrdinal = 9, number = 2073;
+	TravelStore subclassOf Object highestSubId = 1, highestOrdinal = 6, number = 2083;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
 	FlightById subclassOf MemberKeyDictionary loadFactor = 66, number = 2087;
@@ -47,6 +47,9 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:52:33.107;
 		code:                          String[4] readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:51:27.969;
+	referenceDefinitions
+		allFlightPaths:                FlightPathById   explicitInverse, readonly, subId = 1, number = 4, ordinal = 4;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:43:03.524;
 	jadeMethodDefinitions
 		setPropertiesOnCreate(
 			pCode: String; 
@@ -72,48 +75,54 @@ typeDefinitions
 	)
 	Flight completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:56:43.290;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:55:21.981;
 	attributeDefinitions
 		date:                          Date readonly, number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:57:29.526;
-		flightPath:                    Integer readonly, number = 5, ordinal = 5;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:58:44.715;
 		flightStatus:                  String[26] readonly, number = 6, ordinal = 6;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:59:31.988;
 		id:                            Integer readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:57:00.878;
-		plane:                         String[31] readonly, number = 4, ordinal = 4;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:58:29.533;
 		time:                          Time readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:57:18.116;
+	referenceDefinitions
+		allTickets:                    TicketById   explicitInverse, readonly, subId = 1, number = 4, ordinal = 9;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:32.512;
+		myFlightPath:                  FlightPath  readonly, number = 7, ordinal = 7;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:45:15.301;
+		myPlane:                       Plane  readonly, number = 5, ordinal = 8;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:55:16.152;
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 8, ordinal = 10;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:05:09:09.345;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:32:22.930;
 		setPropertiesOnCreate(
 			pDate: Date; 
-			pFlightPath: Integer; 
+			pMyFlightPath: FlightPath; 
 			pFlightStatus: String; 
-			pPlane: String; 
+			pMyPlane: Plane; 
 			pTime: Time) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:29:42.237;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:56:36.611;
 	)
 	FlightPath completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:53:42.277;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:43:03.524;
 	attributeDefinitions
-		arrivalAirport:                String[4] readonly, number = 3, ordinal = 3;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:56:23.693;
-		departureAirport:              String[4] readonly, number = 2, ordinal = 2;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:56:08.087;
 		id:                            Integer readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:55:27.519;
+	referenceDefinitions
+		myArrivalAirport:              Airport   explicitEmbeddedInverse, readonly, number = 4, ordinal = 4;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:41:59.243;
+		myDepartureAirport:            Airport   explicitEmbeddedInverse, readonly, number = 5, ordinal = 5;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:43:03.524;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:56:12.701;
 		setPropertiesOnCreate(
-			pDepartureAirport: String; 
-			pArrivalAirport: String) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:12:06.231;
+			pDepartureAirport: Airport; 
+			pMyArrivalAirport: Airport) updating, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:54:35.600;
 	)
 	Global completeDefinition
 	(
@@ -131,17 +140,19 @@ typeDefinitions
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:05:40.454;
 		createAirportFromFile() number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:28:30.653;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:24:53.189;
+		createFlight() number = 1013;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:45:36.481;
 		createFlightPath() number = 1006;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:56:38.256;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:50:13.516;
 		createFlightPathFromFile() number = 1011;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:23:28.580;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:28:37.391;
 		createPassenger() number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:20:56.139;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:51:43.294;
 		createPlane() number = 1008;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:01:46.014;
 		createPlaneFromFile() number = 1010;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:20:12:35.027;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:26:05.934;
 		openFileDialog(): String number = 1012;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:25:42.774;
 		removeAirportData() number = 1004;
@@ -177,6 +188,9 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:01:40.240;
 		title:                         String[31] readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:00:32.611;
+	referenceDefinitions
+		allTickets:                    TicketById   explicitInverse, readonly, subId = 1, number = 11, ordinal = 11;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:19:12.412;
@@ -218,33 +232,34 @@ typeDefinitions
 	)
 	Ticket completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:17:11:58:23.341;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:16:03.896;
 	attributeDefinitions
 		baggage:                       String[26] readonly, number = 5, ordinal = 5;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:09:28.214;
-		flightId:                      Integer readonly, number = 3, ordinal = 3;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:08:36.332;
 		id:                            Integer readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:07:26.520;
-		passengerId:                   Integer readonly, number = 2, ordinal = 2;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:08:08.045;
 		paymentStatus:                 String[26] readonly, number = 6, ordinal = 6;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:10:12.726;
 		price:                         Decimal[12] readonly, number = 7, ordinal = 7;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:10:35.330;
 		seatNumber:                    Integer readonly, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:17:12:12:00.511;
+	referenceDefinitions
+		myFlight:                      Flight   explicitEmbeddedInverse, readonly, number = 9, ordinal = 9;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:32.512;
+		myPassenger:                   Passenger   explicitEmbeddedInverse, readonly, number = 8, ordinal = 8;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
 	jadeMethodDefinitions
 		create() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:47:40.255;
 		setPropertiesOnCreate(
-			pFlightId: Integer; 
-			pPassengerId: Integer; 
+			pMyFlight: Flight; 
+			pMyPassenger: Passenger; 
 			pBaggage: String; 
 			pPrice: Decimal; 
 			pPaymentStatus: String; 
 			pSeatNumber: Integer) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:02:08:35.967;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:56.485;
 	)
 	TravelStore completeDefinition
 	(
@@ -260,6 +275,9 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:40:02.674;
 		ticketId:                      Integer protected, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:46:03.480;
+	referenceDefinitions
+		allFlights:                    FlightById   explicitInverse, readonly, subId = 1, number = 6, ordinal = 6;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:05:09:09.342;
 	jadeMethodDefinitions
 		nextFlightId(): Integer updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:31:15.951;
@@ -370,6 +388,13 @@ memberKeyDefinitions
 	(
 		id;
 	)
+inverseDefinitions
+	allFlightPaths of Airport automatic parentOf myArrivalAirport of FlightPath manual;
+	allFlightPaths of Airport automatic parentOf myDepartureAirport of FlightPath manual;
+	allTickets of Flight automatic parentOf myFlight of Ticket manual;
+	allFlights of TravelStore automatic peerOf myTravelStore of Flight manual;
+	allTickets of Passenger automatic parentOf myPassenger of Ticket manual;
+
 databaseDefinitions
 	FlightBookingSchemaDb
 	(
@@ -443,13 +468,13 @@ end;
 }
 setPropertiesOnCreate
 {
-setPropertiesOnCreate(pDate : Date; pFlightPath : Integer; pFlightStatus: String; pPlane: String; pTime: Time) updating;
+setPropertiesOnCreate(pDate : Date; pMyFlightPath : FlightPath; pFlightStatus: String; pMyPlane: Plane; pTime: Time) updating;
 
 begin
 	self.date := pDate;
-	self.flightPath := pFlightPath;
+	self.myFlightPath := pMyFlightPath;
 	self.flightStatus := pFlightStatus;
-	self.plane := pPlane;
+	self.myPlane := pMyPlane;
 	self.time := pTime;
 end;
 }
@@ -466,11 +491,11 @@ end;
 }
 setPropertiesOnCreate
 {
-setPropertiesOnCreate(pDepartureAirport, pArrivalAirport: String) updating;
+setPropertiesOnCreate(pDepartureAirport, pMyArrivalAirport: Airport) updating;
 
 begin
-	self.departureAirport := pDepartureAirport;
-	self.arrivalAirport := pArrivalAirport;
+	self.myDepartureAirport := pDepartureAirport;
+	self.myArrivalAirport := pMyArrivalAirport;
 end;
 }
 	)
@@ -505,8 +530,10 @@ vars
 begin
 	app.initialize();
 	create file transient;
-	file.fileName := 'C:\Users\kaue0\.gitstuff\jaded\airports.txt';
-	file.kind:= File.Kind_Unknown_Text;
+	file.fileName := self.openFileDialog();
+	if file.fileName = "" then
+		return;
+	endif;
 	beginTransaction;
 	create arr persistent;
 	create dict persistent;
@@ -514,11 +541,9 @@ begin
 	while not file.endOfFile() do
 		str := file.readLine();
 		create airport persistent;
-		airport.setPropertiesOnCreate (
-										str[1:3].trimBlanks(),
+		airport.setPropertiesOnCreate(str[1:3].trimBlanks(),
 										str[5:3].trimBlanks(),
-										str[9:end].trimBlanks()
-										);
+										str[9:end].trimBlanks());
 		arr.add(airport);
 		dict.add(airport);
 		set.add(airport);
@@ -528,17 +553,38 @@ epilog
 	delete file;
 end;
 }
+createFlight
+{
+createFlight();
+
+vars
+	flight : Flight;
+	flightPathDict : FlightPathById;
+	planeDict : PlaneById;
+	date : Date;
+	time : Time;
+begin
+	app.initialize();
+	date.setDate(27, 11, 2023);
+	beginTransaction;
+	create flight persistent;
+	flight.setPropertiesOnCreate(date, flightPathDict.getAtKey(200), "scheduled", planeDict.getAtKey(3), time + 1);
+	commitTransaction;
+end;
+}
 createFlightPath
 {
 createFlightPath();
 
 vars
 	flightPath : FlightPath;
+	dict : AirportByCode;
 begin
 	app.initialize();
+	dict := 
 	beginTransaction;
 	create flightPath persistent;
-	flightPath.setPropertiesOnCreate("DBL", "QST");
+	flightPath.setPropertiesOnCreate(dict.getAtKey("DBL"), dict.getAtKey("IVC"));
 	commitTransaction;
 end;
 }
@@ -563,7 +609,7 @@ begin
 	while not file.endOfFile() do
 		str := file.readLine();
 		create flightPath persistent;
-		flightPath.setPropertiesOnCreate(str[1:3], str[5:end]);
+		//flightPath.setPropertiesOnCreate(str[1:3], str[5:end]);
 		dict.add(flightPath);
 	endwhile;
 	commitTransaction;
@@ -580,8 +626,8 @@ vars
 	date : Date;
 begin
 	app.initialize;
-	beginTransaction;
 	date.setDate(06, 07, 1995);
+	beginTransaction;
 	create pass persistent;
 	pass.setPropertiesOnCreate("Invercargill 9812", date, "john@gmail.com", "John Full Name Johnson", "New Zealand", "92FI2000", "027 999 9129", "Mr", false);
 	commitTransaction;
@@ -613,8 +659,10 @@ vars
 begin
 	app.initialize();
 	create file transient;
-	file.fileName := 'C:\Users\kaue0\.gitstuff\jaded\planes.txt';
-	file.kind:= File.Kind_Unknown_Text;
+	file.fileName := self.openFileDialog();
+	if file.fileName = "" then
+		return;
+	endif;
 	beginTransaction;
 	create dict persistent;
 	while not file.endOfFile() do
@@ -755,11 +803,11 @@ end;
 }
 setPropertiesOnCreate
 {
-setPropertiesOnCreate(pFlightId: Integer; pPassengerId: Integer; pBaggage: String; pPrice: Decimal; pPaymentStatus: String; pSeatNumber: Integer) updating;
+setPropertiesOnCreate(pMyFlight: Flight; pMyPassenger: Passenger; pBaggage: String; pPrice: Decimal; pPaymentStatus: String; pSeatNumber: Integer) updating;
 
 begin
-	self.flightId := pFlightId;
-	self.passengerId := pPassengerId;
+	self.myFlight := pMyFlight;
+	self.myPassenger := pMyPassenger;
 	self.baggage := pBaggage;
 	self.price:= pPrice;
 	self.paymentStatus := pPaymentStatus;

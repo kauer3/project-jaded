@@ -10,6 +10,7 @@ typeHeaders
 	GFlightBookingViewSchema subclassOf GFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2079;
 	SFlightBookingViewSchema subclassOf SFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2080;
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
+	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 1, number = 2090;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 4, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
 membershipDefinitions
@@ -92,29 +93,49 @@ typeDefinitions
 		btnCancel_click(btn: Button input) updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:07:23.433;
 		btnOk_click(btn: Button input) updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:03:26:57.852;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:04:43.163;
 		btnOk_keyDown(
 			btn: Button input; 
 			keyCode: Integer io; 
 			shift: Integer) updating, number = 1005;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:03:21:11.009;
 		clearForm() number = 1008;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:44.108;
-		createAirport() number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:01:17.446;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:00:30.829;
+		createAirport() protected, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:13:01.502;
+		isDataValid(): Boolean protected, number = 1007;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:04:29.829;
 		keyDown(
 			keyCode: Integer io; 
 			shift: Integer) updating, number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:05:06.459;
 		load() updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:55:49.303;
-		submitAirportDetails() updating, number = 1007;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:00:48.751;
 	eventMethodMappings
 		btnCancel_click = click of Button;
 		btnOk_click = click of Button;
 		btnOk_keyDown = keyDown of Button;
 		keyDown = keyDown of Form;
+		load = load of Form;
+	)
+	FlightList completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:11:19:44.271;
+	referenceDefinitions
+		flightsTable:                  Table  number = 1, ordinal = 1;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
+	jadeMethodDefinitions
+		flightsTable_displayRow(
+			table: Table input; 
+			theSheet: Integer; 
+			obj: Object; 
+			theRow: Integer; 
+			bcontinue: Boolean io): String updating, number = 1002;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:11:18:43.155;
+		load() updating, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:13:46:00.013;
+	eventMethodMappings
+		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
 	)
 	MainMenu completeDefinition
@@ -189,17 +210,17 @@ typeDefinitions
 		btnCancel_click(btn: Button input) updating, number = 1005;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:21:19:18.721;
 		btnOk_click(btn: Button input) updating, number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:20:34:12.813;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:07:06.391;
 		clearForm() number = 1006;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:23.687;
-		createPassenger() number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:19:42.854;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:13:23.425;
+		createPassenger() protected, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:15:27.191;
+		isDataValid(): Boolean protected, number = 1002;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:07:59.508;
 		keyDown(
 			keyCode: Integer io; 
 			shift: Integer) updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:05:56.429;
-		submitPassengerDetails() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:15:23.684;
 	eventMethodMappings
 		btnCancel_click = click of Button;
 		btnOk_click = click of Button;
@@ -235,7 +256,11 @@ btnOk_click
 btnOk_click(btn: Button input) updating;
 
 begin
-	self.submitAirportDetails();
+	if self.isDataValid() then
+		self.createAirport();
+		self.clearForm();
+		self.statusLine.caption := "New airport created succesfully.";
+	endif;
 end;
 }
 btnOk_keyDown
@@ -256,19 +281,48 @@ begin
 	self.txtCode.text := "";
 	self.txtCityName.text := "";
 	self.txtCityCode.text := "";
+	self.txtCode.setFocus();
 end;
 }
 createAirport
 {
-createAirport();
+createAirport() protected;
 
 vars
 	airport : Airport;
 begin
 	beginTransaction;
 	create airport persistent;
-	airport.setPropertiesOnCreate(txtCode.text.trimBlanks(), txtCityCode.text.trimBlanks(), txtCityName.text.trimBlanks());
+	airport.setPropertiesOnCreate(self.txtCode.text.trimBlanks(),
+									self.txtCityCode.text.trimBlanks(),
+									self.txtCityName.text.trimBlanks());
 	commitTransaction;
+end;
+}
+isDataValid
+{
+isDataValid(): Boolean protected;
+
+vars
+	airpCode, ctCode, ctName : String;
+begin
+	airpCode := self.txtCode.text.trimBlanks();
+	ctCode := self.txtCityCode.text.trimBlanks();
+	ctName := self.txtCityName.text.trimBlanks();
+	if airpCode.length <> 3 then
+		self.statusLine.caption := "Invalid airport code format.";
+		self.txtCode.setFocus();
+		return false;
+	elseif ctName = "" then
+		self.statusLine.caption := "City Name field is required.";
+		self.txtCityName.setFocus();
+		return false;
+	elseif ctCode.length <> 3 then
+		self.statusLine.caption := "Invalid city code format.";
+		self.txtCityCode.setFocus();
+		return false;
+	endif;
+	return true;
 end;
 }
 keyDown
@@ -291,34 +345,30 @@ begin
 
 end;
 }
-submitAirportDetails
+	)
+	FlightList (
+	jadeMethodSources
+flightsTable_displayRow
 {
-submitAirportDetails() updating;
+flightsTable_displayRow(table: Table input; theSheet: Integer; obj: Object; theRow: Integer; bcontinue: Boolean io):String updating;
 
 vars
-	airpCode, ctCode, ctName : String;
+	flight: Flight;
 begin
-	airpCode := self.txtCode.text.trimBlanks();
-	ctCode := self.txtCityCode.text.trimBlanks();
-	ctName := self.txtCityName.text.trimBlanks();
-	if airpCode.length <> 3 then
-		self.statusLine.caption := "Invalid airport code format.";
-		self.statusLine.visible := true;
-		self.txtCode.setFocus();
-	elseif ctName = "" then
-		self.statusLine.caption := "City Name field is required.";
-		self.statusLine.visible := true;
-		self.txtCityName.setFocus();
-	elseif ctCode.length <> 3 then
-		self.statusLine.caption := "Invalid city code format.";
-		self.statusLine.visible := true;
-		self.txtCityCode.setFocus();
-	else
-		self.createAirport();
-		self.clearForm();
-		self.statusLine.caption := "New airport created succesfully.";
-		self.statusLine.visible := true;
-	endif;
+	flight := obj.Flight;
+	return "name" & Tab & "1" & Tab & "3" & Tab & "4" & Tab & "5";
+end;
+}
+load
+{
+load() updating;
+
+vars
+	//flightDict : FlightById;
+begin
+	//write TravelStore.firstInstance.allFlights;
+	self.flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Status" & Tab & "Flight Path" & Tab & "Plane");
+	self.flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
 end;
 }
 	)
@@ -371,7 +421,11 @@ btnOk_click
 btnOk_click(btn: Button input) updating;
 
 begin
-	self.submitPassengerDetails();
+	if self.isDataValid() then
+		self.createPassenger();
+		self.clearForm();
+		self.statusLine.caption := "New passenger created succesfully.";
+	endif;
 end;
 }
 clearForm
@@ -388,11 +442,12 @@ begin
 	self.txtNationality.text := "";
 	self.txtPassport.text := "";
 	self.checkBoxStaff.value := false;
+	self.txtFullName.setFocus();
 end;
 }
 createPassenger
 {
-createPassenger();
+createPassenger() protected;
 
 vars
 	passenger : Passenger;
@@ -400,16 +455,41 @@ begin
 	app.initialize;
 	beginTransaction;
 	create passenger persistent;
-	passenger.setPropertiesOnCreate(txtAddress.text.trimBlanks(),
-										txtDateOfBirth.text.asDate,
-										txtEmail.text.trimBlanks(),
-										txtFullName.text.trimBlanks(),
-										txtNationality.text.trimBlanks(),
-										txtPassport.text.trimBlanks(),
-										txtPhoneNumber.text.trimBlanks(),
-										txtTitle.text.trimBlanks(),
-										checkBoxStaff.value);
+	passenger.setPropertiesOnCreate(self.txtAddress.text.trimBlanks(),
+										self.txtDateOfBirth.text.asDate,
+										self.txtEmail.text.trimBlanks(),
+										self.txtFullName.text.trimBlanks(),
+										self.txtNationality.text.trimBlanks(),
+										self.txtPassport.text.trimBlanks(),
+										self.txtPhoneNumber.text.trimBlanks(),
+										self.txtTitle.text.trimBlanks(),
+										self.checkBoxStaff.value);
 	commitTransaction;
+end;
+}
+isDataValid
+{
+isDataValid(): Boolean protected;
+
+begin
+	if self.txtFullName.text.trimBlanks() = "" then
+		self.statusLine.caption := "Field Full Name is required.";
+		self.txtFullName.setFocus();
+		return false;
+	elseif self.txtTitle.text.trimBlanks() = "" then
+		self.statusLine.caption := "Field Title is required.";
+		self.txtTitle.setFocus();
+		return false;
+	elseif self.txtDateOfBirth.text.trimBlanks() = "" then
+		self.statusLine.caption := "Field Date Of Birth is required.";
+		self.txtDateOfBirth.setFocus();
+		return false;
+	elseif not self.txtDateOfBirth.text.Date.isValid then
+		self.statusLine.caption := "Invalid date of birth.";
+		self.txtDateOfBirth.setFocus();
+		return false;
+	endif;
+	return true;
 end;
 }
 keyDown
@@ -420,35 +500,6 @@ vars
 
 begin
 
-end;
-}
-submitPassengerDetails
-{
-submitPassengerDetails() updating;
-
-begin
-	if self.txtFullName.text.trimBlanks() = "" then
-		self.statusLine.caption := "Field Full Name is required.";
-		self.statusLine.visible := true;
-		self.txtFullName.setFocus();
-	elseif self.txtTitle.text.trimBlanks() = "" then
-		self.statusLine.caption := "Field Title is required.";
-		self.statusLine.visible := true;
-		self.txtTitle.setFocus();
-	elseif self.txtDateOfBirth.text.trimBlanks() = "" then
-		self.statusLine.caption := "Field Date Of Birth is required.";
-		self.statusLine.visible := true;
-		self.txtDateOfBirth.setFocus();
-	elseif not self.txtDateOfBirth.text.Date.isValid then
-		self.statusLine.caption := "Invalid date of birth.";
-		self.statusLine.visible := true;
-		self.txtDateOfBirth.setFocus();
-	else
-		self.createPassenger();
-		self.clearForm();
-		self.statusLine.caption := "New passenger created succesfully.";
-		self.statusLine.visible := true;
-	endif;
 end;
 }
 	)
