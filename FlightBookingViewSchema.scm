@@ -120,7 +120,7 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:40:08.002;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:21:39.781;
 	referenceDefinitions
 		flightsTable:                  Table  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
@@ -131,9 +131,9 @@ typeDefinitions
 			obj: Object; 
 			theRow: Integer; 
 			bcontinue: Boolean io): String updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:38:35.304;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:03:56:42.298;
 		load() updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:36:12.374;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:03:58:13.342;
 	eventMethodMappings
 		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
@@ -354,9 +354,19 @@ flightsTable_displayRow(table: Table input; theSheet: Integer; obj: Object; theR
 
 vars
 	flight: Flight;
+	//flightPath : FlightPath;
+	arrivalAirport, departureAirport : Airport;
 begin
 	flight := obj.Flight;
-	return flight.flightStatus & Tab & "1" & Tab & "3" & Tab & "4" & Tab & "5";
+	//flightPath := flight.myFlightPath;
+	arrivalAirport := flight.myFlightPath.myArrivalAirport;
+	departureAirport := flight.myFlightPath.myDepartureAirport;
+	return flight.date.format("d/M/yy")
+	& Tab & flight.time.format("HH:mm")
+	& Tab &	arrivalAirport.code & " " & arrivalAirport.cityName 
+	& Tab &	departureAirport.code & " " & departureAirport.cityName
+	& Tab &	flight.flightStatus
+	& Tab &	flight.myPlane.type;
 end;
 }
 load
@@ -366,8 +376,7 @@ load() updating;
 vars
 	//flightDict : FlightById;
 begin
-	//write TravelStore.firstInstance.allFlights;
-	flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Status" & Tab & "Flight Path" & Tab & "Plane");
+	flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Departure" & Tab & "Destination" & Tab & "Status" & Tab & "Plane");
 	flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
 end;
 }

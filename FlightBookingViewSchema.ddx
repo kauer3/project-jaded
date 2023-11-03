@@ -682,15 +682,15 @@
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
 		<caption>FlightList</caption>
-		<clientHeight>350</clientHeight>
-		<clientWidth>407</clientWidth>
+		<clientHeight>583</clientHeight>
+		<clientWidth>653</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
 		<description/>
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>389</height>
+		<height>622</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
@@ -730,7 +730,7 @@
 		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
 		<webEncodingType/>
 		<webFileName/>
-		<width>423</width>
+		<width>669</width>
 		<windowState>0</windowState>
 		<controlList>
 			<Table name="flightsTable">
@@ -743,7 +743,7 @@
 				<borderColorSingle>0</borderColorSingle>
 				<borderStyle>1</borderStyle>
 				<bubbleHelp/>
-				<columns>5</columns>
+				<columns>6</columns>
 				<defaultRowHeight>20</defaultRowHeight>
 				<description/>
 				<disableReason/>
@@ -751,10 +751,10 @@
 				<dragCursor/>
 				<dropDown>0</dropDown>
 				<enabled>true</enabled>
-				<expandedHeight>353</expandedHeight>
+				<expandedHeight>479</expandedHeight>
 				<fixed3D>true</fixed3D>
 				<fixedColumns>0</fixedColumns>
-				<fixedRows>5</fixedRows>
+				<fixedRows>1</fixedRows>
 				<focusBackColor>0</focusBackColor>
 				<focusForeColor>0</focusForeColor>
 				<fontBold>false</fontBold>
@@ -767,19 +767,19 @@
 				<form name="FlightList" />
 				<gridColor>-2147483632</gridColor>
 				<gridLines>true</gridLines>
-				<height>353</height>
+				<height>479</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>0</left>
+				<left>45</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>flightsTable</name>
 				<parent name="FlightList" />
-				<parentAspect>0</parentAspect>
-				<parentBottomOffset>-3</parentBottomOffset>
-				<parentRightOffset>0</parentRightOffset>
+				<parentAspect>3</parentAspect>
+				<parentBottomOffset>25</parentBottomOffset>
+				<parentRightOffset>45</parentRightOffset>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -801,10 +801,10 @@
 				<tabKey>0</tabKey>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>0</top>
+				<top>79</top>
 				<userScript/>
 				<visible>true</visible>
-				<width>407</width>
+				<width>563</width>
 			</Table>
 		</controlList>
 		<menuList>
