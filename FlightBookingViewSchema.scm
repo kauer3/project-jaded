@@ -120,7 +120,7 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:11:19:44.271;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:40:08.002;
 	referenceDefinitions
 		flightsTable:                  Table  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
@@ -131,9 +131,9 @@ typeDefinitions
 			obj: Object; 
 			theRow: Integer; 
 			bcontinue: Boolean io): String updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:11:18:43.155;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:38:35.304;
 		load() updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:13:46:00.013;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:36:12.374;
 	eventMethodMappings
 		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
@@ -356,7 +356,7 @@ vars
 	flight: Flight;
 begin
 	flight := obj.Flight;
-	return "name" & Tab & "1" & Tab & "3" & Tab & "4" & Tab & "5";
+	return flight.flightStatus & Tab & "1" & Tab & "3" & Tab & "4" & Tab & "5";
 end;
 }
 load
@@ -367,8 +367,8 @@ vars
 	//flightDict : FlightById;
 begin
 	//write TravelStore.firstInstance.allFlights;
-	self.flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Status" & Tab & "Flight Path" & Tab & "Plane");
-	self.flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
+	flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Status" & Tab & "Flight Path" & Tab & "Plane");
+	flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
 end;
 }
 	)

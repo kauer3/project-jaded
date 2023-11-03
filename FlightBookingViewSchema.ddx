@@ -744,7 +744,7 @@
 				<borderStyle>1</borderStyle>
 				<bubbleHelp/>
 				<columns>5</columns>
-				<defaultRowHeight>0</defaultRowHeight>
+				<defaultRowHeight>20</defaultRowHeight>
 				<description/>
 				<disableReason/>
 				<displayHotKey>false</displayHotKey>
@@ -753,8 +753,8 @@
 				<enabled>true</enabled>
 				<expandedHeight>353</expandedHeight>
 				<fixed3D>true</fixed3D>
-				<fixedColumns>1</fixedColumns>
-				<fixedRows>2</fixedRows>
+				<fixedColumns>0</fixedColumns>
+				<fixedRows>5</fixedRows>
 				<focusBackColor>0</focusBackColor>
 				<focusForeColor>0</focusForeColor>
 				<fontBold>false</fontBold>
@@ -789,7 +789,7 @@
 				<scrollBars>3</scrollBars>
 				<securityLevelEnabled>0</securityLevelEnabled>
 				<securityLevelVisible>0</securityLevelVisible>
-				<selectMode>0</selectMode>
+				<selectMode>8</selectMode>
 				<sheets>1</sheets>
 				<show3D>3</show3D>
 				<showFocus>true</showFocus>
