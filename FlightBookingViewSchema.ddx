@@ -681,7 +681,7 @@
 		<backColor>-2147483633</backColor>
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
-		<caption>FlightList</caption>
+		<caption>Flight List</caption>
 		<clientHeight>583</clientHeight>
 		<clientWidth>653</clientWidth>
 		<clipControls>true</clipControls>
@@ -785,7 +785,7 @@
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
 				<relativeWidth>false</relativeWidth>
-				<rows>10</rows>
+				<rows>1</rows>
 				<scrollBars>3</scrollBars>
 				<securityLevelEnabled>0</securityLevelEnabled>
 				<securityLevelVisible>0</securityLevelVisible>

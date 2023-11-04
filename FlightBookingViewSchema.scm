@@ -120,7 +120,7 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:21:39.781;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:07:47.895;
 	referenceDefinitions
 		flightsTable:                  Table  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
@@ -131,7 +131,7 @@ typeDefinitions
 			obj: Object; 
 			theRow: Integer; 
 			bcontinue: Boolean io): String updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:03:56:42.298;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:03:09.496;
 		load() updating, number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:03:58:13.342;
 	eventMethodMappings
@@ -363,8 +363,8 @@ begin
 	departureAirport := flight.myFlightPath.myDepartureAirport;
 	return flight.date.format("d/M/yy")
 	& Tab & flight.time.format("HH:mm")
-	& Tab &	arrivalAirport.code & " " & arrivalAirport.cityName 
-	& Tab &	departureAirport.code & " " & departureAirport.cityName
+	& Tab &	arrivalAirport.code & " - " & arrivalAirport.cityName 
+	& Tab &	departureAirport.code & " - " & departureAirport.cityName
 	& Tab &	flight.flightStatus
 	& Tab &	flight.myPlane.type;
 end;
