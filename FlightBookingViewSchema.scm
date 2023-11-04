@@ -10,7 +10,7 @@ typeHeaders
 	GFlightBookingViewSchema subclassOf GFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2079;
 	SFlightBookingViewSchema subclassOf SFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2080;
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
-	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 1, number = 2090;
+	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 3, number = 2090;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 4, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
 membershipDefinitions
@@ -120,8 +120,12 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:07:47.895;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:55:51.380;
 	referenceDefinitions
+		btnDelete:                     Button  number = 3, ordinal = 3;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
+		btnEdit:                       Button  number = 2, ordinal = 2;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
 		flightsTable:                  Table  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
 	jadeMethodDefinitions

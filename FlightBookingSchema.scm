@@ -155,29 +155,29 @@ typeDefinitions
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:16:24:43.390;
 		createAirportFromFile() number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:16:20:35.392;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:24.249;
 		createAll() number = 1014;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:17:02:53.365;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:39:01.270;
 		createFlight() number = 1013;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:37:59.641;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:12:15.272;
 		createFlightFromFile() number = 1016;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:18:08:25.245;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:03:50.098;
 		createFlightPath() number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:30:48.808;
 		createFlightPathFromFile() number = 1011;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:18:06:08.353;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:02.679;
 		createPassenger() number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:51:43.294;
 		createPlane() number = 1008;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:42:37.815;
 		createPlaneFromFile() number = 1010;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:18:06:01.860;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:11.478;
 		openFileDialog(): String number = 1012;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:25:42.774;
 		removeAirportData() number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:37:11.944;
 		removeAll() number = 1015;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:18:05:42.444;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:11:43.369;
 		removeFlightPathData() number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:21:01:53.011;
 		removePassengerData() number = 1005;
@@ -612,7 +612,6 @@ vars
 	dict : AirportByCode;
 	set: AirportSet;
 begin
-	app.initialize();
 	create file transient;
 	file.fileName := self.openFileDialog();
 	if file.fileName = "" then
@@ -640,43 +639,13 @@ createAll
 {
 createAll();
 
-vars
-	//departureAirport, arrivalAirport : Airport;
-	//flightPath : FlightPath;
-	flightPathByAirports : FlightPathByAirports;
-	//plane : Plane;
-	flight : Flight;
-	airportDict : AirportByCode;
-	planeByType : PlaneByType;
-	//flightPathDict : FlightPathById;
-	//planeDict : PlaneById;
-	date : Date;
-	time : Time;
 begin
+	removeAll();
 	app.initialize();
-	
-	date.setDate(27, 11, 2023);
-	time.setTime(10, 10, 0, 0);
-	airportDict := app.myTravelStore.allAirports;
-	planeByType := app.myTravelStore.allPlanes;
-	flightPathByAirports := app.myTravelStore.allFlightPaths;
-	
-	beginTransaction;
-	
-	//departureAirport := create Airport("IVC", "IVC", "Invercargill") persistent;
-	//arrivalAirport := create Airport("AKL", "AKL", "Auckland") persistent;
-	//flightPath := create FlightPath(departureAirport, arrivalAirport) persistent;
-	//plane := create Plane("Boeing", "Large", "300", "1A-30F") persistent;
-	//flight := create Flight(date, flightPath, "scheduled", plane, time) persistent;
-	
-	//departureAirport := create Airport("CHC", "CHC", "Christchurch") persistent;
-	//arrivalAirport := create Airport("WLG", "WLG", "Wellington") persistent;
-	//flightPath := create FlightPath(airportDict.getAtKey("JFK"), airportDict.getAtKey("DUB")) persistent;
-	//plane := create Plane("Boeing", "Medium", "787", "1A-40F") persistent;
-	
-	flight := create Flight(date + 3, flightPathByAirports.getAtKey(airportDict.getAtKey("LAX"), airportDict.getAtKey("JFK")), "Scheduled", planeByType.getAtKey("Boeing 777"), time + 200 ) persistent;
-	
-	commitTransaction;
+	createAirportFromFile();
+	createPlaneFromFile();
+	createFlightPathFromFile();
+	createFlightFromFile();
 end;
 }
 createFlight
@@ -685,15 +654,13 @@ createFlight();
 
 vars
 	flight : Flight;
-	flightPathDict : FlightPathById;
-	planeDict : PlaneById;
-	date : Date;
-	time : Time;
+	flightPathByAirports : FlightPathByAirports;
+	airportByCode : AirportByCode;
+	planeByType : PlaneByType;
 begin
 	app.initialize();
-	date.setDate(27, 11, 2023);
 	beginTransaction;
-	flight := create Flight(date, flightPathDict.getAtKey(200), "Scheduled", planeDict.getAtKey(3), time + 1) persistent;
+	flight := create Flight("27/11/23".asDate, flightPathByAirports.getAtKey(airportByCode.getAtKey("LAX"), airportByCode.getAtKey("JFK")), "Scheduled", planeByType.getAtKey("Boeing 777"), "12:30".Time) persistent;
 	commitTransaction;
 end;
 }
@@ -704,42 +671,34 @@ createFlightFromFile();
 vars
 	file : File;
 	str : String;
-	time : Time;
-	//timeSplits : JadeRegexResult;
-	//splitPattern : JadeRegexPattern;
-	//flightPath : FlightPath;
 	flight : Flight;
 	airportByCode: AirportByCode;
 	planeByType : PlaneByType;
 	flighByDate : FlightByDate;
 	flighPathByAirports : FlightPathByAirports;
 begin
-	app.initialize();
 	create file transient;
 	file.fileName := self.openFileDialog();
 	if file.fileName = "" then
 		return;
 	endif;
+	
 	airportByCode := app.myTravelStore.allAirports;
 	flighPathByAirports := app.myTravelStore.allFlightPaths;
 	planeByType := app.myTravelStore.allPlanes;
-	//splitPattern.compile(":");
+
 	beginTransaction;
 	
 	create flighByDate persistent;
 	
 	while not file.endOfFile() do
 		str := file.readLine();
-		//splitPattern.split(str[18:5], timeSplits);
-		//time.setTime(timeSplits.at(1).value, timeSplits.at(2).value, 0, 0);
-		//time := str[18:5].Time;
 		flight := create Flight(str[1:8].asDate,
 								flighPathByAirports.getAtKey(airportByCode.getAtKey(str[10:3]), airportByCode.getAtKey(str[14:3])),
 								str[24:10].trimBlanks(),
 								planeByType.getAtKey(str[41:end].trimBlanks()),
 								str[18:5].Time) persistent;
 		flighByDate.add(flight);
-		//flighPathByAirports.add(flightPath);
 	endwhile;
 	
 	commitTransaction;
@@ -774,7 +733,6 @@ vars
 	flighPathById : FlightPathById;
 	flighPathByAirports : FlightPathByAirports;
 begin
-	app.initialize();
 	airportByCode := app.myTravelStore.allAirports;
 	create file transient;
 	file.fileName := self.openFileDialog();
@@ -837,7 +795,6 @@ vars
 	planeById : PlaneById;
 	planeByType : PlaneByType;
 begin
-	app.initialize();
 	create file transient;
 	file.fileName := self.openFileDialog();
 	if file.fileName = "" then

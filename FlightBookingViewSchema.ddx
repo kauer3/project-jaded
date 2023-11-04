@@ -683,7 +683,7 @@
 		<bubbleHelp/>
 		<caption>Flight List</caption>
 		<clientHeight>583</clientHeight>
-		<clientWidth>653</clientWidth>
+		<clientWidth>769</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
 		<description/>
@@ -730,9 +730,131 @@
 		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
 		<webEncodingType/>
 		<webFileName/>
-		<width>669</width>
+		<width>785</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Button name="btnDelete">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Delete</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="FlightList" />
+				<height>40</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>622</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnDelete</name>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>523</parentBottomOffset>
+				<parentRightOffset>45</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>3</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>20</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>102</width>
+			</Button>
+			<Button name="btnEdit">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Edit</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="FlightList" />
+				<height>40</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>499</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnEdit</name>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>523</parentBottomOffset>
+				<parentRightOffset>168</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>2</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>20</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>102</width>
+			</Button>
 			<Table name="flightsTable">
 				<allowDrag>0</allowDrag>
 				<allowResize>0</allowResize>
@@ -740,7 +862,7 @@
 				<backBrush/>
 				<backBrushStyle>0</backBrushStyle>
 				<backColor>-2147483643</backColor>
-				<borderColorSingle>0</borderColorSingle>
+				<borderColorSingle>-2147483632</borderColorSingle>
 				<borderStyle>1</borderStyle>
 				<bubbleHelp/>
 				<columns>6</columns>
@@ -752,7 +874,7 @@
 				<dropDown>0</dropDown>
 				<enabled>true</enabled>
 				<expandedHeight>479</expandedHeight>
-				<fixed3D>true</fixed3D>
+				<fixed3D>false</fixed3D>
 				<fixedColumns>0</fixedColumns>
 				<fixedRows>1</fixedRows>
 				<focusBackColor>0</focusBackColor>
@@ -804,7 +926,7 @@
 				<top>79</top>
 				<userScript/>
 				<visible>true</visible>
-				<width>563</width>
+				<width>679</width>
 			</Table>
 		</controlList>
 		<menuList>
