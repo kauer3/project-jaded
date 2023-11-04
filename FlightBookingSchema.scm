@@ -14,7 +14,7 @@ typeHeaders
 	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 12, number = 2071;
 	Plane subclassOf Object highestOrdinal = 7, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
-	TravelStore subclassOf Object highestSubId = 7, highestOrdinal = 15, number = 2083;
+	TravelStore subclassOf Object highestSubId = 7, highestOrdinal = 16, number = 2083;
 	User subclassOf Object highestOrdinal = 2, number = 2091;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
@@ -27,6 +27,7 @@ typeHeaders
 	TicketById subclassOf MemberKeyDictionary loadFactor = 66, number = 2088;
 	AirportSet subclassOf ObjectSet loadFactor = 66, number = 2075;
 	AirportArray subclassOf Array number = 2076;
+	FilteredFlights subclassOf Array number = 2098;
 membershipDefinitions
 	AirportByCode of Airport;
 	FlightByDate of Flight;
@@ -38,6 +39,7 @@ membershipDefinitions
 	TicketById of Ticket;
 	AirportSet of Airport;
 	AirportArray of Airport;
+	FilteredFlights of Flight;
 typeDefinitions
 	Object completeDefinition
 	(
@@ -103,7 +105,7 @@ typeDefinitions
 		myPlane:                       Plane  readonly, number = 5, ordinal = 8;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:02:55:16.152;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 8, ordinal = 10;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:05:09:09.345;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:42:29.903;
 	jadeMethodDefinitions
 		create(
 			pDate: Date; 
@@ -161,7 +163,7 @@ typeDefinitions
 		createFlight() number = 1013;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:12:15.272;
 		createFlightFromFile() number = 1016;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:03:50.098;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:56:45.928;
 		createFlightPath() number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:30:48.808;
 		createFlightPathFromFile() number = 1011;
@@ -320,6 +322,8 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:27:03.275;
 		allTickets:                    TicketById   explicitInverse, readonly, subId = 6, number = 11, ordinal = 11;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:38:03.835;
+		filteredFlights:               FilteredFlights   explicitInverse, readonly, subId = 7, number = 12, ordinal = 16;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:42:29.899;
 	jadeMethodDefinitions
 		nextFlightId(): Integer updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:31:15.951;
@@ -422,6 +426,10 @@ typeDefinitions
 	(
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:24:10:14:31.354;
 	)
+	FilteredFlights completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:39:17.829;
+	)
 memberKeyDefinitions
 	AirportByCode completeDefinition
 	(
@@ -460,6 +468,7 @@ inverseDefinitions
 	allAirports of TravelStore automatic peerOf myTravelStore of Airport manual;
 	allTickets of Flight automatic parentOf myFlight of Ticket manual;
 	allFlights of TravelStore automatic peerOf myTravelStore of Flight manual;
+	filteredFlights of TravelStore automatic peerOf myTravelStore of Flight manual;
 	allFlightPaths of TravelStore automatic peerOf myTravelStore of FlightPath manual;
 	allTickets of Passenger automatic parentOf myPassenger of Ticket manual;
 	allPassengers of TravelStore automatic peerOf myTravelStore of Passenger manual;
@@ -479,6 +488,7 @@ databaseDefinitions
 		AirportArray in "flightbook";
 		AirportByCode in "flightbook";
 		AirportSet in "flightbook";
+		FilteredFlights in "flightbook";
 		Flight in "flightbook";
 		FlightBookingSchema in "_usergui";
 		FlightByDate in "flightbook";
@@ -675,6 +685,7 @@ vars
 	airportByCode: AirportByCode;
 	planeByType : PlaneByType;
 	flighByDate : FlightByDate;
+	flightArray : FilteredFlights;
 	flighPathByAirports : FlightPathByAirports;
 begin
 	create file transient;
@@ -699,6 +710,7 @@ begin
 								planeByType.getAtKey(str[41:end].trimBlanks()),
 								str[18:5].Time) persistent;
 		flighByDate.add(flight);
+		flightArray.add(flight);
 	endwhile;
 	
 	commitTransaction;

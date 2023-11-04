@@ -10,7 +10,7 @@ typeHeaders
 	GFlightBookingViewSchema subclassOf GFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2079;
 	SFlightBookingViewSchema subclassOf SFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2080;
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
-	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 3, number = 2090;
+	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 8, number = 2090;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 4, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
 membershipDefinitions
@@ -120,15 +120,31 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:55:51.380;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:35:34.430;
 	referenceDefinitions
 		btnDelete:                     Button  number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
 		btnEdit:                       Button  number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
+		btnSearch:                     Button  number = 7, ordinal = 8;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:35:34.430;
 		flightsTable:                  Table  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:33:00.065;
+		searchArrival:                 TextBox  number = 6, ordinal = 7;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:24:26.123;
+		searchDate:                    TextBox  number = 4, ordinal = 5;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:24:26.122;
+		searchDeparture:               TextBox  number = 5, ordinal = 6;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:24:26.122;
 	jadeMethodDefinitions
+		btnSearch_click(btn: Button input) updating, number = 1003;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:52:00.958;
+		filterFlights(): FilteredFlights number = 1004;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:24:49.561;
+		filterFlightsByDate(
+			date: String; 
+			flightsArray: FilteredFlights): FilteredFlights number = 1005;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:50:40.900;
 		flightsTable_displayRow(
 			table: Table input; 
 			theSheet: Integer; 
@@ -137,8 +153,9 @@ typeDefinitions
 			bcontinue: Boolean io): String updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:03:09.496;
 		load() updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:03:58:13.342;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:08:43.299;
 	eventMethodMappings
+		btnSearch_click = click of Button;
 		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
 	)
@@ -352,6 +369,65 @@ end;
 	)
 	FlightList (
 	jadeMethodSources
+btnSearch_click
+{
+btnSearch_click(btn: Button input) updating;
+
+vars
+	filteredFlights : FilteredFlights;
+begin	
+	filteredFlights := filterFlights();
+	flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Departure" & Tab & "Destination" & Tab & "Status" & Tab & "Plane");
+	flightsTable.displayCollection(filteredFlights, true, Table.DisplayCollection_Forward, null);
+end;
+}
+filterFlights
+{
+filterFlights(): FilteredFlights;
+
+vars
+	//flightDict : FlightById;
+	filteredFlights, flightsArray : FilteredFlights;
+	//flight : Flight;
+begin
+	beginTransaction;
+	create filteredFlights persistent;
+	flightsArray := TravelStore.firstInstance.filteredFlights;
+	
+	filteredFlights := filterFlightsByDate(self.searchDate.text.trimBlanks(), flightsArray);
+
+	commitTransaction;
+	return filteredFlights;
+end;
+}
+filterFlightsByDate
+{
+filterFlightsByDate(date: String; flightsArray: FilteredFlights): FilteredFlights;
+
+vars
+	//flightDict : FlightById;
+	filteredFlights : FilteredFlights;
+	flight : Flight;
+begin
+	//beginTransaction;
+	create filteredFlights persistent;
+	
+	//flightsArray := TravelStore.firstInstance.filteredFlights;
+	
+	if date.asDate.isValid then
+		foreach flight in flightsArray where flight.date = date.asDate do
+			write flight.date;
+			filteredFlights.add(flight);
+		endforeach;
+		return filteredFlights;
+	else
+		return flightsArray;
+	endif;
+	//commitTransaction;
+epilog
+	delete filteredFlights;
+end;
+}
 flightsTable_displayRow
 {
 flightsTable_displayRow(table: Table input; theSheet: Integer; obj: Object; theRow: Integer; bcontinue: Boolean io):String updating;
@@ -378,10 +454,13 @@ load
 load() updating;
 
 vars
-	//flightDict : FlightById;
+	filteredFlights : FilteredFlights;
 begin
 	flightsTable.setCellText(1,1, "Date" & Tab & "Time" & Tab & "Departure" & Tab & "Destination" & Tab & "Status" & Tab & "Plane");
-	flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
+	
+	filteredFlights := filterFlights();
+	
+	flightsTable.displayCollection(filteredFlights, true, Table.DisplayCollection_Forward, null);
 end;
 }
 	)
