@@ -13,6 +13,7 @@ typeHeaders
 	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 8, number = 2090;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 4, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
+	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, number = 2052;
 membershipDefinitions
 typeDefinitions
 	Object completeDefinition
@@ -102,7 +103,7 @@ typeDefinitions
 		clearForm() number = 1008;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:00:30.829;
 		createAirport() protected, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:13:01.502;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:17:11.665;
 		isDataValid(): Boolean protected, number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:04:04:29.829;
 		keyDown(
@@ -247,6 +248,10 @@ typeDefinitions
 		btnOk_click = click of Button;
 		keyDown = keyDown of Form;
 	)
+	PassengerTicket completeDefinition
+	(
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:14:15:38.418;
+	)
 databaseDefinitions
 	FlightBookingViewSchemaDb
 	(
@@ -313,10 +318,10 @@ vars
 	airport : Airport;
 begin
 	beginTransaction;
-	create airport persistent;
-	airport.setPropertiesOnCreate(self.txtCode.text.trimBlanks(),
-									self.txtCityCode.text.trimBlanks(),
-									self.txtCityName.text.trimBlanks());
+	
+	airport := create Airport(self.txtCode.text.trimBlanks(),
+							  self.txtCityCode.text.trimBlanks(),
+							  self.txtCityName.text.trimBlanks()) persistent;
 	commitTransaction;
 end;
 }

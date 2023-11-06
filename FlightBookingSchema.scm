@@ -15,7 +15,7 @@ typeHeaders
 	Plane subclassOf Object highestOrdinal = 7, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
 	TravelStore subclassOf Object highestSubId = 7, highestOrdinal = 16, number = 2083;
-	User subclassOf Object highestOrdinal = 2, number = 2091;
+	User subclassOf Object highestOrdinal = 3, number = 2091;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
 	FlightByDate subclassOf MemberKeyDictionary loadFactor = 66, number = 2087;
@@ -25,6 +25,7 @@ typeHeaders
 	PlaneById subclassOf MemberKeyDictionary loadFactor = 66, number = 2084;
 	PlaneByType subclassOf MemberKeyDictionary loadFactor = 66, number = 2142;
 	TicketById subclassOf MemberKeyDictionary loadFactor = 66, number = 2088;
+	UsersByUsername subclassOf MemberKeyDictionary loadFactor = 66, number = 2049;
 	AirportSet subclassOf ObjectSet loadFactor = 66, number = 2075;
 	AirportArray subclassOf Array number = 2076;
 	FilteredFlights subclassOf Array number = 2098;
@@ -37,6 +38,7 @@ membershipDefinitions
 	PlaneById of Plane;
 	PlaneByType of Plane;
 	TicketById of Ticket;
+	UsersByUsername of User;
 	AirportSet of Airport;
 	AirportArray of Airport;
 	FilteredFlights of Flight;
@@ -154,6 +156,8 @@ typeDefinitions
 	JadeScript completeDefinition
 	(
 	jadeMethodDefinitions
+		createAdminUser() number = 1017;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:25:54.272;
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:16:24:43.390;
 		createAirportFromFile() number = 1003;
@@ -342,8 +346,16 @@ typeDefinitions
 	attributeDefinitions
 		password:                      String[31] protected, number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:24:06.588;
+		security:                      Integer protected, number = 3, ordinal = 3;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:17:54.509;
 		username:                      String[31] protected, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:23:13.539;
+	jadeMethodDefinitions
+		create(
+			pUsername: String; 
+			pPssword: String; 
+			pSecurity: Integer) updating, number = 1001;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:19:53.376;
 	)
 	WebSession completeDefinition
 	(
@@ -406,6 +418,10 @@ typeDefinitions
 	(
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:44:14.057;
 	)
+	UsersByUsername completeDefinition
+	(
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:34:50.939;
+	)
 	Set completeDefinition
 	(
 	)
@@ -464,6 +480,10 @@ memberKeyDefinitions
 	(
 		id;
 	)
+	UsersByUsername completeDefinition
+	(
+		username;
+	)
 inverseDefinitions
 	allAirports of TravelStore automatic peerOf myTravelStore of Airport manual;
 	allTickets of Flight automatic parentOf myFlight of Ticket manual;
@@ -506,6 +526,7 @@ databaseDefinitions
 		TicketById in "flightbook";
 		TravelStore in "flightbook";
 		User in "flightbook";
+		UsersByUsername in "flightbook";
 	)
 typeSources
 	Airport (
@@ -597,6 +618,18 @@ end;
 	)
 	JadeScript (
 	jadeMethodSources
+createAdminUser
+{
+createAdminUser();
+
+vars
+	user : User;
+begin
+	beginTransaction;
+	user := create User("Admin", "P@ssw0rd", 2) persistent;
+	commitTransaction;
+end;
+}
 createAirport
 {
 createAirport();
@@ -1040,6 +1073,19 @@ nextTicketId(): Integer updating;
 begin
 	self.ticketId := self.ticketId + 1;
 	return self.ticketId;
+end;
+}
+	)
+	User (
+	jadeMethodSources
+create
+{
+create(pUsername : String; pPssword : String; pSecurity : Integer) updating;
+
+begin
+	self.username := pUsername;
+	self.password := pPssword;
+	self.security := pSecurity;
 end;
 }
 	)
