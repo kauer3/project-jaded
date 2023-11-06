@@ -11,10 +11,10 @@ typeHeaders
 	SFlightBookingViewSchema subclassOf SFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2080;
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
 	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 8, number = 2090;
-	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 5, number = 2145;
+	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 5, number = 2093;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 6, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
-	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2148;
+	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2052;
 membershipDefinitions
 typeDefinitions
 	Object completeDefinition
@@ -46,12 +46,7 @@ typeDefinitions
 	)
 	GFlightBookingViewSchema completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:21:15:51.761;
-	jadeMethodDefinitions
-		getAndValidateUser(
-			usercode: String output; 
-			password: String output): Boolean number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:15:47:03.625;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:53:07.906;
 	)
 	WebSession completeDefinition
 	(
@@ -168,7 +163,7 @@ typeDefinitions
 	)
 	Logon completeDefinition
 	(
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:18:52:23.826;
 	referenceDefinitions
 		btnOK:                         Button  number = 5, ordinal = 5;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
@@ -180,6 +175,11 @@ typeDefinitions
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
 		txtUsername:                   TextBox  number = 1, ordinal = 1;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
+	jadeMethodDefinitions
+		btnOK_click(btn: Button input) updating, number = 1001;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:22:04:02.615;
+	eventMethodMappings
+		btnOK_click = click of Button;
 	)
 	MainMenu completeDefinition
 	(
@@ -198,15 +198,20 @@ typeDefinitions
 		mnuUser:                       MenuItem  number = 5, ordinal = 5;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:22:48.788;
 	jadeMethodDefinitions
+		getAndValidateUser() number = 1004;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:52:41.544;
 		load() updating, number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:40:54.123;
 		mnuAirportAdd_click(menuItem: MenuItem input) updating, number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:31:17.071;
+		mnuLogon_click(menuItem: MenuItem input) updating, number = 1005;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:54:38.075;
 		mnuPassengerAdd_click(menuItem: MenuItem input) updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:27:22.500;
 	eventMethodMappings
 		load = load of Form;
 		mnuAirportAdd_click = click of MenuItem;
+		mnuLogon_click = click of MenuItem;
 		mnuPassengerAdd_click = click of MenuItem;
 	)
 	PassengerDetails completeDefinition
@@ -330,33 +335,6 @@ databaseDefinitions
 		SFlightBookingViewSchema in "_environ";
 	)
 typeSources
-	GFlightBookingViewSchema (
-	jadeMethodSources
-getAndValidateUser
-{
-getAndValidateUser(usercode: String output; password: String output): Boolean;
-vars
-	form: Logon;
-	userByUsername : UserByUsername;
-	user : User;
-begin
-	// Skip authentication if application not Windows desktop-type
-	userByUsername := app.myTravelStore.allUsers;
-	if not app.applicationType = Application.ApplicationType_GUI then
-		return true;
-	endif;
-	create form transient;
-	user := userByUsername.getAtKey(form.txtPassword.text);
-	form.showModal();
-	if form.txtPassword.text = user.password then
-		return true;
-	else
-		app.msgBox("Incorrect password", "Logon Error", MsgBox_OK_Only);
-	return false;
-	endif;
-end;
-}
-	)
 	AirportDetails (
 	jadeMethodSources
 btnCancel_click
@@ -560,8 +538,55 @@ begin
 end;
 }
 	)
+	Logon (
+	jadeMethodSources
+btnOK_click
+{
+btnOK_click(btn: Button input) updating;
+
+vars
+	userByUsername : UserByUsername;
+	user : User;
+	form : Form;
+begin
+	form := app.getForm("MainMenu");
+	user := userByUsername.getAtKey('Admin');
+	if self.txtPassword.text = user.password then
+		app.userSecurityLevel := user.security;
+		app.myTravelStore.myUser := user;
+		form.refresh();
+		self.unloadForm();
+	else
+		app.msgBox("Incorrect password", "Logon Error", MsgBox_OK_Only);
+	endif;
+end;
+
+}
+	)
 	MainMenu (
 	jadeMethodSources
+getAndValidateUser
+{
+logonUser();
+
+vars
+	form : Logon;
+	userByUsername : UserByUsername;
+	user : User;
+begin
+	if not app.applicationType = Application.ApplicationType_GUI then 
+		
+	endif;
+	user := userByUsername.getAtKey(form.txtUsername.text);
+	create form transient;
+	form.showModal();
+	if form.txtPassword.text = user.password then
+		app.userSecurityLevel := user.security;
+	else
+		app.msgBox("Incorrect password", "Logon Error", MsgBox_OK_Only);
+	endif;
+end;
+}
 load
 {
 load() updating;
@@ -576,6 +601,17 @@ mnuAirportAdd_click(menuItem: MenuItem input) updating;
 
 vars
 	form : AirportDetails;
+begin
+	create form transient;
+	form.show();
+end;
+}
+mnuLogon_click
+{
+mnuLogon_click(menuItem: MenuItem input) updating;
+
+vars
+	form : Logon;
 begin
 	create form transient;
 	form.show();

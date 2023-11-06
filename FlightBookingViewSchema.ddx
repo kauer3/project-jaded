@@ -5,23 +5,23 @@
 		<__patchControlString/>
 		<_aboutFormName/>
 		<_defaultLocaleId>0</_defaultLocaleId>
-		<_modifiedBy/>
-		<_modifiedTimestamp/>
+		<_modifiedBy>Mr Laptop</_modifiedBy>
+		<_modifiedTimestamp>2023:11:06:20:47:27.746</_modifiedTimestamp>
 		<_patchVersion>0</_patchVersion>
-		<_startupFormName>AirportDetails</_startupFormName>
-		<_systemVersion/>
+		<_startupFormName>MainMenu</_startupFormName>
+		<_systemVersion>22.0.02</_systemVersion>
 		<aboutForm/>
 		<appVersion/>
 		<applicationType>G</applicationType>
-		<controlSpacing>0</controlSpacing>
+		<controlSpacing>4</controlSpacing>
 		<defaultApp>true</defaultApp>
 		<defaultMdi>false</defaultMdi>
 		<finalizeMethod/>
 		<fontBold>false</fontBold>
 		<fontName>Tahoma</fontName>
 		<fontSize>8.25</fontSize>
-		<formMargin>0</formMargin>
-		<heightSingleLineControl>0</heightSingleLineControl>
+		<formMargin>7</formMargin>
+		<heightSingleLineControl>14</heightSingleLineControl>
 		<helpFile/>
 		<icon/>
 		<initializeMethod/>
@@ -33,9 +33,9 @@
 		<useBorderStyleOnly>false</useBorderStyleOnly>
 		<webMinimumResponseTime>0</webMinimumResponseTime>
 		<threeDControls>
+			<GUIClass name="CheckBox" />
 			<GUIClass name="GroupBox" />
 			<GUIClass name="OptionButton" />
-			<GUIClass name="CheckBox" />
 		</threeDControls>
 	</Application>
 	<Form locale="5129" name="AirportDetails">
@@ -1371,7 +1371,7 @@
 				<parentAspect>0</parentAspect>
 				<parentBottomOffset>68</parentBottomOffset>
 				<parentRightOffset>31</parentRightOffset>
-				<passwordField>false</passwordField>
+				<passwordField>true</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
