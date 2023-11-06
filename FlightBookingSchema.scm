@@ -14,8 +14,8 @@ typeHeaders
 	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 12, number = 2071;
 	Plane subclassOf Object highestOrdinal = 7, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
-	TravelStore subclassOf Object highestSubId = 7, highestOrdinal = 16, number = 2083;
-	User subclassOf Object highestOrdinal = 3, number = 2091;
+	TravelStore subclassOf Object highestSubId = 8, highestOrdinal = 17, number = 2083;
+	User subclassOf Object highestOrdinal = 4, number = 2091;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
 	FlightByDate subclassOf MemberKeyDictionary loadFactor = 66, number = 2087;
@@ -25,7 +25,7 @@ typeHeaders
 	PlaneById subclassOf MemberKeyDictionary loadFactor = 66, number = 2084;
 	PlaneByType subclassOf MemberKeyDictionary loadFactor = 66, number = 2142;
 	TicketById subclassOf MemberKeyDictionary loadFactor = 66, number = 2088;
-	UsersByUsername subclassOf MemberKeyDictionary loadFactor = 66, number = 2049;
+	UserByUsername subclassOf MemberKeyDictionary loadFactor = 66, number = 2143;
 	AirportSet subclassOf ObjectSet loadFactor = 66, number = 2075;
 	AirportArray subclassOf Array number = 2076;
 	FilteredFlights subclassOf Array number = 2098;
@@ -38,7 +38,7 @@ membershipDefinitions
 	PlaneById of Plane;
 	PlaneByType of Plane;
 	TicketById of Ticket;
-	UsersByUsername of User;
+	UserByUsername of User;
 	AirportSet of Airport;
 	AirportArray of Airport;
 	FilteredFlights of Flight;
@@ -326,6 +326,8 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:27:03.275;
 		allTickets:                    TicketById   explicitInverse, readonly, subId = 6, number = 11, ordinal = 11;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:38:03.835;
+		allUsers:                      UserByUsername   explicitInverse, readonly, subId = 8, number = 13, ordinal = 17;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:15:06:24.936;
 		filteredFlights:               FilteredFlights   explicitInverse, readonly, subId = 7, number = 12, ordinal = 16;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:42:29.899;
 	jadeMethodDefinitions
@@ -350,6 +352,9 @@ typeDefinitions
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:17:54.509;
 		username:                      String[31] protected, number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:31:09:23:13.539;
+	referenceDefinitions
+		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 4, ordinal = 4;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:15:06:24.936;
 	jadeMethodDefinitions
 		create(
 			pUsername: String; 
@@ -418,9 +423,9 @@ typeDefinitions
 	(
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:44:14.057;
 	)
-	UsersByUsername completeDefinition
+	UserByUsername completeDefinition
 	(
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:13:34:50.939;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:14:45:15.331;
 	)
 	Set completeDefinition
 	(
@@ -480,7 +485,7 @@ memberKeyDefinitions
 	(
 		id;
 	)
-	UsersByUsername completeDefinition
+	UserByUsername completeDefinition
 	(
 		username;
 	)
@@ -494,6 +499,7 @@ inverseDefinitions
 	allPassengers of TravelStore automatic peerOf myTravelStore of Passenger manual;
 	allPlanes of TravelStore automatic peerOf myTravelStore of Plane manual;
 	allTickets of TravelStore automatic peerOf myTravelStore of Ticket manual;
+	allUsers of TravelStore peerOf myTravelStore of User;
 
 databaseDefinitions
 	FlightBookingSchemaDb
@@ -526,7 +532,7 @@ databaseDefinitions
 		TicketById in "flightbook";
 		TravelStore in "flightbook";
 		User in "flightbook";
-		UsersByUsername in "flightbook";
+		UserByUsername in "flightbook";
 	)
 typeSources
 	Airport (

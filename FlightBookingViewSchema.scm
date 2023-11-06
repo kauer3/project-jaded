@@ -11,10 +11,10 @@ typeHeaders
 	SFlightBookingViewSchema subclassOf SFlightBookingSchema transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2080;
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
 	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 8, number = 2090;
-	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 5, number = 2093;
+	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 5, number = 2145;
 	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 6, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
-	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2052;
+	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2148;
 membershipDefinitions
 typeDefinitions
 	Object completeDefinition
@@ -47,6 +47,11 @@ typeDefinitions
 	GFlightBookingViewSchema completeDefinition
 	(
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:21:15:51.761;
+	jadeMethodDefinitions
+		getAndValidateUser(
+			usercode: String output; 
+			password: String output): Boolean number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:15:47:03.625;
 	)
 	WebSession completeDefinition
 	(
@@ -325,6 +330,33 @@ databaseDefinitions
 		SFlightBookingViewSchema in "_environ";
 	)
 typeSources
+	GFlightBookingViewSchema (
+	jadeMethodSources
+getAndValidateUser
+{
+getAndValidateUser(usercode: String output; password: String output): Boolean;
+vars
+	form: Logon;
+	userByUsername : UserByUsername;
+	user : User;
+begin
+	// Skip authentication if application not Windows desktop-type
+	userByUsername := app.myTravelStore.allUsers;
+	if not app.applicationType = Application.ApplicationType_GUI then
+		return true;
+	endif;
+	create form transient;
+	user := userByUsername.getAtKey(form.txtPassword.text);
+	form.showModal();
+	if form.txtPassword.text = user.password then
+		return true;
+	else
+		app.msgBox("Incorrect password", "Logon Error", MsgBox_OK_Only);
+	return false;
+	endif;
+end;
+}
+	)
 	AirportDetails (
 	jadeMethodSources
 btnCancel_click
