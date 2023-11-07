@@ -12,12 +12,13 @@ typeHeaders
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
 	FlightDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, number = 2144;
 	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 8, number = 2090;
-	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 6, number = 2165;
-	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 7, number = 2082;
+	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 7, number = 2165;
+	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 10, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
-	AddPassengerDetails subclassOf PassengerDetails transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 2, number = 2148;
+	AddPassengerDetails subclassOf PassengerDetails transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 7, number = 2148;
 	EditPassengerDetails subclassOf PassengerDetails transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 2, number = 2145;
 	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2166;
+	Register subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2049;
 membershipDefinitions
 typeDefinitions
 	Object completeDefinition
@@ -134,7 +135,7 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:23:38:06.479;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:08:00:01:42.968;
 	referenceDefinitions
 		btnDelete:                     Button  number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
@@ -178,12 +179,14 @@ typeDefinitions
 	)
 	Logon completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:25:32.084;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:08:00:01:42.122;
 	referenceDefinitions
 		btnGuest:                      Button  number = 6, ordinal = 6;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:46:32.502;
 		btnOK:                         Button  number = 5, ordinal = 5;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
+		btnRegister:                   Button  number = 7, ordinal = 7;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:04:43.436;
 		label1:                        Label  number = 2, ordinal = 2;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:19:25.275;
 		label2:                        Label  number = 3, ordinal = 3;
@@ -197,19 +200,26 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:26:19.433;
 		btnOK_click(btn: Button input) updating, number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:13:05.992;
+		btnRegister_click(btn: Button input) updating, number = 1003;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:27:59.444;
 	eventMethodMappings
 		btnGuest_click = click of Button;
 		btnOK_click = click of Button;
+		btnRegister_click = click of Button;
 	)
 	MainMenu completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:06:31.702;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
 	referenceDefinitions
 		mnuAirport:                    MenuItem  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:29:02.473;
 		mnuAirportAdd:                 MenuItem  number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:29:02.474;
-		mnuLogon:                      MenuItem  number = 6, ordinal = 6;
+		mnuApplyTicket:                MenuItem  number = 9, ordinal = 9;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
+		mnuDisplayTicket:              MenuItem  number = 10, ordinal = 10;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
+		mnuLogoff:                     MenuItem  number = 6, ordinal = 6;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:22:48.788;
 		mnuPassangerEdit:              MenuItem  number = 7, ordinal = 7;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:06:31.702;
@@ -217,6 +227,8 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:25:08.148;
 		mnuPassengerAdd:               MenuItem  number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:25:08.149;
+		mnuTicket:                     MenuItem  number = 8, ordinal = 8;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
 		mnuUser:                       MenuItem  number = 5, ordinal = 5;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:22:48.788;
 	jadeMethodDefinitions
@@ -226,14 +238,14 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:10:41:20.130;
 		mnuAirportAdd_click(menuItem: MenuItem input) updating, number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:31:17.071;
-		mnuLogon_click(menuItem: MenuItem input) updating, number = 1005;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:54:38.075;
+		mnuLogoff_click(menuItem: MenuItem input) updating, number = 1005;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:49:48.848;
 		mnuPassengerAdd_click(menuItem: MenuItem input) updating, number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:27:22.500;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:42:23.941;
 	eventMethodMappings
 		load = load of Form;
 		mnuAirportAdd_click = click of MenuItem;
-		mnuLogon_click = click of MenuItem;
+		mnuLogoff_click = click of MenuItem;
 		mnuPassengerAdd_click = click of MenuItem;
 	)
 	PassengerDetails completeDefinition
@@ -295,19 +307,23 @@ typeDefinitions
 	)
 	AddPassengerDetails completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:31:39.497;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:08:00:01:40.972;
 	referenceDefinitions
-		okBtn:                         Button  number = 1, ordinal = 1;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:26:47.458;
+		btnOK:                         Button  number = 1, ordinal = 3;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:22:16.166;
+		label9:                        Label  number = 4, ordinal = 7;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:23:48:39.706;
 		staffCheckbox:                 CheckBox  number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:31:17.107;
+		txtUserName:                   TextBox  number = 3, ordinal = 6;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:23:48:39.705;
 	jadeMethodDefinitions
+		btnOK_click(btn: Button input) updating, number = 1002;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:23:50:06.805;
 		createPassenger() protected, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:35:17.892;
-		okBtn_click(btn: Button input) updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:27:11.810;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:23:55:16.730;
 	eventMethodMappings
-		okBtn_click = click of Button;
+		btnOK_click = click of Button;
 	)
 	EditPassengerDetails completeDefinition
 	(
@@ -365,6 +381,30 @@ typeDefinitions
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:20:00.540;
 		txtPassenger:                  Label  number = 4, ordinal = 4;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:20:00.540;
+	)
+	Register completeDefinition
+	(
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:30:33.192;
+	referenceDefinitions
+		btnOK:                         Button  number = 2, ordinal = 2;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:07:09.619;
+		label1:                        Label  number = 5, ordinal = 5;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:07:09.620;
+		label2:                        Label  number = 4, ordinal = 4;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:07:09.620;
+		label2_1:                      Label  number = 7, ordinal = 9;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:30:33.192;
+		txtPassword:                   TextBox  number = 3, ordinal = 3;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:07:09.620;
+		txtPassword2:                  TextBox  number = 1, ordinal = 8;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:30:33.192;
+		txtUsername:                   TextBox  number = 6, ordinal = 6;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:07:09.620;
+	jadeMethodDefinitions
+		btnOK_click(btn: Button input) updating, number = 1001;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:22:29:33.526;
+	eventMethodMappings
+		btnOK_click = click of Button;
 	)
 databaseDefinitions
 	FlightBookingViewSchemaDb
@@ -694,6 +734,19 @@ begin
 	endif;
 end;
 }
+btnRegister_click
+{
+btnRegister_click(btn: Button input) updating;
+
+vars
+	form : Register;
+begin
+	create form transient;
+	form.show();
+	self.unloadForm;
+	delete self;
+end;
+}
 	)
 	MainMenu (
 	jadeMethodSources
@@ -739,15 +792,20 @@ begin
 	form.show();
 end;
 }
-mnuLogon_click
+mnuLogoff_click
 {
-mnuLogon_click(menuItem: MenuItem input) updating;
+mnuLogoff_click(menuItem: MenuItem input) updating;
 
 vars
 	form : Logon;
 begin
+	beginTransaction;
+	app.myTravelStore.myUser := null;
+	app.userSecurityLevel := 0;
+	commitTransaction;
 	create form transient;
 	form.show();
+	self.unloadForm();
 end;
 }
 mnuPassengerAdd_click
@@ -755,7 +813,7 @@ mnuPassengerAdd_click
 mnuPassengerAdd_click(menuItem: MenuItem input) updating;
 
 vars
-	form : PassengerDetails;
+	form : AddPassengerDetails;
 begin
 	create form transient;
 	form.show();
@@ -828,14 +886,34 @@ end;
 	)
 	AddPassengerDetails (
 	jadeMethodSources
+btnOK_click
+{
+btnOK_click(btn: Button input) updating;
+
+vars
+
+begin
+	if self.txtUserName.text = "" then
+		app.msgBox("Username is Empty", "Passenger Error", MsgBox_OK_Only);
+	else
+		if self.isDataValid() then
+			self.createPassenger();
+			self.clearForm();
+			self.statusLine.caption := "New passenger created succesfully.";
+		endif;
+	endif;
+end;
+}
 createPassenger
 {
 createPassenger() protected;
 
 vars
 	passenger : Passenger;
+	userByUsername : UserByUsername;
 begin
 	app.initialize;
+	userByUsername := app.myTravelStore.allUsers;
 	beginTransaction;
 	create passenger persistent;
 	passenger.setPropertiesOnCreate(self.txtAddress.text.trimBlanks(),
@@ -847,19 +925,8 @@ begin
 										self.txtPhoneNumber.text.trimBlanks(),
 										self.txtTitle.text.trimBlanks(),
 										self.staffCheckbox.value);
+	passenger.myPassenger := userByUsername.getAtKey(self.txtUserName.text.trimBlanks());
 	commitTransaction;
-end;
-}
-okBtn_click
-{
-okBtn_click(btn: Button input) updating;
-
-begin
-	if self.isDataValid() then
-		self.createPassenger();
-		self.clearForm();
-		self.statusLine.caption := "New passenger created succesfully.";
-	endif;
 end;
 }
 	)
@@ -897,6 +964,42 @@ begin
 										self.txtTitle.text.trimBlanks(),
 										self.checkBoxStaff.value);
 	commitTransaction;
+end;
+}
+	)
+	Register (
+	jadeMethodSources
+btnOK_click
+{
+btnOK_click(btn: Button input) updating;
+
+vars
+	userByUsername : UserByUsername;
+	user : User;
+	form : Logon;
+begin
+	app.initialize();
+	if txtUsername.text = "" and txtPassword.text = "" then
+		app.msgBox("Username or Password empty", "Register Error", MsgBox_OK_Cancel);
+	else
+		userByUsername := app.myTravelStore.allUsers;
+		if userByUsername.getAtKey(txtUsername.text) = null then
+			if txtPassword.text = txtPassword2.text then
+				beginTransaction;
+				user := create User(txtUsername.text, txtPassword.text, 0);
+				create userByUsername persistent;
+				userByUsername.add(user);
+				commitTransaction;
+				create form transient;
+				form.show();
+				self.unloadForm();
+			else
+				app.msgBox("Password does not match!!!", "Register error", MsgBox_OK_Only);
+			endif;
+		else
+			app.msgBox("User already exists", "Register error", MsgBox_OK_Only);
+		endif;
+	endif;
 end;
 }
 	)
