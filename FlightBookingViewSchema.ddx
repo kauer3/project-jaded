@@ -674,6 +674,69 @@
 		<menuList>
 		</menuList>
 	</Form>
+	<Form locale="5129" name="FlightDetails">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>FlightDetails</caption>
+		<clientHeight>486</clientHeight>
+		<clientWidth>712</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>525</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>125</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>FlightDetails</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>84</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>728</width>
+		<windowState>0</windowState>
+		<controlList>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
 	<Form locale="5129" name="FlightList">
 		<allowDocking>0</allowDocking>
 		<backBrush/>
@@ -696,7 +759,7 @@
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>-175</left>
+		<left>209</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>false</mdiFrame>
@@ -722,7 +785,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>105</top>
+		<top>107</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -1228,7 +1291,7 @@
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>405</left>
+		<left>256</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>false</mdiFrame>
@@ -1254,7 +1317,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>62</top>
+		<top>102</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -1265,6 +1328,67 @@
 		<width>375</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Button name="btnGuest">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Log as guest</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="Logon" />
+				<height>24</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>114</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnGuest</name>
+				<parent name="Logon" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>24</parentBottomOffset>
+				<parentRightOffset>149</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>6</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>99</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>96</width>
+			</Button>
 			<Button name="btnOK">
 				<autoSize>1</autoSize>
 				<backBrush/>
@@ -1296,7 +1420,7 @@
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>218</left>
+				<left>232</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>btnOK</name>
@@ -1324,7 +1448,7 @@
 				<value>false</value>
 				<visible>true</visible>
 				<webFileName/>
-				<width>110</width>
+				<width>96</width>
 			</Button>
 			<TextBox name="txtPassword">
 				<alignment>0</alignment>
@@ -1741,8 +1865,33 @@
 				<level>2</level>
 				<name>mnuPassengerAdd</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>3</securityLevelEnabled>
+				<securityLevelVisible>3</securityLevelVisible>
+				<visible>true</visible>
+				<webFileName/>
+				<windowList>false</windowList>
+				<shortCutKey/>
+				<shortCutFlags/>
+			</MenuItem>
+			<MenuItem name="mnuPassangerEdit">
+				<backColor>0</backColor>
+				<caption>&amp;Edit</caption>
+				<checked>false</checked>
+				<commandId>0</commandId>
+				<description/>
+				<disableReason/>
+				<enabled>true</enabled>
+				<foreColor>0</foreColor>
+				<form name="MainMenu" />
+				<hasSubMenu>false</hasSubMenu>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<helpList>false</helpList>
+				<level>2</level>
+				<name>mnuPassangerEdit</name>
+				<picture/>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>1</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -1766,8 +1915,8 @@
 				<level>1</level>
 				<name>mnuAirport</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>4</securityLevelEnabled>
+				<securityLevelVisible>4</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -1791,8 +1940,8 @@
 				<level>2</level>
 				<name>mnuAirportAdd</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>4</securityLevelEnabled>
+				<securityLevelVisible>4</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -1823,7 +1972,7 @@
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>-1</left>
+		<left>350</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>false</mdiFrame>
@@ -1849,7 +1998,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>1</top>
+		<top>85</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -1912,67 +2061,6 @@
 				<skinCategoryName/>
 				<style>0</style>
 				<tabIndex>11</tabIndex>
-				<tabStop>true</tabStop>
-				<tag/>
-				<top>245</top>
-				<userScript/>
-				<value>false</value>
-				<visible>true</visible>
-				<webFileName/>
-				<width>140</width>
-			</Button>
-			<Button name="btnOk">
-				<autoSize>1</autoSize>
-				<backBrush/>
-				<backBrushStyle>0</backBrushStyle>
-				<backColor>-2147483633</backColor>
-				<borderColorSingle>0</borderColorSingle>
-				<borderStyle>0</borderStyle>
-				<bubbleHelp/>
-				<buttonPicture>0</buttonPicture>
-				<cancel>false</cancel>
-				<caption>OK</caption>
-				<default>true</default>
-				<description/>
-				<disableReason/>
-				<dragCursor/>
-				<enabled>true</enabled>
-				<focusBackColor>0</focusBackColor>
-				<focusForeColor>0</focusForeColor>
-				<fontBold>false</fontBold>
-				<fontItalic>false</fontItalic>
-				<fontName/>
-				<fontSize>8.25</fontSize>
-				<fontStrikethru>false</fontStrikethru>
-				<fontUnderline>false</fontUnderline>
-				<foreColor>-2147483630</foreColor>
-				<form name="PassengerDetails" />
-				<height>28</height>
-				<helpContextId>0</helpContextId>
-				<helpKeyword/>
-				<ignoreSkin>false</ignoreSkin>
-				<index>0</index>
-				<left>92</left>
-				<mouseCursor/>
-				<mousePointer>0</mousePointer>
-				<name>btnOk</name>
-				<parent name="PassengerDetails" />
-				<parentAspect>0</parentAspect>
-				<parentBottomOffset>27</parentBottomOffset>
-				<parentRightOffset>161</parentRightOffset>
-				<picture/>
-				<pictureDisabled/>
-				<pictureDown/>
-				<relativeHeight>false</relativeHeight>
-				<relativeLeft>false</relativeLeft>
-				<relativeTop>false</relativeTop>
-				<relativeWidth>false</relativeWidth>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
-				<show3D>3</show3D>
-				<skinCategoryName/>
-				<style>0</style>
-				<tabIndex>10</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<top>245</top>
@@ -3134,6 +3222,310 @@
 				<width>393</width>
 				<wordWrap>false</wordWrap>
 			</StatusLine>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
+	<Form locale="5129" name="AddPassengerDetails">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>AddPassengerDetails</caption>
+		<clientHeight>305</clientHeight>
+		<clientWidth>405</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>344</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>350</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>AddPassengerDetails</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>85</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>421</width>
+		<windowState>0</windowState>
+		<controlList>
+			<CheckBox name="staffCheckbox">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Staff</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddPassengerDetails" />
+				<height>17</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>12</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>staffCheckbox</name>
+				<parent name="AddPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>38</parentBottomOffset>
+				<parentRightOffset>351</parentRightOffset>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>3</securityLevelEnabled>
+				<securityLevelVisible>3</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>22</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>250</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<width>42</width>
+			</CheckBox>
+			<Button name="okBtn">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>OK</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="AddPassengerDetails" />
+				<height>28</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>90</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>okBtn</name>
+				<parent name="AddPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>32</parentBottomOffset>
+				<parentRightOffset>175</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>21</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>245</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>140</width>
+			</Button>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
+	<Form locale="5129" name="EditPassengerDetails">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>Edit Passenger Details</caption>
+		<clientHeight>311</clientHeight>
+		<clientWidth>405</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>350</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>83</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>EditPassengerDetails</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>27</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>421</width>
+		<windowState>0</windowState>
+		<controlList>
+			<Button name="okBtn">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>OK</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="EditPassengerDetails" />
+				<height>28</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>87</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>okBtn</name>
+				<parent name="EditPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>38</parentBottomOffset>
+				<parentRightOffset>178</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>21</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>245</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>140</width>
+			</Button>
 		</controlList>
 		<menuList>
 		</menuList>
