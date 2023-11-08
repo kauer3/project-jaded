@@ -11,10 +11,10 @@ typeHeaders
 	Flight subclassOf Object highestSubId = 1, highestOrdinal = 10, number = 2055;
 	FlightPath subclassOf Object highestOrdinal = 7, number = 2059;
 	GFlightBookingSchema subclassOf RootSchemaGlobal transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2070;
-	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 13, number = 2071;
+	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 14, number = 2071;
 	Plane subclassOf Object highestOrdinal = 7, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 10, number = 2073;
-	TravelStore subclassOf Object highestSubId = 8, highestOrdinal = 19, number = 2083;
+	TravelStore subclassOf Object highestSubId = 8, highestOrdinal = 20, number = 2083;
 	User subclassOf Object highestOrdinal = 7, number = 2091;
 	SFlightBookingSchema subclassOf RootSchemaSession transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2074;
 	AirportByCode subclassOf MemberKeyDictionary loadFactor = 66, number = 2077;
@@ -156,38 +156,38 @@ typeDefinitions
 	JadeScript completeDefinition
 	(
 	jadeMethodDefinitions
-		createAdminUser() number = 1017;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:14:59:02.115;
+		createAdmin() number = 1017;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:23:08:59.484;
 		createAirport() number = 1002;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:10:19:09.135;
 		createAirportFromFile() number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:24.249;
 		createAll() number = 1014;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:42:53.675;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:23:42:26.233;
 		createFlight() number = 1013;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:12:15.272;
 		createFlightFromFile() number = 1016;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:06:23:37:38.967;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:22:20:21.331;
 		createFlightPath() number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:30:48.808;
 		createFlightPathFromFile() number = 1011;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:02.679;
+		createManager() number = 1019;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:23:09:08.723;
 		createPassenger() number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:00:51:43.294;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:23:09:23.307;
 		createPlane() number = 1008;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:48:11.167;
 		createPlaneFromFile() number = 1010;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:11.478;
 		createTravelStore() number = 1018;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:10:21:10.919;
-		createUser() number = 1019;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:33:52.894;
 		openFileDialog(): String number = 1012;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:23:25:42.774;
 		removeAirportData() number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:37:11.944;
 		removeAll() number = 1015;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:09:42.682;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:23:42:21.681;
 		removeFlightPathData() number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:21:01:53.011;
 		removePassengerData() number = 1005;
@@ -197,7 +197,7 @@ typeDefinitions
 	)
 	Passenger completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:10:59:54.048;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:22:51:45.859;
 	attributeDefinitions
 		address:                       String[31] readonly, number = 8, ordinal = 8;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:03:05.829;
@@ -222,14 +222,10 @@ typeDefinitions
 	referenceDefinitions
 		allTickets:                    TicketById   explicitInverse, readonly, subId = 1, number = 11, ordinal = 11;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
-		myPassenger:                   User   explicitEmbeddedInverse, number = 13, ordinal = 13;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:31:33.395;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 12, ordinal = 12;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:35:02.701;
 	jadeMethodDefinitions
-		create() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:14:42:26.828;
-		setPropertiesOnCreate(
+		create(
 			pAddress: String; 
 			pDateOfBirth: Date; 
 			pEmail: String; 
@@ -238,8 +234,8 @@ typeDefinitions
 			pPassport: String; 
 			pPhoneNumber: String; 
 			pTitle: String; 
-			pStaff: Boolean) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:15:32:20.374;
+			pStaff: Boolean) updating, number = 1002;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:21:20:24.339;
 	)
 	Plane completeDefinition
 	(
@@ -307,7 +303,7 @@ typeDefinitions
 	)
 	TravelStore completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:15:46:17.282;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:22:14:55.138;
 	attributeDefinitions
 		flightId:                      Integer protected, number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:30:29.233;
@@ -319,6 +315,8 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:40:02.674;
 		ticketId:                      Integer protected, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:46:03.480;
+		userId:                        Integer protected, number = 16, ordinal = 20;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:22:06:01.634;
 	referenceDefinitions
 		admin:                         User  readonly, number = 15, ordinal = 19;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:11:08:14.091;
@@ -338,8 +336,6 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:58:10.609;
 		filteredFlights:               FilteredFlights   explicitInverse, readonly, subId = 7, number = 12, ordinal = 16;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:03:42:29.899;
-		myUser:                        User  number = 14, ordinal = 18;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:20:54:32.495;
 	jadeMethodDefinitions
 		createTravelStore() number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:10:21:15.547;
@@ -353,10 +349,12 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:18:40:50.827;
 		nextTicketId(): Integer updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:03:47:03.348;
+		nextUserId(): Integer updating, number = 1007;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:22:06:45.656;
 	)
 	User completeDefinition
 	(
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:20:54:00.323;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:21:59:21.885;
 	attributeDefinitions
 		password:                      String[31] readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:31:20.018;
@@ -365,16 +363,17 @@ typeDefinitions
 		username:                      String[31] readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:30:58.768;
 	referenceDefinitions
+		myPassenger:                   Passenger  readonly, number = 5, ordinal = 7;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:21:59:34.691;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:58:10.609;
-		myUser:                        Passenger   explicitEmbeddedInverse, readonly, number = 5, ordinal = 7;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:31:33.396;
 	jadeMethodDefinitions
 		create(
 			pUsername: String; 
 			pPssword: String; 
-			pSecurity: Integer) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:38:57.090;
+			pSecurity: Integer; 
+			pPassenger: Passenger) updating, number = 1001;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:21:58:59.014;
 		setPropertiesOnCreate(
 			pUsername: String; 
 			pPssword: String; 
@@ -515,7 +514,6 @@ inverseDefinitions
 	filteredFlights of TravelStore automatic peerOf myTravelStore of Flight manual;
 	allFlightPaths of TravelStore automatic peerOf myTravelStore of FlightPath manual;
 	allTickets of Passenger automatic parentOf myPassenger of Ticket manual;
-	myUser of User automatic parentOf myPassenger of Passenger manual;
 	allPassengers of TravelStore automatic peerOf myTravelStore of Passenger manual;
 	allPlanes of TravelStore automatic peerOf myTravelStore of Plane manual;
 	allTickets of TravelStore automatic peerOf myTravelStore of Ticket manual;
@@ -644,19 +642,20 @@ end;
 	)
 	JadeScript (
 	jadeMethodSources
-createAdminUser
+createAdmin
 {
-createAdminUser();
+createAdmin();
 
 vars
-	user : User;
-	dict : UserByUsername;
+	adminUser : User;
+	adminPass : Passenger;
+	userByUsername : UserByUsername;
 begin
 	app.initialize();
 	beginTransaction;
-	create dict persistent;
-	user := create User("admin", "admin", 4) persistent;
-	dict.add(user);
+	create userByUsername persistent;
+	adminUser := create User("admin", "admin", 4, null) persistent;
+	userByUsername.add(adminUser);
 	commitTransaction;
 end;
 }
@@ -718,6 +717,9 @@ createAll();
 begin
 	removeAll();
 	app.initialize();
+	createAdmin();
+	createManager();
+	createPassenger();
 	createAirportFromFile();
 	createPlaneFromFile();
 	createFlightPathFromFile();
@@ -835,19 +837,63 @@ epilog
 	delete file;
 end;
 }
+createManager
+{
+createManager();
+
+vars
+	managerUser : User;
+	managerPass : Passenger;
+	userByUsername : UserByUsername;
+	date : Date;
+begin
+	app.initialize();
+	beginTransaction;
+	
+	create userByUsername persistent;
+	
+	managerUser := create User("manager", "pass", 3, null) persistent;
+	userByUsername.add(managerUser);
+	
+	date.setDate(01, 01, 00);
+	managerPass := create Passenger("Invercargill 9810", date, "manager@travelstore.com", "Man Ager", "New Zealand", "923JH938", "027 999 9238", "Sr", true) persistent;
+	managerUser := create User("man", "pass", 3, managerPass) persistent;
+	userByUsername.add(managerUser);
+	
+	commitTransaction;
+end;
+}
 createPassenger
 {
 createPassenger();
 
 vars
 	pass : Passenger;
+	user : User;
+	userByUsername : UserByUsername;
 	date : Date;
 begin
 	app.initialize;
 	date.setDate(06, 07, 1995);
 	beginTransaction;
-	create pass persistent;
-	pass.setPropertiesOnCreate("Invercargill 9812", date, "john@gmail.com", "John Full Name Johnson", "New Zealand", "92FI2000", "027 999 9129", "Mr", false);
+	create userByUsername persistent;
+	
+	pass := create Passenger("Invercargill 9812", date, "john@gmail.com", "John Full Name Johnson", "New Zealand", "92FI2000", "027 999 8491", "Mr", false) persistent;
+	user := create User("john", "pass", 2, pass) persistent;
+	userByUsername.add(user);
+	
+	pass := create Passenger("Invercargill 9812", date, "user@gmail.com", "User Full Name", "New Zealand", "87GHIJ00", "027 999 7698", "Sr", false) persistent;
+	user := create User("user", "pass", 2, pass) persistent;
+	userByUsername.add(user);
+	
+	pass := create Passenger("Invercargill 9812", date, "marylee@gmail.com", "Mary Lee", "New Zealand", "564F1000", "027 999 0000", "Mrs", false) persistent;
+	user := create User("mary", "pass", 2, pass) persistent;
+	userByUsername.add(user);
+	
+	pass := create Passenger("Invercargill 9812", date, "mrmagoo@gmail.com", "Magoo Full Name", "New Zealand", "76FJ2000", "027 999 5671", "Mr", false) persistent;
+	user := create User("magoo", "pass", 2, pass) persistent;
+	userByUsername.add(user);
+	
 	commitTransaction;
 end;
 }
@@ -911,26 +957,6 @@ begin
 	commitTransaction;
 end;
 }
-createUser
-{
-createUser();
-
-vars
-	user : User;
-	dict : UserByUsername;
-begin
-	app.initialize();
-	beginTransaction;
-	//User.instances.purge();
-	//UserByUsername.instances.purge();
-	create dict persistent;
-	user := create User("user1", "password", 2) persistent;
-	dict.add(user);
-	user := create User("user", "pass", 2) persistent;
-	dict.add(user);
-	commitTransaction;
-end;
-}
 openFileDialog
 {
 openFileDialog() : String;
@@ -966,8 +992,6 @@ removeAll();
 
 begin
 	app.initialize();
-	write app.myTravelStore.allUsers.size;
-	write app.myTravelStore.allAirports.size;
 	beginTransaction;
 	Airport.instances.purge();
 	AirportByCode.instances.purge();
@@ -983,6 +1007,7 @@ begin
 	PlaneById.instances.purge();
 	User.instances.purge();
 	UserByUsername.instances.purge();
+	Passenger.instances.purge();
 	commitTransaction;
 end;
 }
@@ -1024,18 +1049,10 @@ end;
 	jadeMethodSources
 create
 {
-create() updating;
+create(pAddress : String; pDateOfBirth : Date; pEmail, pFullName, pNationality, pPassport, pPhoneNumber, pTitle : String; pStaff : Boolean) updating;
 
 begin
 	self.id := app.myTravelStore.nextPassId();
-	self.myTravelStore := app.myTravelStore;
-end;
-}
-setPropertiesOnCreate
-{
-setPropertiesOnCreate(pAddress : String; pDateOfBirth : Date; pEmail, pFullName, pNationality, pPassport, pPhoneNumber, pTitle : String; pStaff : Boolean) updating;
-
-begin
 	self.address := pAddress;
 	self.dateOfBirth := pDateOfBirth;
 	self.email := pEmail;
@@ -1045,6 +1062,7 @@ begin
 	self.phoneNumber := pPhoneNumber;
 	self.title := pTitle;
 	self.staff := pStaff;
+	self.myTravelStore := app.myTravelStore;
 end;
 }
 	)
@@ -1159,17 +1177,27 @@ begin
 	return self.ticketId;
 end;
 }
+nextUserId
+{
+nextUserId(): Integer updating;
+
+begin
+	self.userId := self.userId + 1;
+	return self.userId;
+end;
+}
 	)
 	User (
 	jadeMethodSources
 create
 {
-create(pUsername : String; pPssword : String; pSecurity : Integer) updating;
+create(pUsername : String; pPssword : String; pSecurity : Integer; pPassenger : Passenger) updating;
 
 begin
 	self.username := pUsername;
 	self.password := pPssword;
 	self.security := pSecurity;
+	self.myPassenger := pPassenger;
 	self.myTravelStore := app.myTravelStore;
 end;
 }
