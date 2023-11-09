@@ -5,10 +5,10 @@
 		<__patchControlString/>
 		<_aboutFormName/>
 		<_defaultLocaleId>0</_defaultLocaleId>
-		<_modifiedBy>Mr Laptop</_modifiedBy>
-		<_modifiedTimestamp>2023:11:06:20:47:27.746</_modifiedTimestamp>
+		<_modifiedBy>kaue</_modifiedBy>
+		<_modifiedTimestamp>2023:11:10:10:06:12.707</_modifiedTimestamp>
 		<_patchVersion>0</_patchVersion>
-		<_startupFormName>MainMenu</_startupFormName>
+		<_startupFormName>Logon</_startupFormName>
 		<_systemVersion>22.0.02</_systemVersion>
 		<aboutForm/>
 		<appVersion/>
@@ -170,7 +170,7 @@
 				<borderStyle>0</borderStyle>
 				<bubbleHelp/>
 				<buttonPicture>0</buttonPicture>
-				<cancel>false</cancel>
+				<cancel>true</cancel>
 				<caption>Cancel</caption>
 				<default>false</default>
 				<description/>
@@ -744,8 +744,8 @@
 		<backColor>-2147483633</backColor>
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
-		<caption>Flight List</caption>
-		<clientHeight>583</clientHeight>
+		<caption>Flights</caption>
+		<clientHeight>735</clientHeight>
 		<clientWidth>769</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
@@ -753,7 +753,7 @@
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>622</height>
+		<height>774</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
@@ -785,7 +785,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>82</top>
+		<top>26</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -796,7 +796,7 @@
 		<width>785</width>
 		<windowState>0</windowState>
 		<controlList>
-			<Button name="btnSearch">
+			<Button name="btnLogin">
 				<autoSize>1</autoSize>
 				<backBrush/>
 				<backBrushStyle>0</backBrushStyle>
@@ -806,7 +806,7 @@
 				<bubbleHelp/>
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
-				<caption>Search</caption>
+				<caption>Login</caption>
 				<default>false</default>
 				<description/>
 				<disableReason/>
@@ -822,19 +822,19 @@
 				<fontUnderline>false</fontUnderline>
 				<foreColor>-2147483630</foreColor>
 				<form name="FlightList" />
-				<height>40</height>
+				<height>36</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>375</left>
+				<left>609</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
-				<name>btnSearch</name>
+				<name>btnLogin</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>523</parentBottomOffset>
-				<parentRightOffset>292</parentRightOffset>
+				<parentBottomOffset>627</parentBottomOffset>
+				<parentRightOffset>45</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
 				<pictureDown/>
@@ -847,15 +847,372 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>7</tabIndex>
+				<tabIndex>14</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>20</top>
+				<top>72</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
 				<webFileName/>
-				<width>102</width>
+				<width>115</width>
+			</Button>
+			<Button name="btnMenu">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Main Menu</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="FlightList" />
+				<height>36</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>353</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnMenu</name>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>627</parentBottomOffset>
+				<parentRightOffset>301</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>6</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>72</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>115</width>
+			</Button>
+			<Label name="lblArrival">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Arrival:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="FlightList" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>249</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblArrival</name>
+				<noPrefix>false</noPrefix>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>707</parentBottomOffset>
+				<parentRightOffset>485</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>13</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>15</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>35</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblDeparture">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Departure:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="FlightList" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>147</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblDeparture</name>
+				<noPrefix>false</noPrefix>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>707</parentBottomOffset>
+				<parentRightOffset>569</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>12</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>15</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>53</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblDate">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Date:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="FlightList" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>45</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblDate</name>
+				<noPrefix>false</noPrefix>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>707</parentBottomOffset>
+				<parentRightOffset>697</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>11</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>15</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>27</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Button name="btnTickets">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>View Tickets</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="FlightList" />
+				<height>36</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>481</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnTickets</name>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>627</parentBottomOffset>
+				<parentRightOffset>173</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>7</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>72</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>115</width>
+			</Button>
+			<Button name="btnSearch">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Search</caption>
+				<default>true</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="FlightList" />
+				<height>36</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>45</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnSearch</name>
+				<parent name="FlightList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>627</parentBottomOffset>
+				<parentRightOffset>581</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>9</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>72</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>143</width>
 			</Button>
 			<TextBox name="searchArrival">
 				<alignment>0</alignment>
@@ -900,7 +1257,7 @@
 				<name>searchArrival</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>528</parentBottomOffset>
+				<parentBottomOffset>674</parentBottomOffset>
 				<parentRightOffset>429</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -916,12 +1273,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>6</tabIndex>
+				<tabIndex>3</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>5</textOffset>
-				<top>28</top>
+				<top>34</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -971,7 +1328,7 @@
 				<name>searchDeparture</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>528</parentBottomOffset>
+				<parentBottomOffset>674</parentBottomOffset>
 				<parentRightOffset>531</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -987,12 +1344,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>5</tabIndex>
+				<tabIndex>2</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>5</textOffset>
-				<top>28</top>
+				<top>34</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -1042,7 +1399,7 @@
 				<name>searchDate</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>528</parentBottomOffset>
+				<parentBottomOffset>674</parentBottomOffset>
 				<parentRightOffset>633</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -1058,12 +1415,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>4</tabIndex>
+				<tabIndex>1</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>5</textOffset>
-				<top>28</top>
+				<top>34</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -1074,7 +1431,7 @@
 				<autoSize>1</autoSize>
 				<backBrush/>
 				<backBrushStyle>0</backBrushStyle>
-				<backColor>-2147483633</backColor>
+				<backColor>255</backColor>
 				<borderColorSingle>0</borderColorSingle>
 				<borderStyle>0</borderStyle>
 				<bubbleHelp/>
@@ -1088,26 +1445,26 @@
 				<enabled>true</enabled>
 				<focusBackColor>0</focusBackColor>
 				<focusForeColor>0</focusForeColor>
-				<fontBold>false</fontBold>
+				<fontBold>true</fontBold>
 				<fontItalic>false</fontItalic>
-				<fontName/>
-				<fontSize>8.25</fontSize>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>12</fontSize>
 				<fontStrikethru>false</fontStrikethru>
 				<fontUnderline>false</fontUnderline>
-				<foreColor>-2147483630</foreColor>
+				<foreColor>16777215</foreColor>
 				<form name="FlightList" />
-				<height>40</height>
+				<height>36</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>622</left>
+				<left>609</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>btnDelete</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>523</parentBottomOffset>
+				<parentBottomOffset>627</parentBottomOffset>
 				<parentRightOffset>45</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
@@ -1116,22 +1473,22 @@
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
 				<relativeWidth>false</relativeWidth>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>3</securityLevelEnabled>
+				<securityLevelVisible>3</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>3</tabIndex>
+				<tabIndex>8</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>20</top>
+				<top>72</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
 				<webFileName/>
-				<width>102</width>
+				<width>115</width>
 			</Button>
-			<Button name="btnEdit">
+			<Button name="btnReset">
 				<autoSize>1</autoSize>
 				<backBrush/>
 				<backBrushStyle>0</backBrushStyle>
@@ -1140,8 +1497,8 @@
 				<borderStyle>0</borderStyle>
 				<bubbleHelp/>
 				<buttonPicture>0</buttonPicture>
-				<cancel>false</cancel>
-				<caption>Edit</caption>
+				<cancel>true</cancel>
+				<caption>Reset</caption>
 				<default>false</default>
 				<description/>
 				<disableReason/>
@@ -1157,19 +1514,19 @@
 				<fontUnderline>false</fontUnderline>
 				<foreColor>-2147483630</foreColor>
 				<form name="FlightList" />
-				<height>40</height>
+				<height>36</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>498</left>
+				<left>197</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
-				<name>btnEdit</name>
+				<name>btnReset</name>
 				<parent name="FlightList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>523</parentBottomOffset>
-				<parentRightOffset>169</parentRightOffset>
+				<parentBottomOffset>627</parentBottomOffset>
+				<parentRightOffset>429</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
 				<pictureDown/>
@@ -1182,15 +1539,15 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>2</tabIndex>
+				<tabIndex>5</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>20</top>
+				<top>72</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
 				<webFileName/>
-				<width>102</width>
+				<width>143</width>
 			</Button>
 			<Table name="flightsTable">
 				<allowDrag>0</allowDrag>
@@ -1210,7 +1567,7 @@
 				<dragCursor/>
 				<dropDown>0</dropDown>
 				<enabled>true</enabled>
-				<expandedHeight>479</expandedHeight>
+				<expandedHeight>575</expandedHeight>
 				<fixed3D>false</fixed3D>
 				<fixedColumns>0</fixedColumns>
 				<fixedRows>1</fixedRows>
@@ -1226,7 +1583,7 @@
 				<form name="FlightList" />
 				<gridColor>-2147483632</gridColor>
 				<gridLines>true</gridLines>
-				<height>479</height>
+				<height>575</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
@@ -1237,7 +1594,7 @@
 				<name>flightsTable</name>
 				<parent name="FlightList" />
 				<parentAspect>3</parentAspect>
-				<parentBottomOffset>25</parentBottomOffset>
+				<parentBottomOffset>37</parentBottomOffset>
 				<parentRightOffset>45</parentRightOffset>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -1256,11 +1613,11 @@
 				<stretch>1</stretch>
 				<tabActiveColor>-2147483633</tabActiveColor>
 				<tabInactiveColor>-2147483633</tabInactiveColor>
-				<tabIndex>1</tabIndex>
+				<tabIndex>10</tabIndex>
 				<tabKey>0</tabKey>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>79</top>
+				<top>123</top>
 				<userScript/>
 				<visible>true</visible>
 				<width>679</width>
@@ -1399,7 +1756,7 @@
 				<bubbleHelp/>
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
-				<caption>Log as guest</caption>
+				<caption>Login as Guest</caption>
 				<default>false</default>
 				<description/>
 				<disableReason/>
@@ -1461,7 +1818,7 @@
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -1780,22 +2137,22 @@
 		<backColor>-2147483633</backColor>
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
-		<caption>Main Menu</caption>
-		<clientHeight>434</clientHeight>
-		<clientWidth>587</clientWidth>
+		<caption>Travel Store</caption>
+		<clientHeight>578</clientHeight>
+		<clientWidth>933</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
 		<description/>
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>493</height>
+		<height>637</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>186</left>
+		<left>64</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>true</mdiFrame>
@@ -1829,9 +2186,67 @@
 		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
 		<webEncodingType/>
 		<webFileName/>
-		<width>603</width>
+		<width>949</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Label name="lblWelcome">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Welcome!</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>true</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Verdana</fontName>
+				<fontSize>27.75</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="MainMenu" />
+				<formatOut/>
+				<height>45</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>27</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblWelcome</name>
+				<noPrefix>false</noPrefix>
+				<parent name="MainMenu" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>461</parentBottomOffset>
+				<parentRightOffset>700</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>1</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>72</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>206</width>
+				<wordWrap>false</wordWrap>
+			</Label>
 		</controlList>
 		<menuList>
 			<MenuItem name="mnuUser">
@@ -2084,6 +2499,56 @@
 				<shortCutKey/>
 				<shortCutFlags/>
 			</MenuItem>
+			<MenuItem name="mnuFlights">
+				<backColor>0</backColor>
+				<caption>&amp;Flights</caption>
+				<checked>false</checked>
+				<commandId>0</commandId>
+				<description/>
+				<disableReason/>
+				<enabled>true</enabled>
+				<foreColor>0</foreColor>
+				<form name="MainMenu" />
+				<hasSubMenu>true</hasSubMenu>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<helpList>false</helpList>
+				<level>1</level>
+				<name>mnuFlights</name>
+				<picture/>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<visible>true</visible>
+				<webFileName/>
+				<windowList>false</windowList>
+				<shortCutKey/>
+				<shortCutFlags/>
+			</MenuItem>
+			<MenuItem name="mnuFlightsList">
+				<backColor>0</backColor>
+				<caption>&amp;List</caption>
+				<checked>false</checked>
+				<commandId>0</commandId>
+				<description/>
+				<disableReason/>
+				<enabled>true</enabled>
+				<foreColor>0</foreColor>
+				<form name="MainMenu" />
+				<hasSubMenu>false</hasSubMenu>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<helpList>false</helpList>
+				<level>2</level>
+				<name>mnuFlightsList</name>
+				<picture/>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<visible>true</visible>
+				<webFileName/>
+				<windowList>false</windowList>
+				<shortCutKey/>
+				<shortCutFlags/>
+			</MenuItem>
 		</menuList>
 	</Form>
 	<Form locale="5129" name="PassengerDetails">
@@ -2094,7 +2559,7 @@
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
 		<caption>PassengerDetails</caption>
-		<clientHeight>300</clientHeight>
+		<clientHeight>366</clientHeight>
 		<clientWidth>393</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
@@ -2102,7 +2567,7 @@
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>339</height>
+		<height>405</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
@@ -2134,7 +2599,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>85</top>
+		<top>19</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -2182,7 +2647,7 @@
 				<name>btnCancel</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>27</parentBottomOffset>
+				<parentBottomOffset>40</parentBottomOffset>
 				<parentRightOffset>11</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
@@ -2196,10 +2661,10 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>11</tabIndex>
+				<tabIndex>15</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>245</top>
+				<top>298</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
@@ -2237,15 +2702,15 @@
 				<hyperlink/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>202</left>
+				<left>287</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>passport</name>
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>98</parentBottomOffset>
-				<parentRightOffset>145</parentRightOffset>
+				<parentBottomOffset>111</parentBottomOffset>
+				<parentRightOffset>60</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -2254,10 +2719,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>20</tabIndex>
+				<tabIndex>57</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>189</top>
+				<top>242</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2300,15 +2765,15 @@
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
 				<integralHeight>false</integralHeight>
-				<left>202</left>
+				<left>287</left>
 				<maxLength>25</maxLength>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>txtPassport</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>71</parentBottomOffset>
-				<parentRightOffset>11</parentRightOffset>
+				<parentBottomOffset>84</parentBottomOffset>
+				<parentRightOffset>12</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -2323,17 +2788,17 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>8</tabIndex>
+				<tabIndex>10</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>208</top>
+				<top>261</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
 				<webInputType/>
-				<width>180</width>
+				<width>94</width>
 			</TextBox>
 			<Label name="phoneNumber">
 				<alignment>1</alignment>
@@ -2366,15 +2831,15 @@
 				<hyperlink/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>202</left>
+				<left>287</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>phoneNumber</name>
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>152</parentBottomOffset>
-				<parentRightOffset>117</parentRightOffset>
+				<parentBottomOffset>165</parentBottomOffset>
+				<parentRightOffset>32</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -2383,10 +2848,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>19</tabIndex>
+				<tabIndex>55</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>135</top>
+				<top>188</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2429,15 +2894,15 @@
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
 				<integralHeight>false</integralHeight>
-				<left>202</left>
+				<left>287</left>
 				<maxLength>25</maxLength>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>txtPhoneNumber</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>125</parentBottomOffset>
-				<parentRightOffset>11</parentRightOffset>
+				<parentBottomOffset>138</parentBottomOffset>
+				<parentRightOffset>12</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -2452,17 +2917,17 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>6</tabIndex>
+				<tabIndex>8</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>154</top>
+				<top>207</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
 				<webInputType/>
-				<width>180</width>
+				<width>94</width>
 			</TextBox>
 			<Label name="nationality">
 				<alignment>1</alignment>
@@ -2502,7 +2967,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>98</parentBottomOffset>
+				<parentBottomOffset>111</parentBottomOffset>
 				<parentRightOffset>326</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -2512,10 +2977,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>18</tabIndex>
+				<tabIndex>56</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>189</top>
+				<top>242</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2565,8 +3030,8 @@
 				<name>txtNationality</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>71</parentBottomOffset>
-				<parentRightOffset>201</parentRightOffset>
+				<parentBottomOffset>84</parentBottomOffset>
+				<parentRightOffset>127</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -2581,17 +3046,17 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>7</tabIndex>
+				<tabIndex>9</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>208</top>
+				<top>261</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
 				<webInputType/>
-				<width>180</width>
+				<width>254</width>
 			</TextBox>
 			<Label name="email">
 				<alignment>1</alignment>
@@ -2631,7 +3096,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>152</parentBottomOffset>
+				<parentBottomOffset>165</parentBottomOffset>
 				<parentRightOffset>353</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -2641,10 +3106,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>17</tabIndex>
+				<tabIndex>54</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>135</top>
+				<top>188</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2694,8 +3159,8 @@
 				<name>txtEmail</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>125</parentBottomOffset>
-				<parentRightOffset>201</parentRightOffset>
+				<parentBottomOffset>138</parentBottomOffset>
+				<parentRightOffset>127</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -2710,17 +3175,17 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>5</tabIndex>
+				<tabIndex>7</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>154</top>
+				<top>207</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
 				<webInputType/>
-				<width>180</width>
+				<width>254</width>
 			</TextBox>
 			<Label name="dateOfBirth">
 				<alignment>1</alignment>
@@ -2760,7 +3225,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>206</parentBottomOffset>
+				<parentBottomOffset>219</parentBottomOffset>
 				<parentRightOffset>39</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -2770,10 +3235,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>16</tabIndex>
+				<tabIndex>53</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>81</top>
+				<top>134</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2823,7 +3288,7 @@
 				<name>txtDateOfBirth</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>179</parentBottomOffset>
+				<parentBottomOffset>192</parentBottomOffset>
 				<parentRightOffset>12</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -2839,12 +3304,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>4</tabIndex>
+				<tabIndex>6</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>100</top>
+				<top>153</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -2889,7 +3354,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>260</parentBottomOffset>
+				<parentBottomOffset>273</parentBottomOffset>
 				<parentRightOffset>82</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -2899,10 +3364,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>15</tabIndex>
+				<tabIndex>51</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>27</top>
+				<top>80</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -2952,7 +3417,7 @@
 				<name>txtTitle</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>233</parentBottomOffset>
+				<parentBottomOffset>246</parentBottomOffset>
 				<parentRightOffset>12</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -2968,12 +3433,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>2</tabIndex>
+				<tabIndex>4</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>46</top>
+				<top>99</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -3018,7 +3483,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>206</parentBottomOffset>
+				<parentBottomOffset>219</parentBottomOffset>
 				<parentRightOffset>339</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -3028,10 +3493,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>14</tabIndex>
+				<tabIndex>52</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>81</top>
+				<top>134</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -3074,15 +3539,15 @@
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
 				<integralHeight>false</integralHeight>
-				<left>11</left>
+				<left>12</left>
 				<maxLength>30</maxLength>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>txtAddress</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>179</parentBottomOffset>
-				<parentRightOffset>128</parentRightOffset>
+				<parentBottomOffset>192</parentBottomOffset>
+				<parentRightOffset>127</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -3097,12 +3562,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>3</tabIndex>
+				<tabIndex>5</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>100</top>
+				<top>153</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -3147,7 +3612,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>260</parentBottomOffset>
+				<parentBottomOffset>273</parentBottomOffset>
 				<parentRightOffset>332</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -3157,10 +3622,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>13</tabIndex>
+				<tabIndex>50</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>27</top>
+				<top>80</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -3203,15 +3668,15 @@
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
 				<integralHeight>false</integralHeight>
-				<left>11</left>
+				<left>12</left>
 				<maxLength>30</maxLength>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>txtFullName</name>
 				<parent name="PassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>233</parentBottomOffset>
-				<parentRightOffset>128</parentRightOffset>
+				<parentBottomOffset>246</parentBottomOffset>
+				<parentRightOffset>127</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -3226,12 +3691,12 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>1</tabIndex>
+				<tabIndex>3</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
 				<textOffset>0</textOffset>
-				<top>46</top>
+				<top>99</top>
 				<userScript/>
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
@@ -3293,10 +3758,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>12</tabIndex>
+				<tabIndex>58</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>279</top>
+				<top>345</top>
 				<userScript/>
 				<visible>false</visible>
 				<width>393</width>
@@ -3314,15 +3779,15 @@
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
 		<caption>AddPassengerDetails</caption>
-		<clientHeight>315</clientHeight>
-		<clientWidth>557</clientWidth>
+		<clientHeight>360</clientHeight>
+		<clientWidth>394</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
 		<description/>
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>354</height>
+		<height>399</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
@@ -3362,9 +3827,138 @@
 		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
 		<webEncodingType/>
 		<webFileName/>
-		<width>573</width>
+		<width>410</width>
 		<windowState>0</windowState>
 		<controlList>
+			<TextBox name="txtPassword">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>0</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddPassengerDetails" />
+				<formatOut/>
+				<height>22</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>208</left>
+				<maxLength>0</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtPassword</name>
+				<parent name="AddPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>292</parentBottomOffset>
+				<parentRightOffset>13</parentRightOffset>
+				<passwordField>false</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>2</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>46</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>173</width>
+			</TextBox>
+			<Label name="lblPassword">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Password:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddPassengerDetails" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>208</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblPassword</name>
+				<noPrefix>false</noPrefix>
+				<parent name="AddPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>319</parentBottomOffset>
+				<parentRightOffset>136</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>49</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>28</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>50</width>
+				<wordWrap>false</wordWrap>
+			</Label>
 			<Label name="label9">
 				<alignment>1</alignment>
 				<autoSize>true</autoSize>
@@ -3396,15 +3990,15 @@
 				<hyperlink/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>407</left>
+				<left>11</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>label9</name>
 				<noPrefix>false</noPrefix>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>272</parentBottomOffset>
-				<parentRightOffset>98</parentRightOffset>
+				<parentBottomOffset>319</parentBottomOffset>
+				<parentRightOffset>331</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -3413,10 +4007,10 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>25</tabIndex>
+				<tabIndex>48</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>30</top>
+				<top>28</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
@@ -3450,7 +4044,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="AddPassengerDetails" />
 				<formatOut/>
-				<height>21</height>
+				<height>22</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hintBackColor>-2147483648</hintBackColor>
@@ -3459,15 +4053,15 @@
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
 				<integralHeight>false</integralHeight>
-				<left>394</left>
+				<left>11</left>
 				<maxLength>0</maxLength>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>txtUserName</name>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>248</parentBottomOffset>
-				<parentRightOffset>16</parentRightOffset>
+				<parentBottomOffset>292</parentBottomOffset>
+				<parentRightOffset>208</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
@@ -3482,7 +4076,7 @@
 				<selectionStyle>0</selectionStyle>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>24</tabIndex>
+				<tabIndex>1</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
 				<text/>
@@ -3492,7 +4086,7 @@
 				<visible>true</visible>
 				<wantReturn>false</wantReturn>
 				<webInputType/>
-				<width>147</width>
+				<width>175</width>
 			</TextBox>
 			<Button name="btnOK">
 				<autoSize>1</autoSize>
@@ -3505,7 +4099,7 @@
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -3525,14 +4119,14 @@
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>78</left>
+				<left>87</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>btnOK</name>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>42</parentBottomOffset>
-				<parentRightOffset>339</parentRightOffset>
+				<parentBottomOffset>34</parentBottomOffset>
+				<parentRightOffset>167</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
 				<pictureDown/>
@@ -3545,10 +4139,10 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>23</tabIndex>
+				<tabIndex>12</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>245</top>
+				<top>298</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
@@ -3590,8 +4184,8 @@
 				<name>managerCheckbox</name>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>48</parentBottomOffset>
-				<parentRightOffset>485</parentRightOffset>
+				<parentBottomOffset>40</parentBottomOffset>
+				<parentRightOffset>322</parentRightOffset>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -3601,10 +4195,10 @@
 				<securityLevelVisible>3</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>22</tabIndex>
+				<tabIndex>11</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>250</top>
+				<top>303</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<value>false</value>
@@ -3623,21 +4217,21 @@
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
 		<caption>Edit Passenger Details</caption>
-		<clientHeight>311</clientHeight>
-		<clientWidth>405</clientWidth>
+		<clientHeight>360</clientHeight>
+		<clientWidth>394</clientWidth>
 		<clipControls>true</clipControls>
 		<controlBox>true</controlBox>
 		<description/>
 		<disableReason/>
 		<dragCursor/>
 		<enabled>true</enabled>
-		<height>350</height>
+		<height>399</height>
 		<helpContextId>0</helpContextId>
 		<helpKeyword/>
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>83</left>
+		<left>307</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>false</mdiFrame>
@@ -3663,7 +4257,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>27</top>
+		<top>24</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -3671,7 +4265,7 @@
 		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
 		<webEncodingType/>
 		<webFileName/>
-		<width>421</width>
+		<width>410</width>
 		<windowState>0</windowState>
 		<controlList>
 			<Button name="okBtn">
@@ -3685,7 +4279,7 @@
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -3705,14 +4299,14 @@
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>87</left>
+				<left>82</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>okBtn</name>
 				<parent name="EditPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>38</parentBottomOffset>
-				<parentRightOffset>178</parentRightOffset>
+				<parentBottomOffset>34</parentBottomOffset>
+				<parentRightOffset>172</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
 				<pictureDown/>
@@ -3725,10 +4319,10 @@
 				<show3D>3</show3D>
 				<skinCategoryName/>
 				<style>0</style>
-				<tabIndex>21</tabIndex>
+				<tabIndex>14</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>245</top>
+				<top>298</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
@@ -3746,7 +4340,7 @@
 		<backColor>-2147483633</backColor>
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
-		<caption>Passenger List</caption>
+		<caption>Passengers</caption>
 		<clientHeight>582</clientHeight>
 		<clientWidth>639</clientWidth>
 		<clipControls>true</clipControls>
@@ -3835,7 +4429,7 @@
 				<name>btnEdit</name>
 				<parent name="PassengerList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>525</parentBottomOffset>
+				<parentBottomOffset>517</parentBottomOffset>
 				<parentRightOffset>201</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
@@ -3852,7 +4446,7 @@
 				<tabIndex>3</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>19</top>
+				<top>27</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
@@ -3896,7 +4490,7 @@
 				<name>btnDelete</name>
 				<parent name="PassengerList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>525</parentBottomOffset>
+				<parentBottomOffset>517</parentBottomOffset>
 				<parentRightOffset>46</parentRightOffset>
 				<picture/>
 				<pictureDisabled/>
@@ -3913,7 +4507,7 @@
 				<tabIndex>2</tabIndex>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>19</top>
+				<top>27</top>
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
@@ -3959,14 +4553,14 @@
 				<helpKeyword/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>44</left>
+				<left>43</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
 				<name>passTable</name>
 				<parent name="PassengerList" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>94</parentBottomOffset>
-				<parentRightOffset>43</parentRightOffset>
+				<parentBottomOffset>90</parentBottomOffset>
+				<parentRightOffset>44</parentRightOffset>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -3988,7 +4582,7 @@
 				<tabKey>0</tabKey>
 				<tabStop>true</tabStop>
 				<tag/>
-				<top>86</top>
+				<top>90</top>
 				<userScript/>
 				<visible>true</visible>
 				<width>552</width>
@@ -4004,7 +4598,7 @@
 		<backColor>16777215</backColor>
 		<borderStyle>2</borderStyle>
 		<bubbleHelp/>
-		<caption>PassengerTicket</caption>
+		<caption>Ticket</caption>
 		<clientHeight>269</clientHeight>
 		<clientWidth>795</clientWidth>
 		<clipControls>true</clipControls>
@@ -5415,6 +6009,694 @@ AABJRU5ErkJggg==</picture>
 		<menuList>
 		</menuList>
 	</Form>
+	<Form locale="5129" name="Payment">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>Payment</caption>
+		<clientHeight>447</clientHeight>
+		<clientWidth>560</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>486</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>2</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>Payment</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>4</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>576</width>
+		<windowState>0</windowState>
+		<controlList>
+			<Label name="lblPrice">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption/>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>true</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>14.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>24</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>200</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblPrice</name>
+				<noPrefix>false</noPrefix>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>343</parentBottomOffset>
+				<parentRightOffset>348</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>10</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>80</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>12</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Button name="btnCancel">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>true</cancel>
+				<caption>Cancel</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>9.75</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="Payment" />
+				<height>51</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>111</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnCancel</name>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>127</parentBottomOffset>
+				<parentRightOffset>283</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>9</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>269</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>166</width>
+			</Button>
+			<Button name="btnSubmit">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483635</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Submit Application</caption>
+				<default>true</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>true</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>12</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>16777215</foreColor>
+				<form name="Payment" />
+				<height>51</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>288</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnSubmit</name>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>127</parentBottomOffset>
+				<parentRightOffset>106</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>8</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>269</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>166</width>
+			</Button>
+			<Label name="lblCode">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Security Code</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>288</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblCode</name>
+				<noPrefix>false</noPrefix>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>236</parentBottomOffset>
+				<parentRightOffset>205</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>7</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>198</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>67</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblExpiry">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Expiry Date</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>111</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblExpiry</name>
+				<noPrefix>false</noPrefix>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>236</parentBottomOffset>
+				<parentRightOffset>393</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>6</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>198</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>56</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblCard">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Card Number</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>13</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>111</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblCard</name>
+				<noPrefix>false</noPrefix>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>294</parentBottomOffset>
+				<parentRightOffset>386</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>5</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>140</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>63</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="txtHeader">
+				<alignment>7</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Submit your payment information to confirm your ticket application.</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>12</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>22</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>37</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtHeader</name>
+				<noPrefix>false</noPrefix>
+				<parent name="Payment" />
+				<parentAspect>1</parentAspect>
+				<parentBottomOffset>408</parentBottomOffset>
+				<parentRightOffset>31</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>4</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>17</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>492</width>
+				<wordWrap>true</wordWrap>
+			</Label>
+			<TextBox name="txtCode">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>1</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>23</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>288</left>
+				<maxLength>3</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtCode</name>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>203</parentBottomOffset>
+				<parentRightOffset>106</parentRightOffset>
+				<passwordField>false</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>3</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>221</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>166</width>
+			</TextBox>
+			<TextBox name="txtExpiry">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>0</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut>=shortdate</formatOut>
+				<height>23</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>111</left>
+				<maxLength>5</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtExpiry</name>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>202</parentBottomOffset>
+				<parentRightOffset>283</parentRightOffset>
+				<passwordField>false</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>2</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>222</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>166</width>
+			</TextBox>
+			<TextBox name="txtCard">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>1</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="Payment" />
+				<formatOut/>
+				<height>23</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>111</left>
+				<maxLength>16</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtCard</name>
+				<parent name="Payment" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>261</parentBottomOffset>
+				<parentRightOffset>106</parentRightOffset>
+				<passwordField>false</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>1</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>163</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>343</width>
+			</TextBox>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
 	<Form locale="5129" name="Register">
 		<allowDocking>0</allowDocking>
 		<backBrush/>
@@ -5474,6 +6756,67 @@ AABJRU5ErkJggg==</picture>
 		<width>364</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Button name="btnCancel">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>true</cancel>
+				<caption>Cancel</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="Register" />
+				<height>24</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>113</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnCancel</name>
+				<parent name="Register" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>25</parentBottomOffset>
+				<parentRightOffset>139</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>8</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>126</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>96</width>
+			</Button>
 			<Label name="label2_1">
 				<alignment>1</alignment>
 				<autoSize>true</autoSize>
@@ -5614,7 +6957,7 @@ AABJRU5ErkJggg==</picture>
 				<buttonPicture>0</buttonPicture>
 				<cancel>false</cancel>
 				<caption>OK</caption>
-				<default>false</default>
+				<default>true</default>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -5922,6 +7265,203 @@ AABJRU5ErkJggg==</picture>
 				<webInputType/>
 				<width>214</width>
 			</TextBox>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
+	<Form locale="5129" name="TicketList">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>Tickets</caption>
+		<clientHeight>659</clientHeight>
+		<clientWidth>1008</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>698</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>0</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>TicketList</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>0</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>1024</width>
+		<windowState>0</windowState>
+		<controlList>
+			<Button name="btnApply">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483635</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Buy</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>true</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>20.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>16777215</foreColor>
+				<form name="TicketList" />
+				<height>66</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>786</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnApply</name>
+				<parent name="TicketList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>557</parentBottomOffset>
+				<parentRightOffset>31</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>2</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>36</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>191</width>
+			</Button>
+			<Table name="ticketsTable">
+				<allowDrag>0</allowDrag>
+				<allowResize>0</allowResize>
+				<autoSize>3</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483626</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>1</borderStyle>
+				<bubbleHelp/>
+				<columns>7</columns>
+				<defaultRowHeight>0</defaultRowHeight>
+				<description/>
+				<disableReason/>
+				<displayHotKey>false</displayHotKey>
+				<dragCursor/>
+				<dropDown>0</dropDown>
+				<enabled>true</enabled>
+				<expandedHeight>502</expandedHeight>
+				<fixed3D>true</fixed3D>
+				<fixedColumns>0</fixedColumns>
+				<fixedRows>1</fixedRows>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="TicketList" />
+				<gridColor>-2147483632</gridColor>
+				<gridLines>true</gridLines>
+				<height>502</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>30</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>ticketsTable</name>
+				<parent name="TicketList" />
+				<parentAspect>1</parentAspect>
+				<parentBottomOffset>28</parentBottomOffset>
+				<parentRightOffset>31</parentRightOffset>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<rows>1</rows>
+				<scrollBars>3</scrollBars>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectMode>8</selectMode>
+				<sheets>1</sheets>
+				<show3D>3</show3D>
+				<showFocus>true</showFocus>
+				<skinCategoryName/>
+				<stretch>1</stretch>
+				<tabActiveColor>-2147483633</tabActiveColor>
+				<tabInactiveColor>-2147483633</tabInactiveColor>
+				<tabIndex>1</tabIndex>
+				<tabKey>0</tabKey>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>129</top>
+				<userScript/>
+				<visible>true</visible>
+				<width>947</width>
+			</Table>
 		</controlList>
 		<menuList>
 		</menuList>
