@@ -6,7 +6,7 @@
 		<_aboutFormName/>
 		<_defaultLocaleId>0</_defaultLocaleId>
 		<_modifiedBy>kaue</_modifiedBy>
-		<_modifiedTimestamp>2023:11:10:10:06:12.707</_modifiedTimestamp>
+		<_modifiedTimestamp>2023:11:10:19:01:21.869</_modifiedTimestamp>
 		<_patchVersion>0</_patchVersion>
 		<_startupFormName>Logon</_startupFormName>
 		<_systemVersion>22.0.02</_systemVersion>
@@ -18,7 +18,7 @@
 		<defaultMdi>false</defaultMdi>
 		<finalizeMethod/>
 		<fontBold>false</fontBold>
-		<fontName>Tahoma</fontName>
+		<fontName>Trebuchet MS</fontName>
 		<fontSize>8.25</fontSize>
 		<formMargin>7</formMargin>
 		<heightSingleLineControl>14</heightSingleLineControl>
@@ -1648,7 +1648,7 @@
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>267</left>
+		<left>587</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>false</mdiFrame>
@@ -1674,7 +1674,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>66</top>
+		<top>290</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -1683,7 +1683,7 @@
 		<webEncodingType/>
 		<webFileName/>
 		<width>375</width>
-		<windowState>0</windowState>
+		<windowState>1</windowState>
 		<controlList>
 			<Button name="btnRegister">
 				<autoSize>1</autoSize>
@@ -1895,7 +1895,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="Logon" />
 				<formatOut/>
-				<height>18</height>
+				<height>21</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hintBackColor>-2147483648</hintBackColor>
@@ -1911,7 +1911,7 @@
 				<name>txtPassword</name>
 				<parent name="Logon" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>68</parentBottomOffset>
+				<parentBottomOffset>65</parentBottomOffset>
 				<parentRightOffset>31</parentRightOffset>
 				<passwordField>true</passwordField>
 				<readOnly>false</readOnly>
@@ -1964,7 +1964,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="Logon" />
 				<formatOut/>
-				<height>13</height>
+				<height>16</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hyperlink/>
@@ -1977,7 +1977,7 @@
 				<noPrefix>false</noPrefix>
 				<parent name="Logon" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>69</parentBottomOffset>
+				<parentBottomOffset>66</parentBottomOffset>
 				<parentRightOffset>282</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -2022,7 +2022,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="Logon" />
 				<formatOut/>
-				<height>13</height>
+				<height>16</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hyperlink/>
@@ -2035,8 +2035,8 @@
 				<noPrefix>false</noPrefix>
 				<parent name="Logon" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>100</parentBottomOffset>
-				<parentRightOffset>280</parentRightOffset>
+				<parentBottomOffset>97</parentBottomOffset>
+				<parentRightOffset>279</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -2052,7 +2052,7 @@
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
-				<width>52</width>
+				<width>53</width>
 				<wordWrap>false</wordWrap>
 			</Label>
 			<TextBox name="txtUsername">
@@ -2082,7 +2082,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="Logon" />
 				<formatOut/>
-				<height>18</height>
+				<height>21</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hintBackColor>-2147483648</hintBackColor>
@@ -2098,7 +2098,7 @@
 				<name>txtUsername</name>
 				<parent name="Logon" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>97</parentBottomOffset>
+				<parentBottomOffset>94</parentBottomOffset>
 				<parentRightOffset>31</parentRightOffset>
 				<passwordField>false</passwordField>
 				<readOnly>false</readOnly>
@@ -2152,7 +2152,7 @@
 		<icon/>
 		<ignoreSkin>false</ignoreSkin>
 		<ignoreSkinAllControls>false</ignoreSkinAllControls>
-		<left>64</left>
+		<left>69</left>
 		<maxButton>true</maxButton>
 		<mdiChild>0</mdiChild>
 		<mdiFrame>true</mdiFrame>
@@ -2178,7 +2178,7 @@
 		<showMdiPinMenu>false</showMdiPinMenu>
 		<skinCategoryName/>
 		<tag/>
-		<top>22</top>
+		<top>15</top>
 		<userScript/>
 		<visible>true</visible>
 		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
@@ -2251,7 +2251,7 @@
 		<menuList>
 			<MenuItem name="mnuUser">
 				<backColor>0</backColor>
-				<caption>User</caption>
+				<caption>&amp;Account</caption>
 				<checked>false</checked>
 				<commandId>0</commandId>
 				<description/>
@@ -2266,8 +2266,8 @@
 				<level>1</level>
 				<name>mnuUser</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>1</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -2276,7 +2276,7 @@
 			</MenuItem>
 			<MenuItem name="mnuLogoff">
 				<backColor>0</backColor>
-				<caption>Logoff</caption>
+				<caption>&amp;Logoff</caption>
 				<checked>false</checked>
 				<commandId>0</commandId>
 				<description/>
@@ -2291,8 +2291,33 @@
 				<level>2</level>
 				<name>mnuLogoff</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>1</securityLevelVisible>
+				<visible>true</visible>
+				<webFileName/>
+				<windowList>false</windowList>
+				<shortCutKey/>
+				<shortCutFlags/>
+			</MenuItem>
+			<MenuItem name="mnuUpdate">
+				<backColor>0</backColor>
+				<caption>&amp;Update</caption>
+				<checked>false</checked>
+				<commandId>0</commandId>
+				<description/>
+				<disableReason/>
+				<enabled>true</enabled>
+				<foreColor>0</foreColor>
+				<form name="MainMenu" />
+				<hasSubMenu>false</hasSubMenu>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<helpList>false</helpList>
+				<level>2</level>
+				<name>mnuUpdate</name>
+				<picture/>
+				<securityLevelEnabled>1</securityLevelEnabled>
+				<securityLevelVisible>1</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -2301,7 +2326,7 @@
 			</MenuItem>
 			<MenuItem name="mnuPassenger">
 				<backColor>0</backColor>
-				<caption>&amp;Passenger</caption>
+				<caption>&amp;Passengers</caption>
 				<checked>false</checked>
 				<commandId>0</commandId>
 				<description/>
@@ -2316,8 +2341,8 @@
 				<level>1</level>
 				<name>mnuPassenger</name>
 				<picture/>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
+				<securityLevelEnabled>3</securityLevelEnabled>
+				<securityLevelVisible>3</securityLevelVisible>
 				<visible>true</visible>
 				<webFileName/>
 				<windowList>false</windowList>
@@ -2376,7 +2401,7 @@
 			</MenuItem>
 			<MenuItem name="mnuAirport">
 				<backColor>0</backColor>
-				<caption>&amp;Airport</caption>
+				<caption>A&amp;irport</caption>
 				<checked>false</checked>
 				<commandId>0</commandId>
 				<description/>
@@ -3830,78 +3855,7 @@
 		<width>410</width>
 		<windowState>0</windowState>
 		<controlList>
-			<TextBox name="txtPassword">
-				<alignment>0</alignment>
-				<autoTab>false</autoTab>
-				<backBrush/>
-				<backBrushStyle>0</backBrushStyle>
-				<backColor>-2147483643</backColor>
-				<borderColorSingle>0</borderColorSingle>
-				<borderStyle>2</borderStyle>
-				<bubbleHelp/>
-				<case>0</case>
-				<dataType>0</dataType>
-				<decimals>0</decimals>
-				<description/>
-				<disableReason/>
-				<dragCursor/>
-				<enabled>true</enabled>
-				<focusBackColor>0</focusBackColor>
-				<focusForeColor>0</focusForeColor>
-				<fontBold>false</fontBold>
-				<fontItalic>false</fontItalic>
-				<fontName/>
-				<fontSize>8.25</fontSize>
-				<fontStrikethru>false</fontStrikethru>
-				<fontUnderline>false</fontUnderline>
-				<foreColor>-2147483640</foreColor>
-				<form name="AddPassengerDetails" />
-				<formatOut/>
-				<height>22</height>
-				<helpContextId>0</helpContextId>
-				<helpKeyword/>
-				<hintBackColor>-2147483648</hintBackColor>
-				<hintForeColor>-2147483648</hintForeColor>
-				<hintText/>
-				<ignoreSkin>false</ignoreSkin>
-				<index>0</index>
-				<integralHeight>false</integralHeight>
-				<left>208</left>
-				<maxLength>0</maxLength>
-				<mouseCursor/>
-				<mousePointer>0</mousePointer>
-				<name>txtPassword</name>
-				<parent name="AddPassengerDetails" />
-				<parentAspect>0</parentAspect>
-				<parentBottomOffset>292</parentBottomOffset>
-				<parentRightOffset>13</parentRightOffset>
-				<passwordField>false</passwordField>
-				<readOnly>false</readOnly>
-				<relativeHeight>false</relativeHeight>
-				<relativeLeft>false</relativeLeft>
-				<relativeTop>false</relativeTop>
-				<relativeWidth>false</relativeWidth>
-				<scrollBars>0</scrollBars>
-				<scrollHorizontal>false</scrollHorizontal>
-				<scrollVertical>false</scrollVertical>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
-				<selectionStyle>0</selectionStyle>
-				<show3D>3</show3D>
-				<skinCategoryName/>
-				<tabIndex>2</tabIndex>
-				<tabStop>true</tabStop>
-				<tag/>
-				<text/>
-				<textOffset>0</textOffset>
-				<top>46</top>
-				<userScript/>
-				<visible>true</visible>
-				<wantReturn>false</wantReturn>
-				<webInputType/>
-				<width>173</width>
-			</TextBox>
-			<Label name="lblPassword">
+			<Label name="lblUsername">
 				<alignment>1</alignment>
 				<autoSize>true</autoSize>
 				<backBrush/>
@@ -3910,7 +3864,7 @@
 				<borderColorSingle>0</borderColorSingle>
 				<borderStyle>0</borderStyle>
 				<bubbleHelp/>
-				<caption>Password:</caption>
+				<caption/>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -3919,28 +3873,28 @@
 				<focusForeColor>0</focusForeColor>
 				<fontBold>false</fontBold>
 				<fontItalic>false</fontItalic>
-				<fontName/>
-				<fontSize>8.25</fontSize>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>15.75</fontSize>
 				<fontStrikethru>false</fontStrikethru>
 				<fontUnderline>false</fontUnderline>
 				<foreColor>-2147483640</foreColor>
 				<form name="AddPassengerDetails" />
 				<formatOut/>
-				<height>13</height>
+				<height>27</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hyperlink/>
 				<ignoreSkin>false</ignoreSkin>
 				<index>0</index>
-				<left>208</left>
+				<left>56</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
-				<name>lblPassword</name>
+				<name>lblUsername</name>
 				<noPrefix>false</noPrefix>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
-				<parentBottomOffset>319</parentBottomOffset>
-				<parentRightOffset>136</parentRightOffset>
+				<parentBottomOffset>311</parentBottomOffset>
+				<parentRightOffset>326</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -3949,17 +3903,17 @@
 				<securityLevelVisible>0</securityLevelVisible>
 				<show3D>3</show3D>
 				<skinCategoryName/>
-				<tabIndex>49</tabIndex>
+				<tabIndex>59</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>28</top>
+				<top>22</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
-				<width>50</width>
+				<width>12</width>
 				<wordWrap>false</wordWrap>
 			</Label>
-			<Label name="label9">
+			<Label name="lblUser">
 				<alignment>1</alignment>
 				<autoSize>true</autoSize>
 				<backBrush/>
@@ -3968,7 +3922,7 @@
 				<borderColorSingle>0</borderColorSingle>
 				<borderStyle>0</borderStyle>
 				<bubbleHelp/>
-				<caption>Username:</caption>
+				<caption>User:</caption>
 				<description/>
 				<disableReason/>
 				<dragCursor/>
@@ -3984,7 +3938,7 @@
 				<foreColor>-2147483640</foreColor>
 				<form name="AddPassengerDetails" />
 				<formatOut/>
-				<height>13</height>
+				<height>16</height>
 				<helpContextId>0</helpContextId>
 				<helpKeyword/>
 				<hyperlink/>
@@ -3993,12 +3947,12 @@
 				<left>11</left>
 				<mouseCursor/>
 				<mousePointer>0</mousePointer>
-				<name>label9</name>
+				<name>lblUser</name>
 				<noPrefix>false</noPrefix>
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
 				<parentBottomOffset>319</parentBottomOffset>
-				<parentRightOffset>331</parentRightOffset>
+				<parentRightOffset>356</parentRightOffset>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
 				<relativeTop>false</relativeTop>
@@ -4010,84 +3964,13 @@
 				<tabIndex>48</tabIndex>
 				<tabStop>false</tabStop>
 				<tag/>
-				<top>28</top>
+				<top>25</top>
 				<transparent>true</transparent>
 				<userScript/>
 				<visible>true</visible>
-				<width>52</width>
+				<width>27</width>
 				<wordWrap>false</wordWrap>
 			</Label>
-			<TextBox name="txtUserName">
-				<alignment>0</alignment>
-				<autoTab>false</autoTab>
-				<backBrush/>
-				<backBrushStyle>0</backBrushStyle>
-				<backColor>-2147483643</backColor>
-				<borderColorSingle>0</borderColorSingle>
-				<borderStyle>2</borderStyle>
-				<bubbleHelp/>
-				<case>0</case>
-				<dataType>0</dataType>
-				<decimals>0</decimals>
-				<description/>
-				<disableReason/>
-				<dragCursor/>
-				<enabled>true</enabled>
-				<focusBackColor>0</focusBackColor>
-				<focusForeColor>0</focusForeColor>
-				<fontBold>false</fontBold>
-				<fontItalic>false</fontItalic>
-				<fontName/>
-				<fontSize>8.25</fontSize>
-				<fontStrikethru>false</fontStrikethru>
-				<fontUnderline>false</fontUnderline>
-				<foreColor>-2147483640</foreColor>
-				<form name="AddPassengerDetails" />
-				<formatOut/>
-				<height>22</height>
-				<helpContextId>0</helpContextId>
-				<helpKeyword/>
-				<hintBackColor>-2147483648</hintBackColor>
-				<hintForeColor>-2147483648</hintForeColor>
-				<hintText/>
-				<ignoreSkin>false</ignoreSkin>
-				<index>0</index>
-				<integralHeight>false</integralHeight>
-				<left>11</left>
-				<maxLength>0</maxLength>
-				<mouseCursor/>
-				<mousePointer>0</mousePointer>
-				<name>txtUserName</name>
-				<parent name="AddPassengerDetails" />
-				<parentAspect>0</parentAspect>
-				<parentBottomOffset>292</parentBottomOffset>
-				<parentRightOffset>208</parentRightOffset>
-				<passwordField>false</passwordField>
-				<readOnly>false</readOnly>
-				<relativeHeight>false</relativeHeight>
-				<relativeLeft>false</relativeLeft>
-				<relativeTop>false</relativeTop>
-				<relativeWidth>false</relativeWidth>
-				<scrollBars>0</scrollBars>
-				<scrollHorizontal>false</scrollHorizontal>
-				<scrollVertical>false</scrollVertical>
-				<securityLevelEnabled>0</securityLevelEnabled>
-				<securityLevelVisible>0</securityLevelVisible>
-				<selectionStyle>0</selectionStyle>
-				<show3D>3</show3D>
-				<skinCategoryName/>
-				<tabIndex>1</tabIndex>
-				<tabStop>true</tabStop>
-				<tag/>
-				<text/>
-				<textOffset>0</textOffset>
-				<top>46</top>
-				<userScript/>
-				<visible>true</visible>
-				<wantReturn>false</wantReturn>
-				<webInputType/>
-				<width>175</width>
-			</TextBox>
 			<Button name="btnOK">
 				<autoSize>1</autoSize>
 				<backBrush/>
@@ -4185,7 +4068,7 @@
 				<parent name="AddPassengerDetails" />
 				<parentAspect>0</parentAspect>
 				<parentBottomOffset>40</parentBottomOffset>
-				<parentRightOffset>322</parentRightOffset>
+				<parentRightOffset>321</parentRightOffset>
 				<readOnly>false</readOnly>
 				<relativeHeight>false</relativeHeight>
 				<relativeLeft>false</relativeLeft>
@@ -4203,8 +4086,446 @@
 				<userScript/>
 				<value>false</value>
 				<visible>true</visible>
-				<width>60</width>
+				<width>61</width>
 			</CheckBox>
+		</controlList>
+		<menuList>
+		</menuList>
+	</Form>
+	<Form locale="5129" name="AddUserAndPassengerDetails">
+		<allowDocking>0</allowDocking>
+		<backBrush/>
+		<backBrushStyle>0</backBrushStyle>
+		<backColor>-2147483633</backColor>
+		<borderStyle>2</borderStyle>
+		<bubbleHelp/>
+		<caption>AddUserAndPassengerDetails</caption>
+		<clientHeight>357</clientHeight>
+		<clientWidth>405</clientWidth>
+		<clipControls>true</clipControls>
+		<controlBox>true</controlBox>
+		<description/>
+		<disableReason/>
+		<dragCursor/>
+		<enabled>true</enabled>
+		<height>396</height>
+		<helpContextId>0</helpContextId>
+		<helpKeyword/>
+		<icon/>
+		<ignoreSkin>false</ignoreSkin>
+		<ignoreSkinAllControls>false</ignoreSkinAllControls>
+		<left>350</left>
+		<maxButton>true</maxButton>
+		<mdiChild>0</mdiChild>
+		<mdiFrame>false</mdiFrame>
+		<mdiPinned>false</mdiPinned>
+		<minButton>true</minButton>
+		<minimumHeight>0</minimumHeight>
+		<minimumWidth>0</minimumWidth>
+		<mouseCursor/>
+		<mousePointer>0</mousePointer>
+		<name>AddUserAndPassengerDetails</name>
+		<paintedDialogBaseUnits>1048584</paintedDialogBaseUnits>
+		<printerForm>false</printerForm>
+		<scaleForm>true</scaleForm>
+		<scrollBars>0</scrollBars>
+		<secureForm>false</secureForm>
+		<securityLevelEnabled>0</securityLevelEnabled>
+		<securityLevelVisible>0</securityLevelVisible>
+		<showMdiCloseAllButPinnedMenu>false</showMdiCloseAllButPinnedMenu>
+		<showMdiCloseAllButThisMenu>false</showMdiCloseAllButThisMenu>
+		<showMdiCloseMenu>false</showMdiCloseMenu>
+		<showMdiDockMenu>false</showMdiDockMenu>
+		<showMdiFloatMenu>false</showMdiFloatMenu>
+		<showMdiPinMenu>false</showMdiPinMenu>
+		<skinCategoryName/>
+		<tag/>
+		<top>19</top>
+		<userScript/>
+		<visible>true</visible>
+		<webBrowserAutoRefreshInterval>0</webBrowserAutoRefreshInterval>
+		<webBrowserAutoRefreshURL/>
+		<webBrowserDisableBackButton>false</webBrowserDisableBackButton>
+		<webEncodingType/>
+		<webFileName/>
+		<width>421</width>
+		<windowState>0</windowState>
+		<controlList>
+			<CheckBox name="cbStaff">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Staff:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<height>17</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>12</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>cbStaff</name>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>36</parentBottomOffset>
+				<parentRightOffset>347</parentRightOffset>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>64</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>304</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<width>46</width>
+			</CheckBox>
+			<Button name="btnOk">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>OK</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<height>28</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>82</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btnOk</name>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>31</parentBottomOffset>
+				<parentRightOffset>183</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>63</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>298</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>140</width>
+			</Button>
+			<Label name="lblPassword">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Password:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<formatOut/>
+				<height>16</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>205</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblPassword</name>
+				<noPrefix>false</noPrefix>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>321</parentBottomOffset>
+				<parentRightOffset>150</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>62</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>20</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>50</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblUsername">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>Username:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<formatOut/>
+				<height>16</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>12</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblUsername</name>
+				<noPrefix>false</noPrefix>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>321</parentBottomOffset>
+				<parentRightOffset>340</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>61</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>20</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>53</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<TextBox name="txtPassword">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>0</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<formatOut/>
+				<height>24</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>205</left>
+				<maxLength>0</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtPassword</name>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>292</parentBottomOffset>
+				<parentRightOffset>24</parentRightOffset>
+				<passwordField>true</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>2</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>41</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>176</width>
+			</TextBox>
+			<TextBox name="txtUsername">
+				<alignment>0</alignment>
+				<autoTab>false</autoTab>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483643</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>2</borderStyle>
+				<bubbleHelp/>
+				<case>0</case>
+				<dataType>0</dataType>
+				<decimals>0</decimals>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="AddUserAndPassengerDetails" />
+				<formatOut/>
+				<height>24</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hintBackColor>-2147483648</hintBackColor>
+				<hintForeColor>-2147483648</hintForeColor>
+				<hintText/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<integralHeight>false</integralHeight>
+				<left>12</left>
+				<maxLength>0</maxLength>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>txtUsername</name>
+				<parent name="AddUserAndPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>292</parentBottomOffset>
+				<parentRightOffset>217</parentRightOffset>
+				<passwordField>false</passwordField>
+				<readOnly>false</readOnly>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<scrollBars>0</scrollBars>
+				<scrollHorizontal>false</scrollHorizontal>
+				<scrollVertical>false</scrollVertical>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<selectionStyle>0</selectionStyle>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>1</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<text/>
+				<textOffset>0</textOffset>
+				<top>41</top>
+				<userScript/>
+				<visible>true</visible>
+				<wantReturn>false</wantReturn>
+				<webInputType/>
+				<width>176</width>
+			</TextBox>
 		</controlList>
 		<menuList>
 		</menuList>
@@ -4268,6 +4589,122 @@
 		<width>410</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Label name="lblUsername">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption/>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>15.75</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="EditPassengerDetails" />
+				<formatOut/>
+				<height>27</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>60</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblUsername</name>
+				<noPrefix>false</noPrefix>
+				<parent name="EditPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>309</parentBottomOffset>
+				<parentRightOffset>322</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>60</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>24</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>12</width>
+				<wordWrap>false</wordWrap>
+			</Label>
+			<Label name="lblUser">
+				<alignment>1</alignment>
+				<autoSize>true</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<caption>User:</caption>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName/>
+				<fontSize>8.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483640</foreColor>
+				<form name="EditPassengerDetails" />
+				<formatOut/>
+				<height>16</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<hyperlink/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>12</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>lblUser</name>
+				<noPrefix>false</noPrefix>
+				<parent name="EditPassengerDetails" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>315</parentBottomOffset>
+				<parentRightOffset>355</parentRightOffset>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<tabIndex>59</tabIndex>
+				<tabStop>false</tabStop>
+				<tag/>
+				<top>29</top>
+				<transparent>true</transparent>
+				<userScript/>
+				<visible>true</visible>
+				<width>27</width>
+				<wordWrap>false</wordWrap>
+			</Label>
 			<Button name="okBtn">
 				<autoSize>1</autoSize>
 				<backBrush/>
@@ -7328,6 +7765,67 @@ AABJRU5ErkJggg==</picture>
 		<width>1024</width>
 		<windowState>0</windowState>
 		<controlList>
+			<Button name="btMenu">
+				<autoSize>1</autoSize>
+				<backBrush/>
+				<backBrushStyle>0</backBrushStyle>
+				<backColor>-2147483633</backColor>
+				<borderColorSingle>0</borderColorSingle>
+				<borderStyle>0</borderStyle>
+				<bubbleHelp/>
+				<buttonPicture>0</buttonPicture>
+				<cancel>false</cancel>
+				<caption>Main Menu</caption>
+				<default>false</default>
+				<description/>
+				<disableReason/>
+				<dragCursor/>
+				<enabled>true</enabled>
+				<focusBackColor>0</focusBackColor>
+				<focusForeColor>0</focusForeColor>
+				<fontBold>false</fontBold>
+				<fontItalic>false</fontItalic>
+				<fontName>Trebuchet MS</fontName>
+				<fontSize>14.25</fontSize>
+				<fontStrikethru>false</fontStrikethru>
+				<fontUnderline>false</fontUnderline>
+				<foreColor>-2147483630</foreColor>
+				<form name="TicketList" />
+				<height>66</height>
+				<helpContextId>0</helpContextId>
+				<helpKeyword/>
+				<ignoreSkin>false</ignoreSkin>
+				<index>0</index>
+				<left>561</left>
+				<mouseCursor/>
+				<mousePointer>0</mousePointer>
+				<name>btMenu</name>
+				<parent name="TicketList" />
+				<parentAspect>0</parentAspect>
+				<parentBottomOffset>557</parentBottomOffset>
+				<parentRightOffset>256</parentRightOffset>
+				<picture/>
+				<pictureDisabled/>
+				<pictureDown/>
+				<relativeHeight>false</relativeHeight>
+				<relativeLeft>false</relativeLeft>
+				<relativeTop>false</relativeTop>
+				<relativeWidth>false</relativeWidth>
+				<securityLevelEnabled>0</securityLevelEnabled>
+				<securityLevelVisible>0</securityLevelVisible>
+				<show3D>3</show3D>
+				<skinCategoryName/>
+				<style>0</style>
+				<tabIndex>3</tabIndex>
+				<tabStop>true</tabStop>
+				<tag/>
+				<top>36</top>
+				<userScript/>
+				<value>false</value>
+				<visible>true</visible>
+				<webFileName/>
+				<width>191</width>
+			</Button>
 			<Button name="btnApply">
 				<autoSize>1</autoSize>
 				<backBrush/>
