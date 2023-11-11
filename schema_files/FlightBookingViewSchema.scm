@@ -12,8 +12,9 @@ typeHeaders
 	AirportDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 9, number = 2081;
 	FlightDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, number = 2144;
 	FlightList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestSubId = 1, highestOrdinal = 17, number = 2090;
+	Lists subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 1, number = 2173;
 	Logon subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 7, number = 2165;
-	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 14, number = 2082;
+	MainMenu subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestSubId = 1, highestOrdinal = 32, number = 2082;
 	PassengerDetails subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 20, number = 2085;
 	AddPassengerDetails subclassOf PassengerDetails transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 10, number = 2148;
 	AddUserAndPassengerDetails subclassOf PassengerDetails transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 6, number = 2170;
@@ -22,7 +23,7 @@ typeHeaders
 	PassengerTicket subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 19, number = 2166;
 	Payment subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 11, number = 2171;
 	Register subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 10, number = 2151;
-	TicketList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 4, number = 2164;
+	TicketList subclassOf Form transient, transientAllowed, subclassTransientAllowed, highestOrdinal = 17, number = 2164;
 membershipDefinitions
 typeDefinitions
 	Object completeDefinition
@@ -139,7 +140,7 @@ typeDefinitions
 	)
 	FlightList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:01:31.949;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:21:34.928;
 	referenceDefinitions
 		btnDelete:                     Button  number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:49:44.304;
@@ -171,19 +172,17 @@ typeDefinitions
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:05:05:24:26.122;
 	jadeMethodDefinitions
 		btnDelete_click(btn: Button input) updating, number = 1004;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:17:45:54.512;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:23:43.837;
 		btnLogin_click(btn: Button input) updating, number = 1010;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:24:05.769;
 		btnMenu_click(btn: Button input) updating, number = 1009;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:23:50.551;
 		btnReset_click(btn: Button input) updating, number = 1005;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:23:10.193;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:20:54.542;
 		btnSearch_click(btn: Button input) updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:07:17:33.782;
 		btnTickets_click(btn: Button input) updating, number = 1008;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:17:23:58.569;
-		flightsTable_click(table: Table input) updating, number = 1006;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:07:19:38.884;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:16:34.458;
 		flightsTable_displayRow(
 			table: Table input; 
 			theSheet: Integer; 
@@ -194,7 +193,7 @@ typeDefinitions
 		getSelectedFlight(): Flight number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:11:07:16.663;
 		load() updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:35:16.056;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:50:39.735;
 	eventMethodMappings
 		btnDelete_click = click of Button;
 		btnLogin_click = click of Button;
@@ -202,13 +201,19 @@ typeDefinitions
 		btnReset_click = click of Button;
 		btnSearch_click = click of Button;
 		btnTickets_click = click of Button;
-		flightsTable_click = click of Table;
 		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
 	)
+	Lists completeDefinition
+	(
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:09:10:13.807;
+	referenceDefinitions
+		flightsTable:                  Table  number = 1, ordinal = 1;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:09:10:13.807;
+	)
 	Logon completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:01:15:52.710;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:41:38.125;
 	referenceDefinitions
 		btnGuest:                      Button  number = 6, ordinal = 6;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:09:46:32.502;
@@ -238,57 +243,123 @@ typeDefinitions
 	)
 	MainMenu completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:00:30:39.748;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:16:57.927;
 	referenceDefinitions
+		btnDelete:                     Button  number = 28, ordinal = 30;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:43:44.386;
+		btnReset:                      Button  number = 25, ordinal = 25;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		btnSearch:                     Button  number = 21, ordinal = 21;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		btnTickets:                    Button  number = 26, ordinal = 29;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:43:44.386;
+		flightsTable:                  Table  number = 15, ordinal = 15;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:09:18:33.215;
+		lblArrival:                    Label  number = 18, ordinal = 18;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		lblDate:                       Label  number = 20, ordinal = 20;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		lblDateIndicator:              Label  number = 29, ordinal = 31;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:50:23.498;
+		lblDeparture:                  Label  number = 19, ordinal = 19;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
 		lblWelcome:                    Label  number = 13, ordinal = 13;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:01:08:12.212;
 		mnuAirport:                    MenuItem  number = 1, ordinal = 1;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:29:02.473;
 		mnuAirportAdd:                 MenuItem  number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:29:02.474;
-		mnuApplyTicket:                MenuItem  number = 9, ordinal = 9;
-		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
-		mnuDisplayTicket:              MenuItem  number = 10, ordinal = 10;
+		mnuAllTickets:                 MenuItem  number = 9, ordinal = 9;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
 		mnuFlights:                    MenuItem  number = 11, ordinal = 11;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:00:13:40.175;
 		mnuFlightsList:                MenuItem  number = 12, ordinal = 12;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:00:13:40.176;
+		mnuLogin:                      MenuItem  number = 16, ordinal = 16;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:09:58:03.880;
 		mnuLogoff:                     MenuItem  number = 6, ordinal = 6;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:22:48.788;
+		mnuMyTickets:                  MenuItem  number = 30, ordinal = 32;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:22:40.136;
 		mnuPassangerEdit:              MenuItem  number = 7, ordinal = 7;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:07:15:06:31.702;
 		mnuPassenger:                  MenuItem  number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:25:08.148;
 		mnuPassengerAdd:               MenuItem  number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:28:23:25:08.149;
+		mnuRequestedTickets:           MenuItem  number = 10, ordinal = 10;
+		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
 		mnuTicket:                     MenuItem  number = 8, ordinal = 8;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:21:48:38.806;
 		mnuUpdate:                     MenuItem  number = 14, ordinal = 14;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:40:57.053;
 		mnuUser:                       MenuItem  number = 5, ordinal = 5;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:15:22:48.788;
+		myFlights:                     FlightByDate  number = 17, ordinal = 17;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:24:24.765;
+		myTickets:                     TicketById  number = 27, ordinal = 27;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:00:57.858;
+		searchArrival:                 TextBox  number = 22, ordinal = 22;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		searchDate:                    TextBox  number = 24, ordinal = 24;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
+		searchDeparture:               TextBox  number = 23, ordinal = 23;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:18:30.819;
 	jadeMethodDefinitions
+		btnReset_click(btn: Button input) updating, number = 1010;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:47:36.904;
+		btnSearch_click(btn: Button input) updating, number = 1009;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:10:47:36.904;
+		btnTickets_click(btn: Button input) updating, number = 1015;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:12:12:23.654;
+		flightsTable_click(table: Table input) updating, number = 1014;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:15:22.150;
+		flightsTable_displayRow(
+			table: Table input; 
+			theSheet: Integer; 
+			obj: Object; 
+			theRow: Integer; 
+			bcontinue: Boolean io): String updating, number = 1008;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:21:20.357;
 		getAndValidateUser() number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:04:01:08.608;
+		getSelectedFlight(): Flight number = 1011;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:12:11:47.796;
 		load() updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:00:02.655;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:12:01:06.703;
 		mnuAirportAdd_click(menuItem: MenuItem input) updating, number = 1001;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:27:23:31:17.071;
+		mnuAllTickets_click(menuItem: MenuItem input) updating, number = 1013;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:29:03.928;
 		mnuFlightsList_click(menuItem: MenuItem input) updating, number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:10:11:25.108;
+		mnuLogin_click(menuItem: MenuItem input) updating, number = 1012;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:31:33.308;
 		mnuLogoff_click(menuItem: MenuItem input) updating, number = 1005;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:09:25:14;
+		mnuMyTickets_click(menuItem: MenuItem input) updating, number = 1017;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:33:45.104;
 		mnuPassengerAdd_click(menuItem: MenuItem input) updating, number = 1003;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:07:20:42:23.941;
+		mnuRequestedTickets_click(menuItem: MenuItem input) updating, number = 1016;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:54:26.444;
 		mnuUpdate_click(menuItem: MenuItem input) updating, number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:22:14:33.875;
 	eventMethodMappings
+		btnReset_click = click of Button;
+		btnSearch_click = click of Button;
+		btnTickets_click = click of Button;
+		flightsTable_click = click of Table;
+		flightsTable_displayRow = displayRow of Table;
 		load = load of Form;
 		mnuAirportAdd_click = click of MenuItem;
+		mnuAllTickets_click = click of MenuItem;
 		mnuFlightsList_click = click of MenuItem;
+		mnuLogin_click = click of MenuItem;
 		mnuLogoff_click = click of MenuItem;
+		mnuMyTickets_click = click of MenuItem;
 		mnuPassengerAdd_click = click of MenuItem;
+		mnuRequestedTickets_click = click of MenuItem;
 		mnuUpdate_click = click of MenuItem;
 	)
 	PassengerDetails completeDefinition
@@ -522,7 +593,7 @@ typeDefinitions
 		btnCancel_click(btn: Button input) updating, number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:08:34:00.478;
 		btnSubmit_click(btn: Button input) updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:01:02:43.441;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:47:01.205;
 		load() updating, number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:24:38.144;
 		loadMenu() updating, number = 1002;
@@ -563,36 +634,53 @@ typeDefinitions
 	)
 	TicketList completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:21:24.843;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:58:32.355;
 	referenceDefinitions
 		btMenu:                        Button  number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:08:27.267;
-		btnApply:                      Button  number = 3, ordinal = 3;
+		btnAcceptRequest:              Button  number = 5, ordinal = 14;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:35:17.372;
+		btnDeclineRequest:             Button  number = 6, ordinal = 15;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:35:17.372;
+		btnRequestTicket:              Button  number = 3, ordinal = 3;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:06:14:46.187;
-		myTickets:                     TicketByPrice  number = 2, ordinal = 2;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:04:23:57.396;
-		ticketsTable:                  Table  number = 1, ordinal = 1;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:04:20:41.690;
+		btnViewTicket:                 Button  number = 8, ordinal = 17;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:55:17.696;
+		lblMessage:                    Label  number = 7, ordinal = 16;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:35:17.372;
+		myTickets:                     TicketById  number = 2, ordinal = 2;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:04:11.112;
+		ticketsTable:                  Table  number = 1, ordinal = 13;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:12:33:32.272;
 	jadeMethodDefinitions
 		btMenu_click(btn: Button input) updating, number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:20:24.599;
-		btnApply_click(btn: Button input) updating, number = 1004;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:18:31:44.347;
+		btnAcceptRequest_click(btn: Button input) updating, number = 1008;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:44:23.120;
+		btnDeclineRequest_click(btn: Button input) updating, number = 1007;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:25:35.620;
+		btnRequestTicket_click(btn: Button input) updating, number = 1004;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:16:05:58.155;
 		getSelectedTicket(): Ticket number = 1003;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:11:05:47.837;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:41:05.785;
 		load() updating, number = 1001;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:07:11:27.438;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:36:59.212;
+		ticketsTable_click(table: Table input) updating, number = 1005;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:16:02:52.840;
 		ticketsTable_displayRow(
 			table: Table input; 
 			theSheet: Integer; 
 			obj: Object; 
 			theRow: Integer; 
 			bcontinue: Boolean io): String updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:12:22:37.996;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:15:21:42.822;
 	eventMethodMappings
 		btMenu_click = click of Button;
-		btnApply_click = click of Button;
+		btnAcceptRequest_click = click of Button;
+		btnDeclineRequest_click = click of Button;
+		btnRequestTicket_click = click of Button;
 		load = load of Form;
+		ticketsTable_click = click of Table;
 		ticketsTable_displayRow = displayRow of Table;
 	)
 databaseDefinitions
@@ -741,24 +829,25 @@ vars
 	flightById : FlightById;
 
 begin
-	app.initialize();
+	// If user is admin
+	if app.userSecurityLevel >= 4 then
+		app.initialize();
 
-	flightByDate := app.myTravelStore.allFlights;
-	flightById := app.myTravelStore.allFlightsById;
+		flightByDate := app.myTravelStore.allFlights;
+		flightById := app.myTravelStore.allFlightsById;
 
-	flight := getSelectedFlight();
-	
-	beginTransaction;
-
-	app.myTravelStore.allFlights.remove(flight);
-	app.myTravelStore.allFlightsById.remove(flight);
-	
-	delete flight;
-	
-	app.myTravelStore.allFlights.rebuild();
-	app.myTravelStore.allFlightsById.rebuild();
-
-	commitTransaction;
+		// Get flight selected on table
+		flight := getSelectedFlight();
+		
+		// And delete the flight
+		beginTransaction;
+		app.myTravelStore.allFlights.remove(flight);
+		app.myTravelStore.allFlightsById.remove(flight);
+		delete flight;
+		app.myTravelStore.allFlights.rebuild();
+		app.myTravelStore.allFlightsById.rebuild();
+		commitTransaction;
+	endif;
 end;
 }
 btnLogin_click
@@ -855,14 +944,6 @@ begin
 	else
 		app.msgBox("Please select a flight", "Error", 0);
 	endif;
-end;
-}
-flightsTable_click
-{
-flightsTable_click(table: Table input) updating;
-
-begin
-	//self.
 end;
 }
 flightsTable_displayRow
@@ -1010,6 +1091,110 @@ end;
 	)
 	MainMenu (
 	jadeMethodSources
+btnReset_click
+{
+btnReset_click(btn: Button input) updating;
+
+vars
+
+begin
+	searchDate.text := "";
+	searchDeparture.text := "";
+	searchArrival.text := "";
+	flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
+end;
+}
+btnSearch_click
+{
+btnSearch_click(btn: Button input) updating;
+
+vars
+	flightByDate, filteredFlights : FlightByDate;
+	flight : Flight;
+	
+begin
+	flightByDate := TravelStore.firstInstance.allFlights;
+	
+	if searchDate.text = "" or searchDate.text.asDate.isValid then
+		if searchDate.text.trimBlanks() = "" and searchDeparture.text.trimBlanks() = "" and searchArrival.text.trimBlanks() = "" then
+			flightsTable.displayCollection(flightByDate, true, Table.DisplayCollection_Forward, null);
+		else
+			beginTransaction;
+			create filteredFlights persistent;
+			
+			foreach flight in flightByDate where (searchDate.text.trimBlanks() = "" or flight.date = searchDate.text.asDate) and 
+													(searchDeparture.text.trimBlanks() = "" or searchDeparture.text.trimBlanks() = flight.myFlightPath.myDepartureAirport.cityName) and
+													(searchArrival.text.trimBlanks() = "" or searchArrival.text.trimBlanks() = flight.myFlightPath.myArrivalAirport.cityName) do
+				filteredFlights.add(flight);
+				
+			endforeach;
+			
+			flightsTable.displayCollection(filteredFlights, true, Table.DisplayCollection_Forward, null);
+			
+			commitTransaction;
+		endif;
+	else
+		app.msgBox("Invalid date", "Error", 0);
+	endif;
+end;
+}
+btnTickets_click
+{
+btnTickets_click(btn: Button input) updating;
+
+vars
+	form : TicketList;
+	selectedFlight : Flight;
+begin
+	// get selected flight
+	selectedFlight := getSelectedFlight();
+	
+	// display ticket list
+	create form transient;
+	if selectedFlight <> null then
+		form.myTickets := selectedFlight.myTickets;
+		form.show();
+		self.unloadForm;
+		delete self;
+	else
+		app.msgBox("Please select a flight", "Error", 0);
+	endif;
+end;
+}
+flightsTable_click
+{
+flightsTable_click(table: Table input) updating;
+
+begin
+	// If there is a flight selected, enabled "View tickets from flight" button
+	if getSelectedFlight() <> null then
+		self.btnTickets.enabled := true;
+		if app.userSecurityLevel >= 3 then
+			self.btnDelete.visible := true;
+		endif;
+	endif;
+end;
+}
+flightsTable_displayRow
+{
+flightsTable_displayRow(table: Table input; theSheet: Integer; obj: Object; theRow: Integer; bcontinue: Boolean io): String updating;
+
+vars
+	flight: Flight;
+	arrivalAirport, departureAirport : Airport;
+begin
+	flight := obj.Flight;
+	arrivalAirport := flight.myFlightPath.myArrivalAirport;
+	departureAirport := flight.myFlightPath.myDepartureAirport;
+	return flight.id.display
+	& Tab & flight.date.format("d/M/yy")
+	& Tab & flight.time.format("HH:mm")
+	& Tab &	departureAirport.code & " - " & departureAirport.cityName 
+	& Tab &	arrivalAirport.code & " - " & arrivalAirport.cityName
+	& Tab &	flight.flightStatus
+	& Tab &	flight.myPlane.type;
+end;
+}
 getAndValidateUser
 {
 getAndValidateUser();
@@ -1032,17 +1217,56 @@ begin
 	endif;
 end;
 }
+getSelectedFlight
+{
+getSelectedFlight(): Flight;
+
+vars
+	flightByDate : FlightByDate;
+	flight : Flight;
+	id : Integer;
+begin
+	// Get id of selected flight
+	id := flightsTable.getCellText(flightsTable.row, 1).Integer;
+	flightByDate := TravelStore.firstInstance.allFlights;
+	
+	foreach flight in flightByDate where flight.id = id do
+		// Return selected flight if found
+		return flight;
+	endforeach;
+	// Else return null
+	return null;
+end;
+}
 load
 {
 load() updating;
 
+vars
+	date : Date;
 begin
 	app.mdiFrame := MainMenu;
-
 	app.initialize();
+	
+	// If user is not logged in, show login button
+	if app.userSecurityLevel = 0 then
+		self.mnuLogoff.visible := false;
+		self.mnuLogoff.enabled := false;
+	else
+		self.mnuLogoff.visible := true;
+		self.mnuLogoff.enabled := true;
+	endif;
+	
 	if app.myTravelStore.myUser <> null then
 		lblWelcome.caption := "Welcome, " & app.myTravelStore.myUser.username & "!";
 	endif;
+	
+	self.lblDateIndicator.caption := date.display;
+	
+	// Populate table header
+	flightsTable.setCellText(1,1, "Code" & Tab & "Date" & Tab & "Time" & Tab & "Departure" & Tab & "Destination" & Tab & "Status" & Tab & "Plane");
+	// Assign collection to be displayed by table
+	flightsTable.displayCollection(TravelStore.firstInstance.allFlights, true, Table.DisplayCollection_Forward, null);
 end;
 }
 mnuAirportAdd_click
@@ -1056,6 +1280,29 @@ begin
 	form.show();
 end;
 }
+mnuAllTickets_click
+{
+mnuAllTickets_click(menuItem: MenuItem input) updating;
+
+vars
+	form : TicketList;
+	ticketById : TicketById;
+	ticket : Ticket;
+begin
+	beginTransaction;
+	// display ticket list
+	create form transient;
+	create ticketById persistent;
+	foreach ticket in app.myTravelStore.allTickets do
+		ticketById.add(ticket);
+	endforeach;
+	form.myTickets := ticketById;
+	//commitTransaction;
+	form.show();
+	self.unloadForm;
+	delete self;
+end;
+}
 mnuFlightsList_click
 {
 mnuFlightsList_click(menuItem: MenuItem input) updating;
@@ -1067,6 +1314,20 @@ begin
 	create form transient;
 	form.show();
 	self.unloadForm();
+end;
+}
+mnuLogin_click
+{
+mnuLogin_click(menuItem: MenuItem input) updating;
+
+vars
+	form : Logon;
+begin
+	// display Login form
+	create form transient;
+	form.show();
+	self.unloadForm;
+	delete self;
 end;
 }
 mnuLogoff_click
@@ -1085,6 +1346,31 @@ begin
 	self.unloadForm();
 end;
 }
+mnuMyTickets_click
+{
+mnuMyTickets_click(menuItem: MenuItem input) updating;
+
+vars
+	form : TicketList;
+	ticketById : TicketById;
+	ticket : Ticket;
+begin
+	beginTransaction;
+	// display ticket list
+	create form transient;
+	create ticketById persistent;
+	foreach ticket in app.myTravelStore.allTickets where
+													ticket.myPassenger = app.myTravelStore.myUser.myPassenger or
+													ticket.myRequestPassenger = app.myTravelStore.myUser.myPassenger do
+		ticketById.add(ticket);
+	endforeach;
+	form.myTickets := ticketById;
+	//commitTransaction;
+	form.show();
+	self.unloadForm;
+	delete self;
+end;
+}
 mnuPassengerAdd_click
 {
 mnuPassengerAdd_click(menuItem: MenuItem input) updating;
@@ -1094,6 +1380,29 @@ vars
 begin
 	create form transient;
 	form.show();
+end;
+}
+mnuRequestedTickets_click
+{
+mnuRequestedTickets_click(menuItem: MenuItem input) updating;
+
+vars
+	form : TicketList;
+	ticketById : TicketById;
+	ticket : Ticket;
+begin
+	beginTransaction;
+	// display ticket list
+	create form transient;
+	create ticketById persistent;
+	foreach ticket in app.myTravelStore.allTickets where ticket.myRequestPassenger <> null do
+		ticketById.add(ticket);
+	endforeach;
+	form.myTickets := ticketById;
+	commitTransaction;
+	form.show();
+	self.unloadForm;
+	delete self;
 end;
 }
 mnuUpdate_click
@@ -1517,8 +1826,6 @@ btnSubmit_click
 btnSubmit_click(btn: Button input) updating;
 
 vars
-	ticketRequestById : TicketRequestById;
-	ticket : Ticket;
 	form : AddPassengerDetails;
 begin
 	beginTransaction;
@@ -1529,9 +1836,11 @@ begin
 		self.unloadForm();
 		delete self;
 	elseif txtCard.text.length = 16 and txtCode.text.length = 3 and txtExpiry.text.length >= 5 then
-		create ticketRequestById persistent;
-		ticket := create Ticket(myTicket.myFlight, app.myTravelStore.myUser.myPassenger, myTicket.baggage, myTicket.price, "Waiting acceptance", myTicket.seatNumber) persistent;
-		ticketRequestById.add(ticket);
+		myTicket.myRequestPassenger := app.myTravelStore.myUser.myPassenger;
+		myTicket.paymentStatus := "Pending acceptance";
+		//create ticketRequestById persistent;
+		//ticket := create Ticket(myTicket.myFlight, app.myTravelStore.myUser.myPassenger, myTicket.baggage, myTicket.price, "Waiting acceptance", myTicket.seatNumber) persistent;
+		//ticketRequestById.add(ticket);
 		
 		app.msgBox("Ticket application submitted! A manager will analyze your request.", "Success", 0);
 		loadMenu();
@@ -1630,11 +1939,40 @@ epilog
 	self.unloadForm;
 	delete self;
 end;
-
 }
-btnApply_click
+btnAcceptRequest_click
 {
-btnApply_click(btn: Button input) updating;
+btnAcceptRequest_click(btn: Button input) updating;
+
+vars
+	ticket : Ticket;
+begin
+	beginTransaction;
+	ticket := getSelectedTicket();
+	ticket.myPassenger := ticket.myRequestPassenger;
+	ticket.myRequestPassenger := null;
+	ticket.paymentStatus := "Complete";
+	self.myTickets.remove(ticket);
+	commitTransaction;
+end;
+}
+btnDeclineRequest_click
+{
+btnDeclineRequest_click(btn: Button input) updating;
+
+vars
+	ticket : Ticket;
+begin
+	beginTransaction;
+	ticket := getSelectedTicket();
+	ticket.myRequestPassenger := null;
+	self.myTickets.remove(ticket);
+	commitTransaction;
+end;
+}
+btnRequestTicket_click
+{
+btnRequestTicket_click(btn: Button input) updating;
 
 vars
 	paymentForm : Payment;
@@ -1648,8 +1986,8 @@ begin
 	elseif app.myTravelStore.myUser.myPassenger = null then
 		app.msgBox("You need to update your data before getting a ticket", "Warning", 0);
 		create addPassForm transient;
-		addPassForm.load();
-		self.unload();
+		addPassForm.show();
+		//self.unload();
 	else
 		paymentForm.myTicket := ticket;
 		paymentForm.show();
@@ -1669,7 +2007,6 @@ vars
 begin
 	// Get id of selected ticket
 	id := ticketsTable.getCellText(ticketsTable.row, 1).Integer;
-	write id;
 	
 	foreach ticket in self.myTickets where ticket.id = id do
 		// Return selected flight if found
@@ -1684,9 +2021,51 @@ load
 load() updating;
 
 begin
-	ticketsTable.setCellText(1,1, "Passenger" & Tab & "Departure" & Tab & "Destination" & Tab & "Date" & Tab & "Time" & Tab & "Seat Number" & Tab & "Price" & Tab & "Payment Status");
+	app.mdiFrame := TicketList;
+	
+	if app.userSecurityLevel >= 3 then
+		btnRequestTicket.visible := false;
+		btnAcceptRequest.visible := true;
+		btnDeclineRequest.visible := true;
+	else
+		btnRequestTicket.visible := true;
+		btnAcceptRequest.visible := false;
+		btnDeclineRequest.visible := false;
+	endif;
+	
+	ticketsTable.setCellText(1,1, "Number" & Tab & "Passenger" & Tab & "Departure" & Tab & "Destination" & Tab & "Date" & Tab & "Time" & Tab & "Seat Number" & Tab & "Price" & Tab & "Payment Status");
 		
 	ticketsTable.displayCollection(self.myTickets, true, Table.DisplayCollection_Forward, null);
+end;
+}
+ticketsTable_click
+{
+ticketsTable_click(table: Table input) updating;
+
+vars
+	ticket : Ticket;
+begin
+	ticket := getSelectedTicket;
+	// If there is a ticket selected, enabled "View tickets from flight" button
+	if ticket <> null then
+		btnRequestTicket.enabled := true;
+		if app.userSecurityLevel >= 3 and ticket.myRequestPassenger <> null then
+			self.btnAcceptRequest.visible := true;
+			self.btnDeclineRequest.visible := true;
+			self.lblMessage.visible := true;
+			self.lblMessage.caption := "Accept purchase request from " & ticket.myRequestPassenger.fullName & "?";
+		else
+			self.btnAcceptRequest.visible := false;
+			self.btnDeclineRequest.visible := false;
+			self.lblMessage.visible := false;
+			if ticket.myPassenger = app.myTravelStore.myUser.myPassenger or ticket.myRequestPassenger = app.myTravelStore.myUser.myPassenger then
+				self.btnViewTicket.visible := true;
+				self.btnRequestTicket.visible := false;
+			else
+				self.btnRequestTicket.visible := true;
+			endif;
+		endif;
+	endif;
 end;
 }
 ticketsTable_displayRow
@@ -1702,6 +2081,8 @@ begin
 	
 	if ticket.myPassenger <> null then
 		passengerName := ticket.myPassenger.fullName;
+	elseif ticket.myRequestPassenger <> null then
+		passengerName := "(Pending Acceptance) " & ticket.myRequestPassenger.fullName;
 	else
 		passengerName := "Available";
 	endif;
