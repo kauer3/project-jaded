@@ -11,7 +11,7 @@ typeHeaders
 	Flight subclassOf Object highestSubId = 1, highestOrdinal = 10, number = 2055;
 	FlightPath subclassOf Object highestOrdinal = 7, number = 2059;
 	GFlightBookingSchema subclassOf RootSchemaGlobal transient, sharedTransientAllowed, transientAllowed, subclassSharedTransientAllowed, subclassTransientAllowed, number = 2070;
-	Passenger subclassOf Object highestSubId = 1, highestOrdinal = 15, number = 2071;
+	Passenger subclassOf Object highestSubId = 3, highestOrdinal = 17, number = 2071;
 	Plane subclassOf Object highestOrdinal = 7, number = 2072;
 	Ticket subclassOf Object highestOrdinal = 11, number = 2073;
 	TravelStore subclassOf Object highestSubId = 10, highestOrdinal = 23, number = 2083;
@@ -173,11 +173,11 @@ typeDefinitions
 		createAirportFromFile() number = 1003;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:04:24.249;
 		createAll() number = 1014;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:49:09.918;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:12:21:14:25.199;
 		createFlight() number = 1013;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:19:12:15.272;
 		createFlightAndTicketsFromFile() number = 1016;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:12:53.094;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:02:16:01.728;
 		createFlightPath() number = 1006;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:04:04:30:48.808;
 		createFlightPathFromFile() number = 1011;
@@ -191,7 +191,7 @@ typeDefinitions
 		createPlaneFromFile() number = 1010;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:21:42:42.923;
 		createTicketsFromFlight(pFlight: Flight) number = 1020;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:13:15.196;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:02:13:53.052;
 		createTravelStore() number = 1018;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:10:07:24:17.955;
 		getFilteredFlights(
@@ -204,7 +204,7 @@ typeDefinitions
 		removeAirportData() number = 1004;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:01:37:11.944;
 		removeAll() number = 1015;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:13:15:52.902;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:12:16:31:21.975;
 		removeFlightPathData() number = 1007;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:29:21:01:53.011;
 		removePassengerData() number = 1005;
@@ -214,7 +214,7 @@ typeDefinitions
 	)
 	Passenger completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:50:47.239;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:00:13:00.451;
 	attributeDefinitions
 		address:                       String[31] readonly, number = 8, ordinal = 8;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:03:05.829;
@@ -237,12 +237,12 @@ typeDefinitions
 		title:                         String[31] readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:08:14:11:00:32.611;
 	referenceDefinitions
-		allTickets:                    TicketById  implicitMemberInverse, readonly, subId = 1, number = 11, ordinal = 11;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:10:30:03:19:49.136;
+		allTickets:                    TicketById   explicitInverse, readonly, subId = 1, number = 11, ordinal = 11;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:12:21:13:21.051;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 12, ordinal = 12;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:03:31:19.452;
-		myUser:                        User  number = 13, ordinal = 15;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:12:37:53.547;
+		myUser:                        User   explicitEmbeddedInverse, number = 13, ordinal = 15;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:00:13:00.451;
 	jadeMethodDefinitions
 		create(
 			pAddress: String; 
@@ -254,7 +254,7 @@ typeDefinitions
 			pPhoneNumber: String; 
 			pTitle: String; 
 			pStaff: Boolean) updating, number = 1002;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:08:21:20:24.339;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:00:12:29.839;
 		setPropertiesOnUpdate(
 			pAddress: String; 
 			pDateOfBirth: Date; 
@@ -299,7 +299,7 @@ typeDefinitions
 	)
 	Ticket completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:50:47.239;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:12:20:41:23.481;
 	attributeDefinitions
 		baggage:                       Integer readonly, number = 5, ordinal = 5;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:22:22:20.834;
@@ -314,10 +314,8 @@ typeDefinitions
 	referenceDefinitions
 		myFlight:                      Flight  readonly, number = 9, ordinal = 9;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:23:14:00.585;
-		myPassenger:                   Passenger  number = 8, ordinal = 8;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:51:04.798;
-		myRequestPassenger:            Passenger  number = 3, ordinal = 11;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:14:01:13.329;
+		myPassenger:                   Passenger   explicitEmbeddedInverse, number = 8, ordinal = 8;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:12:21:13:21.051;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 2, ordinal = 10;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:11:11:08:44.459;
 	jadeMethodDefinitions
@@ -397,7 +395,7 @@ typeDefinitions
 	)
 	User completeDefinition
 	(
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:03:31:59.571;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:00:13:00.435;
 	attributeDefinitions
 		password:                      String[31] readonly, number = 2, ordinal = 2;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:31:20.018;
@@ -406,8 +404,8 @@ typeDefinitions
 		username:                      String[31] readonly, number = 1, ordinal = 1;
 		setModifiedTimeStamp "Mr Laptop" "22.0.02" 2023:11:06:19:30:58.768;
 	referenceDefinitions
-		myPassenger:                   Passenger  readonly, number = 5, ordinal = 7;
-		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:03:31:59.571;
+		myPassenger:                   Passenger   explicitEmbeddedInverse, readonly, number = 5, ordinal = 7;
+		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:13:00:13:00.435;
 		myTravelStore:                 TravelStore   explicitEmbeddedInverse, readonly, number = 4, ordinal = 4;
 		setModifiedTimeStamp "kaue" "22.0.02" 2023:11:09:03:31:07.824;
 	jadeMethodDefinitions
@@ -596,7 +594,9 @@ inverseDefinitions
 	allFlights of TravelStore peerOf myTravelStore of Flight;
 	allFlightsById of TravelStore peerOf myTravelStore of Flight;
 	allFlightPaths of TravelStore automatic peerOf myTravelStore of FlightPath manual;
+	myPassenger of Ticket peerOf allTickets of Passenger;
 	allPassengers of TravelStore peerOf myTravelStore of Passenger;
+	myPassenger of User peerOf myUser of Passenger;
 	allPlanes of TravelStore automatic peerOf myTravelStore of Plane manual;
 	allTickets of TravelStore automatic peerOf myTravelStore of Ticket manual;
 	allTicketRequests of TravelStore automatic peerOf myTravelStore of Ticket manual;
@@ -905,7 +905,7 @@ begin
 				baggage := app.random(3) + 1;
 				price := app.random(50) + baggage * 30 + 50;
 				
-				ticket := create Ticket(flight, null, baggage, price.Decimal, "pending", seatNumber) persistent;
+				ticket := create Ticket(flight, null, baggage, price.Decimal, "Available", seatNumber) persistent;
 				ticketById.add(ticket);
 			endwhile;
 			row := row + 1;
@@ -1105,7 +1105,6 @@ createTicketsFromFlight(pFlight : Flight);
 
 vars
 	ticketById : TicketById;
-	//ticketById : TicketById;
 	ticket : Ticket;
 	flight : Flight;
 	rows, row, rowSeat, remainder, baggage : Integer;
@@ -1131,11 +1130,10 @@ begin
 			rowSeat := rowSeat + 1;
 			seatLetter := seatLetters[rowSeat];
 			seatNumber := row.display & seatLetter;
-			write seatNumber;
 			baggage := app.random(3) + 1;
 			price := (app.random(150) + baggage * 30).Decimal;
 			
-			ticket := create Ticket(pFlight, null, baggage, price, "pending", seatNumber) persistent;
+			ticket := create Ticket(pFlight, null, baggage, price, "Available", seatNumber) persistent;
 			ticketById.add(ticket);
 		endwhile;
 		row := row + 1;
@@ -1237,6 +1235,12 @@ begin
 	UserByUsername.instances.purge();
 	Passenger.instances.purge();
 	PassengerById.instances.purge();
+	Ticket.instances.purge();
+	TicketById.instances.purge();
+	TicketByPrice.instances.purge();
+	TicketByFlightId.instances.purge();
+	TicketRequestById.instances.purge();
+	TicketRequestByPrice.instances.purge();
 	commitTransaction;
 end;
 }
